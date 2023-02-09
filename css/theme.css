@@ -1,0 +1,85 @@
+
+.my-font{
+	font-family:"Comic Sans MS";
+}
+
+.container{
+	width: 90%;
+	margin: auto;
+}
+
+
+.btn{
+	text-align: left !important;
+	text-decoration: none !important;
+	color: skyblue;
+}
+
+.btn:hover{
+	color: navy;
+	font-weight: bolder;
+}
+
+
+.error{
+	color: red;
+	font-weight: bold;
+
+}
+.success{
+	font-weight: bold;
+	width: 351px;
+	background-color: green;
+}
+
+.h-font-size{
+	font-weight: bolder;
+}
+
+.p-font-size{
+	font-size: 2vw;
+}
+
+.bottom{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 50;
+}
+
+.bg-image{
+	width: 100%;
+	background-image: url(../images/bg.jpg);
+	background-size: cover;
+	
+}
+
+.bg-image1{
+	width: 100%;
+	background-image: url(../images/mobilebg.jpg);
+	background-size: cover;
+	
+}
+
+.main-content{
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 7px;
+
+}
+
+.main-content h1{
+	font-size: 37px;
+	color: antiquewhite;
+}
+
+/*.active{
+	border-bottom: 2px orange solid !important;
+	box-shadow: 2px 2px 1.4px orange
+}*/
+
+.footer{
+	margin-top: 5em;
+	padding: 2em 0em;
+	text-shadow: 1px 1px lightgray;
+	font-weight: bold;
+}

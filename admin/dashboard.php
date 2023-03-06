@@ -133,7 +133,8 @@ if(isset($_SESSION['username'])){
                             <option value="ss2">S.S.2</option>
                             <option value="ss3">S.S.3</option>
                             <option value="js1">J.S.1</option>
-                            <option value="js2">J.S.2</option>
+                            <option value="js2A">J.S.2A</option>
+                            <option value="js2b">J.S.2b</option>
                             <option value="js3">J.S.3</option>
 
                         </select>

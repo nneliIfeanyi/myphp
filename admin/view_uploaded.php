@@ -81,7 +81,7 @@ if(!isset($_SESSION['username'])){
               <td><?php  echo $term; ?></td>
               <td><a href="delete.php?name=<?php echo $name;?>&year=<?php echo $year;?>" class="w3-text-red w3-tiny">Delete</a>
               <a href="<?php echo $reportCard;?>" class="w3-text-green w3-tiny">View</a>
-              <a href="../download.php?result=<?php echo $reportCard; ?>" target="_blank" class="btn btn-info w3-tiny">Download</a></td>
+              <a href="../download.php?result=<?php echo $reportCard; ?>" class="btn btn-info w3-tiny">Download</a></td>
               
 
             </tr>

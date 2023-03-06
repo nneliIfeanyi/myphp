@@ -46,7 +46,8 @@ if(!isset($_SESSION['username'])){
       <option value="ss2">SS2</option>
       <option value="ss3">SS3</option>
       <option value="js1">JS1</option>
-      <option value="js2">JS2</option>
+      <option value="js2A">JS2A</option>
+        <option value="js2b">JS2b</option>
       <option value="js3">JS3</option>
     </select>
     <div id="showSS1" style="display:none; height: 550px;overflow-y: scroll;" class="">
@@ -270,8 +271,8 @@ if(!isset($_SESSION['username'])){
        </div>
     </div>
   
-   <div id="showJS2" style="display:none; height: 550px;overflow-y: scroll;" class="">
-     <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS2 STUDENTS</h2>
+   <div id="showJS2A" style="display:none; height: 550px;overflow-y: scroll;" class="">
+     <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS2A STUDENTS</h2>
      <div class="">
        <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
          <thead>
@@ -285,7 +286,7 @@ if(!isset($_SESSION['username'])){
          <tbody>
            <?php 
 
-             $sql = "SELECT * FROM student WHERE classesID = 'js2'" ;
+             $sql = "SELECT * FROM student WHERE classesID = 'js2A'" ;
              $query = mysqli_query($conn, $sql);
               if (mysqli_num_rows($query) > 0) {
                // code...
@@ -325,6 +326,66 @@ if(!isset($_SESSION['username'])){
      </div>
   </div>
   
+
+
+   <div id="showJS2b" style="display:none; height: 550px;overflow-y: scroll;" class="">
+     <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS2b STUDENTS</h2>
+     <div class="">
+       <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
+         <thead>
+           <tr class="w3-text-black">
+            <th><b>S/N</b></th>
+             <th><b>Name</b></th>
+             <th><b>Action</b></th>
+           </tr>
+         </thead>
+
+         <tbody>
+           <?php 
+
+             $sql = "SELECT * FROM student WHERE classesID = 'js2b'" ;
+             $query = mysqli_query($conn, $sql);
+              if (mysqli_num_rows($query) > 0) {
+               // code...
+
+                 $i = 1;
+                while($result = mysqli_fetch_array($query)){
+
+                  $name = $result['name'];
+              
+              ?>
+              <tr class="w3-text-dark-grey">
+               <td><?php echo $i;?></td>
+                <td><?php  echo $name; ?></td>
+                <td><?php echo "<a class='w3-tiny w3-teal w3-card' href='add_result.php?addResult={$result['name']}'>Add Result</a>"; ?>
+                  <?php echo "<a class='w3-tiny w3-red w3-card' href='delete.php?name2={$result['name']}'>Delete</a>"; ?>
+                </td>
+
+              </tr>
+
+              <?php
+              $i++;
+                }
+             }else{
+              ?>
+              <tr class="w3-text-dark-grey">
+               <td colspan="3" align="center" class="w3-text-red">No student found..</td>
+             </tr>
+
+
+              <?php
+
+             }
+             
+           ?>
+         </tbody>
+       </table>
+     </div>
+  </div>
+  
+
+
+
    <div id="showJS3" style="display:none; height: 550px;overflow-y: scroll;" class="">
      <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS3 STUDENTS</h2>
      <div class="">

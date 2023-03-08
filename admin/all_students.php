@@ -82,7 +82,7 @@ if(!isset($_SESSION['username'])){
             
               <td>
                <a href="edit.php?name2=<?php echo $name;?>" class="w3-text-red w3-btn w3-tiny">Edit</a>
-              <a href="" class="w3-text-green w3-btn  w3-tiny">Delete</a>
+              <a href="delete.php?name2=<?=$name?>" class="w3-text-green w3-btn  w3-tiny">Delete</a>
              </td>
               
 

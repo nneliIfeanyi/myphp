@@ -36,8 +36,8 @@ if(!isset($_SESSION['username'])){
   <body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
 
 
-  <section class="w3-margin w3-padding-small" style="background:rgba(0, 0, 0, 0.6);">
-    <div class="w3-row-padding">
+  <section class="w3-padding-small" style="background:rgba(0, 0, 0, 0.6);">
+    <div class="w3-row">
       <div class="w3-twothird">
     <label for="classID" class="w3-xlarge">UPLOAD RESULT FOR: </label>
     <select id="classID" class="w3-text-dark-grey" style="padding:7px;border-radius: 15px;">

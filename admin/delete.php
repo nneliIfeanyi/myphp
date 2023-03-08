@@ -28,7 +28,7 @@ if (isset($_GET['name']) && isset($_GET['year'])) {
 			<script type="text/javascript">
 				alert('An error occured while deleting result.')
 			</script>
-			<meta http-equiv="refresh" content="3; view_uploaded.php">
+			<meta http-equiv="refresh" content="3; all_students.php">
 		<?php
 
 

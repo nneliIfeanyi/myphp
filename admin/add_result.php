@@ -136,7 +136,7 @@ include '../functions.php';
 				<form action="#" method="POST" enctype="multipart/form-data">
 
 					<div class="w3-grey w3-padding w3-margin-bottom">
-						<select class="" name="year">
+						<select class="w3-select" name="year">
 							<option value="">Select schoolsession..</option>
 							<option value="2022/2023">2022/2023</option>
 						</select>
@@ -144,7 +144,7 @@ include '../functions.php';
 					</div>
 
 					<div class="w3-grey w3-padding w3-margin-bottom">
-						<select class="" name="term">
+						<select class="w3-select" name="term">
 							<option value="">Choose Term..</option>
 							<option value="first_term">First Term</option>
 							<option value="second_term">Second Term</option>
@@ -168,11 +168,17 @@ include '../functions.php';
 				</form>
 			</div>
     	</div>
-    <?php
+    		<div class="w3-col m12 l12 s12">
+					
+					<div class="w3-padding-16 w3-margin-top" style="">
+						<ul class="w3-ul">
+						<li class=""><a href="upload_result.php" class="w3-btn w3-hover-teal"><span>&#10094;&#10094;</span> Go Back</a></li>
+						<li class=""><a href="logout.php" class="w3-btn w3-hover-teal">Logout</a></li>
+						
+					</ul>
+					</div>
 
-    include 'menu.php';
-
-     ?>
+				</div>
   </div>
 </section>
      

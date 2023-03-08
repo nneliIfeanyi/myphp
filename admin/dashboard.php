@@ -103,9 +103,8 @@ if(isset($_SESSION['username'])){
             font-size: 19px;
         }
         select{
-            border-radius: 20px;
             outline: none;
-            background-color: lightgrey;
+            background-color lightgrey;
             padding: 6px;
         }
     </style>
@@ -113,8 +112,13 @@ if(isset($_SESSION['username'])){
 <!-- body starts -->
 <body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
    <section class="w3-margin w3-padding" style="background:rgba(0, 0, 0, 0.8);">
-    <div class="w3-row-padding">
+    <div class="w3-row">
       <div class="w3-twothird w3-padding-16">
+
+            <div class="w3-center w3-margin-top">
+                <img src="images/badge.jpg" width="100" height="100" class="w3-circle">
+            </div>
+
         <div class="w3-center">
             <p class="welcomemsg w3-text-green w3-tag">Welcome <?php echo $username; ?></p>
             <h3 class="text-center header">Please use the form below to upload a student's Data.</h3>
@@ -122,12 +126,12 @@ if(isset($_SESSION['username'])){
 
             <?php echo $msg1; ?>
             <?php echo $msg2; ?>
-            <div class="w3-grey w3-padding-small w3-round-large w3-border-blue w3-border">
+            <div class="w3-padding-small w3-center w3-round-large">
                 <form action="" method="post" enctype="multipart/form-data">
                     <!-- Classes Dropdown-->
                     <div class="w3-margin-bottom w3-padding-16">
                         <label for="classID">Student's Class</label>
-                        <select name="class" id="classID" class="w3-text-dark-grey">
+                        <select name="class" id="classID" class="w3-text-dark-grey w3-select">
                             <option value="">Select class</option>
                             <option value="ss1">S.S.1</option>
                             <option value="ss2">S.S.2</option>
@@ -143,7 +147,7 @@ if(isset($_SESSION['username'])){
 
                     <div class="w3-margin-bottom">
                         <label for="student">Student's Name</label>
-                        <input type="text" name="name" class="w3-input" placeholder="Surname first, then other names" style="background-color: lightgrey;width: 80%;">
+                        <input type="text" name="name" class="w3-input" placeholder="Surname first, then other names">
                         <span><?php echo $nameErr;?></span>
                     </div>
 

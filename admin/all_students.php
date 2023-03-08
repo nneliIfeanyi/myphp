@@ -20,7 +20,7 @@ if(!isset($_SESSION['username'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pins Requested</title>
+    <title>School Admin Dashboard</title>
     <!-- custom-theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -38,18 +38,22 @@ if(!isset($_SESSION['username'])){
 
   <section class="w3-padding-small" style="background:rgba(0, 0, 0, 0.6);">
     <div class="w3-row">
-      <div class="w3-col m11 l11 s12">
-    <div style="height: auto;overflow-y: scroll;" class="">
-      <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">USED SCRATCH PINS</h2>
+      <div class="w3-col m12 l12 s12">
+         <div class="w3-center w3-margin-top">
+            <img src="images/badge.jpg" width="100" height="100" class="w3-circle">
+         </div>
+    <div style="height: auto; overflow-y: scroll;" class="">
+      <h2 class="w3-center my-font w3-large w3-padding-16"><strong>A Comprehensive List of All Students</strong></h2>
       <div class="">
         <table class="w3-table-all">
           <thead>
             <tr class="w3-text-black">
               <th><b>S/N</b></th>
-              <th><b>Pin Code</b></th>
-              <th><b>Used_By</b></th>
-               <th><b>Date_used</b></th>
-              <th><b>Expiry_Date</b></th>
+              <th><b>Name</b></th>
+               <th><b>Sex</b></th>
+              <th><b>Class</b></th>
+               <th><b>Card Pin</b></th>
+              <th><b>Action</b></th>
             </tr>
           </thead>
 
@@ -57,25 +61,31 @@ if(!isset($_SESSION['username'])){
             <?php 
            
 
-              $sql = "SELECT * FROM pins ORDER BY id DESC" ;
+              $sql = "SELECT * FROM student ORDER BY id DESC" ;
               $query = mysqli_query($conn, $sql);
               $i = 1;
 
               while($result = mysqli_fetch_array($query)){
 
              
-                $scratch_pin = $result['pin_code'];
-                $usedBy = $result['used_by'];
-                $dateUsed = $result['date_issued'];
-                $expiry = $result['exp_date'];
-               
+                $name = $result['name'];
+                $class = $result['classesID'];
+                $sex = $result['sex'];
+                $pin = $result['card_serial_no'];
             ?>
             <tr class="w3-text-dark-grey">
               <td><?php echo $i; ?></td>
-              <td><?php  echo $scratch_pin; ?></td>
-              <td><?php  echo $usedBy; ?></td>
-              <td><?php  echo $dateUsed; ?></td>
-              <td><?php  echo $expiry; ?></td>              
+              <td><?php  echo $name; ?></td>
+              <td><?php  echo $sex; ?></td>
+              <td><?php  echo $class; ?></td>
+              <td><?php  echo $pin; ?></td>
+            
+              <td>
+               <a href="edit.php?name2=<?php echo $name;?>" class="w3-text-red w3-btn w3-tiny">Edit</a>
+              <a href="" class="w3-text-green w3-btn  w3-tiny">Delete</a>
+             </td>
+              
+
             </tr>
 
             <?php

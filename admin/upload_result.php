@@ -50,10 +50,10 @@ if(!isset($_SESSION['username'])){
         <option value="js2b">JS2b</option>
       <option value="js3">JS3</option>
     </select>
-    <div id="showSS1" style="display:none; height: 550px;overflow-y: scroll;" class="">
+    <div id="showSS1" style="display:none; height: auto;" class="">
       <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL SS1 STUDENTS</h2>
       <div class="">
-        <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
+        <table class="w3-table-all w3-text-blue" style="width:100%;margin: auto;">
           <thead>
             <tr class="w3-text-black">
               <th><b>S/N</b></th>
@@ -79,9 +79,7 @@ if(!isset($_SESSION['username'])){
               <tr class="w3-text-dark-grey">
                <td><?php echo $i;?></td>
                 <td><?php  echo $name; ?></td>
-                <td><?php echo "<a class='w3-card w3-tiny w3-teal w3-card' href='add_result.php?addResult={$result['name']}'>Add Result</a>"; ?>
-                  <?php echo "<a class='w3-tiny w3-red w3-card' href='delete.php?name2={$result['name']}'>Delete</a>"; ?>
-                  <?php echo "<a class='w3-tiny w3-text-green w3-card' href='edit.php?name2={$result['name']}'>Edit</a>"; ?>
+                <td><?php echo "<a class='w3-tiny w3-card' href='add_result.php?addResult=$name'>Add Result</a>"; ?>
                 </td>
 
               </tr>
@@ -106,7 +104,7 @@ if(!isset($_SESSION['username'])){
       </div>
    </div>
     
-       <div id="showSS2" style="display:none; height: 550px;overflow-y: scroll;" class="">
+       <div id="showSS2" style="display:none; height: auto;" class="">
          <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL SS2 STUDENTS</h2>
          <div class="">
            <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
@@ -135,8 +133,7 @@ if(!isset($_SESSION['username'])){
               <tr class="w3-text-dark-grey">
                <td><?php echo $i;?></td>
                 <td><?php  echo $name; ?></td>
-                <td><?php echo "<a class='w3-tiny w3-card w3-teal' href='add_result.php?addResult={$result['name']}'>Add Result</a>"; ?>
-                  <?php echo "<a class='w3-tiny w3-red w3-card' href='delete.php?name2={$result['name']}'>Delete</a>"; ?>
+                <td><?php echo "<a class='w3-tiny w3-card' href='add_result.php?addResult=$name'>Add Result</a>"; ?>
                 </td>
 
               </tr>
@@ -161,7 +158,7 @@ if(!isset($_SESSION['username'])){
          </div>
       </div>
     
-     <div id="showSS3" style="display:none; height: 550px;overflow-y: scroll;" class="">
+     <div id="showSS3" style="display:none; height: auto;" class="">
        <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL SS3 STUDENTS</h2>
        <div class="">
          <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
@@ -190,8 +187,7 @@ if(!isset($_SESSION['username'])){
               <tr class="w3-text-dark-grey">
                <td><?php echo $i;?></td>
                 <td><?php  echo $name; ?></td>
-                <td><?php echo "<a class='w3-tiny w3-teal w3-card' href='add_result.php?addResult={$result['name']}'>Add Result</a>"; ?>
-                  <?php echo "<a class='w3-tiny w3-red w3-card' href='delete.php?name2={$result['name']}'>Delete</a>"; ?>
+                <td><?php echo "<a class='w3-tiny w3-card' href='add_result.php?addResult=$name'>Add Result</a>"; ?>
                 </td>
 
               </tr>
@@ -216,7 +212,7 @@ if(!isset($_SESSION['username'])){
        </div>
     </div>
   
-     <div id="showJS1" style="display:none; height: 550px;overflow-y: scroll;" class="">
+     <div id="showJS1" style="display:none; height: auto;" class="">
        <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS1 STUDENTS</h2>
        <div class="">
          <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
@@ -245,9 +241,8 @@ if(!isset($_SESSION['username'])){
                    <tr class="w3-text-dark-grey">
                     <td><?php echo $i;?></td>
                      <td><?php  echo $name; ?></td>
-                     <td><?php echo "<a class='w3-tiny w3-teal w3-card' href='add_result.php?addResult={$result['name']}'>Add Result</a>"; ?>
-                       <?php echo "<a class='w3-tiny w3-red w3-card' href='delete.php?name2={$result['name']}'>Delete</a>"; ?>
-                     </td>
+                     <td><?php echo "<a class='w3-tiny w3-card' href='add_result.php?addResult=$name'>Add Result</a>"; ?>
+                    </td>
 
                    </tr>
 
@@ -271,7 +266,7 @@ if(!isset($_SESSION['username'])){
        </div>
     </div>
   
-   <div id="showJS2A" style="display:none; height: 550px;overflow-y: scroll;" class="">
+   <div id="showJS2A" style="display:none; height: auto;" class="">
      <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS2A STUDENTS</h2>
      <div class="">
        <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
@@ -300,10 +295,8 @@ if(!isset($_SESSION['username'])){
               <tr class="w3-text-dark-grey">
                <td><?php echo $i;?></td>
                 <td><?php  echo $name; ?></td>
-                <td><?php echo "<a class='w3-tiny w3-teal w3-card' href='add_result.php?addResult={$result['name']}'>Add Result</a>"; ?>
-                  <?php echo "<a class='w3-tiny w3-red w3-card' href='delete.php?name2={$result['name']}'>Delete</a>"; ?>
+               <td><?php echo "<a class='w3-tiny w3-card' href='add_result.php?addResult=$name'>Add Result</a>"; ?>
                 </td>
-
               </tr>
 
               <?php
@@ -328,10 +321,10 @@ if(!isset($_SESSION['username'])){
   
 
 
-   <div id="showJS2b" style="display:none; height: 550px;overflow-y: scroll;" class="">
+   <div id="showJS2b" style="display:none; height: auto;" class="">
      <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS2b STUDENTS</h2>
      <div class="">
-       <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
+       <table class="w3-table-all w3-text-blue" style="width:100%;margin: auto;">
          <thead>
            <tr class="w3-text-black">
             <th><b>S/N</b></th>
@@ -357,8 +350,7 @@ if(!isset($_SESSION['username'])){
               <tr class="w3-text-dark-grey">
                <td><?php echo $i;?></td>
                 <td><?php  echo $name; ?></td>
-                <td><?php echo "<a class='w3-tiny w3-teal w3-card' href='add_result.php?addResult={$result['name']}'>Add Result</a>"; ?>
-                  <?php echo "<a class='w3-tiny w3-red w3-card' href='delete.php?name2={$result['name']}'>Delete</a>"; ?>
+                <td><?php echo "<a class='w3-tiny w3-card' href='add_result.php?addResult=$name'>Add Result</a>"; ?>
                 </td>
 
               </tr>
@@ -386,7 +378,7 @@ if(!isset($_SESSION['username'])){
 
 
 
-   <div id="showJS3" style="display:none; height: 550px;overflow-y: scroll;" class="">
+   <div id="showJS3" style="display:none; height: auto;" class="">
      <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS3 STUDENTS</h2>
      <div class="">
        <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
@@ -415,8 +407,7 @@ if(!isset($_SESSION['username'])){
               <tr class="w3-text-dark-grey">
                <td><?php echo $i;?></td>
                 <td><?php  echo $name; ?></td>
-                <td><?php echo "<a class='w3-tiny w3-teal w3-card' href='add_result.php?addResult={$result['name']}'>Add Result</a>"; ?>
-                  <?php echo "<a class='w3-tiny w3-red w3-card' href='delete.php?name2={$result['name']}'>Delete</a>"; ?>
+                <td><?php echo "<a class='w3-tiny w3-card' href='add_result.php?addResult=$name'>Add Result</a>"; ?>
                 </td>
 
               </tr>

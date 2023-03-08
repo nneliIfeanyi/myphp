@@ -77,9 +77,9 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
-   <section class="w3-margin w3-padding-small" style="background:rgba(0, 0, 0, 0.8);">
-    <div class="w3-row-padding">
-      <div class="w3-twothird w3-margin-bottom">
+   <section class="w3-padding-small w3-padding-16" style="background:rgba(0, 0, 0, 0.8);">
+    <div class="w3-row">
+      <div class="w3-margin-bottom"  style="width:98.5%;margin: auto;">
         
 
         <div class="w3-center my-font p-font-size">Generate Students Pins</div>
@@ -89,7 +89,7 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
             <div class="w3-padding-16">
               <div class="w3-margin-top w3-padding-16 w3-padding w3-blue-gray">
                 <input type="number" name="number" placeholder="Enter no. of pins to generate.." class="w3-input w3-white">
-                <span class="w3-padding-small">Maximum of 100 pins at a time.</span>
+                <span class="w3-padding-small w3-text-red w3-opacity">Maximum of 100 pins at a time.</span>
                 <span class="error"><?php echo "$pinErr";?></span>
               </div>
               <div class="w3-margin-top" style="margin:auto; width: 60%;">
@@ -98,8 +98,11 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
           </form>
         </div>
  
-          <div style="overflow: scroll;height: 250px;">
-            <table class="w3-table-all w3-center" style="width:95%;margin: auto;">
+          <div style="overflow-x: scroll;height: auto;">
+
+            <div class="w3-center my-font p-font-size">All Generated Pins</div>
+
+            <table class="w3-table-all w3-center" style="width:100%;margin: auto;">
               <thead>
                 <tr class="w3-text-black">
                  <th><b>S/N</b></th>
@@ -172,12 +175,16 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
           </div>
         </div>
 
-         <?php
+        <div class="w3-third">
+           
+           <div class="w3-padding-16 w3-margin-top" style="">
+              <ul class="w3-ul">
+              <li class="w3-hover-teal"><a href="dashboard.php" class="btn">Return to Dashboard</a></li>
+              <li class="w3-hover-teal"><a href="logout.php" class="btn">Logout</a></li>
+           </ul>
+           </div>
 
-    include 'menu.php';
-
-     ?>
-
+        </div>
     </div>
 
    
@@ -185,11 +192,12 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
 
 
     <!-- copyright -->
-    
-</section>
- <div class="w3-center footer" style="width:100%;color: navy;">
+     <div class="w3-center footer" style="width:100%;color: lightgrey;">
         © 2023 <span class="my-font">CPM Int. School Suleja</span><br> All Rights Reserved
   </div>
+    
+</section>
+
   <script>
       if ( window.history.replaceState ) {
           window.history.replaceState( null, null, window.location.href );

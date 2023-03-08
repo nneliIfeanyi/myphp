@@ -21,41 +21,57 @@ if (isset($_SESSION['username'])) {
 				$id = $info['ID'];
 				
 				$dbname= $info['name'];
+				$gender = $info['sex'];
+				$class = $info['classesID'];
 			}
 			
 		}else{
 
-			echo "Something is fishing with the entire system, call for repair..";
+			echo "Something is fishy with the entire system, call for repair..";
 		}
 	}else{
 
-		?>
-			<meta http-equiv="refresh" content="10; upload_result.php">
 
-		<?php
-	}
-		
+		if (isset($_POST['update'])) {
 
-	if (isset($_POST['update'])) {
-		
-		$stu_name = mysqli_real_escape_string($conn, htmlspecialchars($_POST['name'], ENT_QUOTES, 'utf-8'));
-		$stu_class =mysqli_real_escape_string($conn, htmlspecialchars($_POST['class'], ENT_QUOTES, 'utf-8'));
-		$sex = mysqli_real_escape_string($conn, htmlspecialchars($_POST['sex'], ENT_QUOTES, 'utf-8'));
+			$id = mysqli_real_escape_string($conn, htmlspecialchars($_POST['id'], ENT_QUOTES, 'utf-8'));
+			
+			$stu_name = mysqli_real_escape_string($conn, htmlspecialchars($_POST['name'], ENT_QUOTES, 'utf-8'));
+			$stu_class =mysqli_real_escape_string($conn, htmlspecialchars($_POST['class'], ENT_QUOTES, 'utf-8'));
+			$gender = mysqli_real_escape_string($conn, htmlspecialchars($_POST['sex'], ENT_QUOTES, 'utf-8'));
 
 
-			$sql = "UPDATE student SET name = '$stu_name', sex = '$sex', classesID = '$stu_class' WHERE ID = '$id'";
+			$sql = "UPDATE student SET name='$stu_name',sex='$gender',classesID='$stu_class' WHERE ID = '$id'";
 
 			$query = mysqli_query($conn, $sql);
 
 			if ($query) {
-
-				echo "$id $dbname";
 				
 				$msg1 = "<div class='w3-padding w3-margin-top w3-margin-bottom w3-green'>
 
 							Changes made successfully.
 
 						</div>";
+						?>
+						<meta http-equiv="refresh" content="12; all_students.php">
+
+						<?php
+
+						$sql = "SELECT * FROM student WHERE name = '$stu_name' ";
+						$result = mysqli_query($conn, $sql);
+
+						if (mysqli_num_rows($result) > 0) {
+
+							while ($info = mysqli_fetch_assoc($result)) {
+
+								$id = $info['ID'];
+								
+								$dbname= $info['name'];
+								$gender = $info['sex'];
+								$class = $info['classesID'];
+							}
+							
+						}
 			}else{
 
 
@@ -68,7 +84,12 @@ if (isset($_SESSION['username'])) {
 			}
 		
 
+		}
+		
 	}
+		
+
+	
 
 ?>
 
@@ -91,24 +112,25 @@ if (isset($_SESSION['username'])) {
 				
 				<?= $msg1 ?>
 				<?= $msg2 ?>
-				<h4 class="my-font w3-center">You are editing <?= $name2 ?>'s info.</h4>
+				<h4 class="my-font w3-center">You are editing <strong><?= $name2 ?>'s</strong> info.</h4>
 				<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
 					
 
-					<div class="w3-padding w3-blue-gray">
+					<div class="w3-padding-small w3-light-grey w3-card">
 						<label>Edit Name</label>
 					<input type="text"  class="w3-input" name="name" value="<?= $dbname ?>">
 					</div>
 
-					<div class="w3-margin-bottom w3-padding-16">
+					<div class="w3-margin-top w3-padding-small w3-light-grey w3-card">
 					    <label for="classID">Reselect Class</label>
 					    <select name="class" id="classID" class="w3-text-dark-grey">
-					        <option value="">Select class</option>
+					        <option value="<?=$class?>"><?=$class?></option>
 					        <option value="ss1">S.S.1</option>
 					        <option value="ss2">S.S.2</option>
 					        <option value="ss3">S.S.3</option>
 					        <option value="js1">J.S.1</option>
-					        <option value="js2">J.S.2</option>
+					        <option value="js2A">J.S.2A</option>
+					          <option value="js2b">J.S.2b</option>
 					        <option value="js3">J.S.3</option>
 
 					    </select>
@@ -123,18 +145,19 @@ if (isset($_SESSION['username'])) {
 					</div>
 
 				
-					<div class="w3-margin w3-wide">
-						<input class="w3-teal w3-btn" type="submit" value="Update Student's info" name="update">
+					<div class="w3-padding-16 w3-wide">
+						<input type="hidden" name="id" value="<?=$id?>">
+						<input name="update" type="submit" value="Update Student's info" class="w3-teal w3-btn">
 					</div>
 				</form>
 				</div>
-				<div class="w3-third">
+				<div class="w3-col m12 l12 s12">
 					
 					<div class="w3-padding-16 w3-margin-top" style="">
 						<ul class="w3-ul">
-						<li class="w3-hover-teal"><a href="dashboard.php" class="btn">Dashboard</a></li>
-						<li class="w3-hover-teal"><a href="logout.php" class="btn">Logout</a></li>
-						<li class="w3-hover-teal"><a href="tel:+2347076602896" class="btn">Contact Admin</a></li>
+						<li class=""><a href="upload_result.php" class="w3-btn w3-hover-teal"><span>&#10094;&#10094;</span> Go Back</a></li>
+						<li class=""><a href="logout.php" class="w3-btn w3-hover-teal">Logout</a></li>
+						
 					</ul>
 					</div>
 

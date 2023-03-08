@@ -102,7 +102,7 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
 
             <div class="w3-center my-font p-font-size">All Generated Pins</div>
 
-            <table class="w3-table-all w3-center" style="width:100%;margin: auto;">
+            <table class="w3-table-all" style="width:100%;margin: auto;">
               <thead>
                 <tr class="w3-text-black">
                  <th><b>S/N</b></th>

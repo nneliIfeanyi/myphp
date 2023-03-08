@@ -107,7 +107,7 @@ if(!isset($_SESSION['username'])){
        <div id="showSS2" style="display:none; height: auto;" class="">
          <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL SS2 STUDENTS</h2>
          <div class="">
-           <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
+           <table class="w3-table-all w3-text-blue" style="width:100%;margin: auto;">
              <thead>
                <tr class="w3-text-black">
                 <th><b>S/N</b></th>
@@ -161,7 +161,7 @@ if(!isset($_SESSION['username'])){
      <div id="showSS3" style="display:none; height: auto;" class="">
        <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL SS3 STUDENTS</h2>
        <div class="">
-         <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
+         <table class="w3-table-all w3-text-blue" style="width:100%;margin: auto;">
            <thead>
              <tr class="w3-text-black">
               <th><b>S/N</b></th>
@@ -215,7 +215,7 @@ if(!isset($_SESSION['username'])){
      <div id="showJS1" style="display:none; height: auto;" class="">
        <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS1 STUDENTS</h2>
        <div class="">
-         <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
+         <table class="w3-table-all w3-text-blue" style="width:100%;margin: auto;">
            <thead>
              <tr class="w3-text-black">
               <th><b>S/N</b></th>
@@ -269,7 +269,7 @@ if(!isset($_SESSION['username'])){
    <div id="showJS2A" style="display:none; height: auto;" class="">
      <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS2A STUDENTS</h2>
      <div class="">
-       <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
+       <table class="w3-table-all w3-text-blue" style="width:100%;margin: auto;">
          <thead>
            <tr class="w3-text-black">
             <th><b>S/N</b></th>
@@ -381,7 +381,7 @@ if(!isset($_SESSION['username'])){
    <div id="showJS3" style="display:none; height: auto;" class="">
      <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS3 STUDENTS</h2>
      <div class="">
-       <table class="w3-table-all w3-text-blue" style="width:95%;margin: auto;">
+       <table class="w3-table-all w3-text-blue" style="width:100%;margin: auto;">
          <thead>
            <tr class="w3-text-black">
             <th><b>S/N</b></th>

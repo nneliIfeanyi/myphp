@@ -43,7 +43,7 @@ if(!isset($_SESSION['username'])){
             <img src="images/badge.jpg" width="100" height="100" class="w3-circle">
          </div>
     <div style="height: auto; overflow-y: scroll;" class="">
-      <h2 class="w3-center my-font w3-large w3-padding-16"><strong>A Comprehensive List of All Students</strong></h2>
+      <h2 class="w3-center my-font w3-large w3-padding-16"><strong>A Comprehensive List of All Students</strong><span class="w3-small w3-opacity"><b>&nbsp;(In Alphabetical order)</b></span></h2>
       <div class="">
         <table class="w3-table-all">
           <thead>
@@ -61,7 +61,7 @@ if(!isset($_SESSION['username'])){
             <?php 
            
 
-              $sql = "SELECT * FROM student ORDER BY id DESC" ;
+              $sql = "SELECT * FROM student ORDER BY name ASC" ;
               $query = mysqli_query($conn, $sql);
               $i = 1;
 

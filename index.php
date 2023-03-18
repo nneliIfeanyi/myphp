@@ -291,21 +291,21 @@ include 'config.php';
 <div class="row service-center">
 <div class="col-md-4 col-sm-6">
 <div class="feature-list" style="margin-bottom:40px;">
-<img src="img/edit13.jpg" width="70%" height="200px" style="margin-bottom:20px; border-radius:10%;" />
+<img src="img/edit13.jpg" width="100%" height="200px" style="margin-bottom:20px; border-radius:10%;" />
 <p class="w3-medium">National Assembly</p>
 <p></p>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
 <div class="feature-list" style="margin-bottom:40px;">
- <img src="img/edit12.jpg" width="70%" height="200px" style="margin-bottom:20px; border-radius:10%;" />
+ <img src="img/edit12.jpg" width="100%" height="200px" style="margin-bottom:20px; border-radius:10%;" />
 <p class="w3-medium">Abuja International Airport</p>
 <p></p>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
 <div class="feature-list">
- <img src="img/edit11.jpg" width="70%" height="200px" style="margin-bottom:20px; border-radius:10%;" />
+ <img src="img/edit11.jpg" width="100%" height="200px" style="margin-bottom:20px; border-radius:10%;" />
 <p class="w3-medium">End of year party 2011</p>
 <p></p>
 </div>

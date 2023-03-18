@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
 
 	 	$sql = "SELECT * FROM admin WHERE user_name = '$username'";
 	 	$query = mysqli_query($conn, $sql);
-	 	if (mysqli_num_rows($query) > 0) {
+	 	if ($query) {
 	 		$result = mysqli_fetch_assoc($query);
 	 		$db_username =$result['user_name'];
 	 		$db_password =$result['password'];
@@ -93,9 +93,8 @@ if (isset($_POST['submit'])) {
 								<span class="error"><?php echo "$passErr";?></span>
 							</div>
 
-							<div class="w3-center">
-								<input type="submit" name="submit" value="Submit And Continue" class="w3-round-large w3-btn w3-teal w3-margin-top">
-								<a href="../index.php" class="w3-round-large w3-btn w3-margin-top w3-text-teal w3-border">Bact to Homepage</a>
+							<div class="w3-margin-top" style="width:70%; margin: auto;">
+								<input type="submit" name="submit" value="Login" class="w3-btn w3-block w3-teal">
 							</div>
 						</div>
 					</form>

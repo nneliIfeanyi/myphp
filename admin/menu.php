@@ -40,6 +40,7 @@
         <li class=""><a class="w3-hover-blue" href="requests.php">View Pin Requests</a></li>
         <li class=""><a class="w3-hover-blue" href="generate_pin.php">Generate Pins</a></li>
         <li class=""><a class="w3-hover-blue" href="set_homework.php">Assignments</a></li>
+        <li class=""><a class="w3-hover-blue" href="news_update.php">News Update</a></li>
         <li class=""><a class="w3-hover-blue" href="logout.php">Logout</a></li>
     </ul><br><br>
     <div class="w3-center">

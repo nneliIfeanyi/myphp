@@ -279,10 +279,10 @@ include 'config.php';
 <section class="section darkskin fullscreen paralbackground parallax" style="background-image:url(img/edit.jpg)" data-img-width="1627" data-img-height="868" data-diff="100">
 
 <div class="overlay"></div>
-<div class="container w3-center">
+<div style="margin: auto;width: 90%;">
 <div class="row">
 <div class="col-md-12">
-<div class="section-title text-center">
+<div class="section-title">
 <h4>OUR PAST EVENTS</h4>
 <p>We Shared Awesome times together exploring places...</p>
 </div>
@@ -456,7 +456,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit19.jpg" width="70%" height="120px" alt="">
+<img src="img/edit19.jpg" width="70%" height="170px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -466,18 +466,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit17.jpg" width="70%" height="120px" alt="">
-<div class="magnifier">
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit15.jpg" width="70%" height="120px" alt="">
+<img src="img/edit17.jpg" width="70%" height="170px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -488,7 +477,18 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit4.jpg" width="70%" height="120px" alt="">
+<img src="img/edit15.jpg" width="70%" height="170px" alt="">
+<div class="magnifier">
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="owl-featured">
+<div class="shop-item-list ">
+<div class="">
+<img src="img/edit4.jpg" width="70%" height="170px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -498,7 +498,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit2.jpg" width="70%" height="120px" alt="">
+<img src="img/edit2.jpg" width="70%" height="170px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -508,7 +508,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit18.jpg" width="70%" height="120px" alt="">
+<img src="img/edit18.jpg" width="70%" height="170px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -518,7 +518,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit3.jpg" width="70%" height="120px" alt="">
+<img src="img/edit3.jpg" width="70%" height="170px" alt="">
 <div class="magnifier">
 </div>
 </div>

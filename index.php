@@ -433,8 +433,23 @@ $body = $result['body'];
 </section>
 
 
+<style type="text/css">
 
-<div class="container">
+.contents img{
+  width: 100%;
+  border-radius: 10px;
+  transition: all .7s ease-out;
+}
+
+.contents img:hover{
+  transform: scale(1.1) !important;
+  margin: 0 10px !important;
+}
+</style>
+
+
+
+<div class="container contents">
 <div class="row">
 <div class="col-md-12">
 <div class="section-title text-center">

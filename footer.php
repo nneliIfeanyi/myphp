@@ -11,7 +11,7 @@
 <h4 style="color:#aaa;">School Anthem</h4>
 <hr>
 </div>
-<div class="w3-half w3-serif">
+<div class="w3-half w3-serif w3-small">
 <p style="color:antiquewhite;">We are the bright students of Glory Land.<br>Glory Land <span class="w3-large"><b> x</b></span>2</p>
 
 <p style="color:antiquewhite;">As the light covers the darkness we shine above other school.<br>above other <span class="w3-large"><b> x</b></span>2</p>
@@ -53,13 +53,13 @@
 <hr>
 </div>
 <ul class="list-inline w3-serif">
-<li style="color:antiquewhite;"><a class="social" href="#"><i class="fa fa-facebook"></i></a></li>
+<li style="color:antiquewhite;"><a class="social" href=""><i class="fa fa-facebook"></i></a></li>
 
-<li style="color:antiquewhite;"><a class="social" href="#"><i class="fa fa-twitter"></i></a></li>
+<li style="color:antiquewhite;"><a class="social" href=""><i class="fa fa-twitter"></i></a></li>
 
-<li style="color:antiquewhite;"><a class="social" href="#"><i class="fa fa-google-plus"></i></a></li>
+<li style="color:antiquewhite;"><a class="social" href=""><i class="fa fa-google-plus"></i></a></li>
 
-<li style="color:antiquewhite;">  <a class="social" href="#"><i class="fa fa-linkedin"></i></a></li>
+<li style="color:antiquewhite;">  <a class="social" href=""><i class="fa fa-linkedin"></i></a></li>
 </ul>
 </div>
 </div>

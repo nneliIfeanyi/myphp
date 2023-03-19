@@ -97,7 +97,7 @@ include 'config.php';
 <span class="fa fa-bars"></span>
 </button>
 <div class="logo">
-<a class="navbar-brand" href="index.html">
+<a class="navbar-brand" href="index.php">
       <i class="fa fa-graduation-cap" style="color:red;"></i>
       <span class="w3-large w3-text-blue w3-serif">C.P.M. <span class="w3-cursive w3-medium">International School</span></span>
 </a>

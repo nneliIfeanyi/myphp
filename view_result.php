@@ -83,7 +83,7 @@ if(!isset($_GET['name']) && !isset($_GET['term']) && !isset($_GET['year'])){
                       <td><?php  echo $term; ?></td>
                       <td>
                        <a href="admin/<?php echo $reportCard;?>" class="w3-text-green w3-btn w3-small">View result</a>
-                       <a href="download.php?result=<?php echo $reportCard; ?>" target="_blank" class="w3-text-teal w3-btn w3-tiny">Download result</a>
+                       <!--<a href="download.php?result=<?php echo $reportCard; ?>" target="_blank" class="w3-text-teal w3-btn w3-tiny">Download result</a>-->
                       </td>
                       
 

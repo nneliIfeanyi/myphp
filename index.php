@@ -92,7 +92,7 @@ include 'config.php';
 <span class="fa fa-bars"></span>
 </button>
 <div class="logo">
-<a class="navbar-brand" href="index.html">
+<a class="navbar-brand" href="index.php">
       <i class="fa fa-graduation-cap" style="color:red;"></i>
       <span class="w3-large w3-text-blue w3-serif">C.P.M. <span class="w3-cursive w3-medium">International School</span></span>
 </a>
@@ -185,7 +185,7 @@ include 'config.php';
 <div class="big-title">
 <h3><i class="fa fa-user"></i> <span>WHO</span> WE ARE</h3>
 </div>
-<p>We are a co-education mission<br> school that welcomes any student interested in exploring and soaring<br>the fields of academic and moral excellence.</p>
+<p>We are a co-education mission<br> school that welcomes any student<br> interested in exploring and soaring<br>the fields of academic and moral excellence.</p>
 </li>
 
 <li>
@@ -201,7 +201,7 @@ include 'config.php';
 <h3><i class="fa fa-bullseye"></i> <span>OUR</span> MISSION</h3>
 <div class="border-title"></div>
 </div>
-<p>We aim to develop well rounded and thoughtful students prepared to cope with a changing post-modern world and globalized world.</p>
+<p>We aim to develop well rounded and <br>thoughtful students prepared to cope<br> with a changing post-modern world and <br>globalized world.</p>
 </li>
 <div class="w3-center"><a href="page-about.php" class="btn btn-default" title="About Us">Learn More</a></div>
 </ul>
@@ -448,7 +448,7 @@ $body = $result['body'];
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit19.jpg" width="70%" height="140px" alt="">
+<img src="img/edit19.jpg" width="100%" height="100px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -458,18 +458,7 @@ $body = $result['body'];
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit17.jpg" width="70%" height="140px" alt="">
-<div class="magnifier">
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit15.jpg" width="70%" height="140px" alt="">
+<img src="img/edit17.jpg" width="100%" height="100px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -480,7 +469,18 @@ $body = $result['body'];
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit4.jpg" width="70%" height="140px" alt="">
+<img src="img/edit15.jpg" width="100%" height="100px" alt="">
+<div class="magnifier">
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="owl-featured">
+<div class="shop-item-list ">
+<div class="">
+<img src="img/edit4.jpg" width="100%" height="100px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -490,7 +490,7 @@ $body = $result['body'];
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit2.jpg" width="70%" height="140px" alt="">
+<img src="img/edit2.jpg" width="100%" height="100px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -500,7 +500,7 @@ $body = $result['body'];
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit18.jpg" width="70%" height="140px" alt="">
+<img src="img/edit18.jpg" width="100%" height="100px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -510,7 +510,7 @@ $body = $result['body'];
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit3.jpg" width="70%" height="140px" alt="">
+<img src="img/edit3.jpg" width="100%" height="100px" alt="">
 <div class="magnifier">
 </div>
 </div>

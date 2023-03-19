@@ -151,7 +151,6 @@ include 'config.php';
 
 
 
-<section class="white section">
 <div class="container">
 
       <!--=== WELCOME ADDRESS ===-->
@@ -162,7 +161,7 @@ include 'config.php';
 <img src="img/badge_.png" width="60%" style="border-radius:10%;height: 150px;" class="w3-image" />
 </div>
 <div class="w3-half">
-<h4>Glory Land Academy</h4>
+<h4><span class="w3-tiny">a.k.a</span>Glory Land Academy</h4>
 <p>Welcomes all tribes, religion and nationality to be part of this noble vision. We are dedicated to giving quality and sound education without any track out of their life time. We are glad you are here, and we promise to meet up to your expectations. <br />Once again you are welcome!
 </p>
 </div>
@@ -170,12 +169,11 @@ include 'config.php';
 </div>
 
 </div>
-</section>
 
 
-<section class="grey section">
+
 <div class="row-fluid">
-<div class="col-md-6 myimg"></div>
+
 <div class="container">
 <div class="row">
 <div class="col-md-6 col-md-offset-6">
@@ -183,34 +181,29 @@ include 'config.php';
 <div class="textrotate">
 <ul class="bxslider">
 
-<li>
+<li class="">
 <div class="big-title">
-<p class="lead">Glory Land Academy</p>
 <h3><i class="fa fa-user"></i> <span>WHO</span> WE ARE</h3>
-<div class="border-title"></div>
 </div>
-<p>We are a co-education mission school that welcomes any student interested in exploring and soaring the fields of academic and moral excellence.</p>
-<a href="page-about.html" class="btn btn-default" title="">Learn More</a>
+<p>We are a co-education mission<br> school that welcomes any student interested in exploring and soaring<br>the fields of academic and moral excellence.</p>
 </li>
 
 <li>
 <div class="big-title">
-<p class="lead">Glory Land Academy</p>
 <h3><i class="fa fa-eye"></i> <span>OUR</span> VISSION</h3>
 <div class="border-title"></div>
 </div>
-<p>To ensure a solid foundation in education and moral training in the fear of God.</p>
-<a href="#" class="btn btn-default" title="">Learn More</a>
+<p>To ensure a solid foundation in <br>education and moral training in the<br> fear of God.</p>
 </li>
+
 <li>
 <div class="big-title">
-<p class="lead">Glory Land Academy</p>
 <h3><i class="fa fa-bullseye"></i> <span>OUR</span> MISSION</h3>
 <div class="border-title"></div>
 </div>
 <p>We aim to develop well rounded and thoughtful students prepared to cope with a changing post-modern world and globalized world.</p>
-<a href="#contact" class="btn btn-default" title="">Contact Us</a>
 </li>
+<div class="w3-center"><a href="page-about.php" class="btn btn-default" title="About Us">Learn More</a></div>
 </ul>
 </div>
 </div>
@@ -218,7 +211,7 @@ include 'config.php';
 </div>
 </div>
 </div>
-</section>
+
 
 
 
@@ -239,8 +232,8 @@ include 'config.php';
 
 <li>
 <div class="big-title">
-<p class="lead">Our Facilities</p>
-<h3 class="w3-large"><b>Kids's Playground</b></h3>
+<p class="lead w3-red w3-tag"><b>Our Facilities</b></p>
+<h3 class="w3-large"><b>Kid's Playground</b></h3>
 <div class="border-title"></div>
 </div>
 <img src="img/edit10.jpg" alt="">
@@ -248,7 +241,7 @@ include 'config.php';
 
 <li>
 <div class="big-title">
-<p class="lead">Our Facilities</p>
+<p class="lead w3-red w3-tag"><b>Our Facilities</b></p>
 <h3 class="w3-large"><b>Science Labouratory</b></h3>
 <div class="border-title"></div>
 </div>
@@ -256,7 +249,7 @@ include 'config.php';
 </li>
 <li>
 <div class="big-title">
-<p class="lead">Our Facilities</p>
+<p class="lead w3-red w3-tag"><b>Our Facilities</b></p>
 <h3 class="w3-large"><b>Computer Lab | ICT Unit</b></h3>
 <div class="border-title"></div>
 </div>
@@ -279,33 +272,35 @@ include 'config.php';
 <section class="section darkskin fullscreen paralbackground parallax" style="background-image:url(img/edit.jpg)" data-img-width="1627" data-img-height="868" data-diff="100">
 
 <div class="overlay"></div>
-<div style="margin: auto;width: 90%;">
+<div>
 <div class="row">
 <div class="col-md-12">
-<div class="section-title">
+<div class="section-title text-center">
 <h4>OUR PAST EVENTS</h4>
 <p>We Shared Awesome times together exploring places...</p>
 </div>
 </div>
 </div>
-<div class="row service-center">
+<div class="row service-center" style="margin-left:17px ;">
 <div class="col-md-4 col-sm-6">
 <div class="feature-list" style="margin-bottom:40px;">
-<img src="img/edit13.jpg" width="100%" height="200px" style="margin-bottom:20px; border-radius:10%;" />
-<p class="w3-medium">National Assembly</p>
-<p></p>
-</div>
-</div>
-<div class="col-md-4 col-sm-6">
-<div class="feature-list" style="margin-bottom:40px;">
- <img src="img/edit12.jpg" width="100%" height="200px" style="margin-bottom:20px; border-radius:10%;" />
+ <img src="img/edit12.jpg" width="100%" height="200px" style="margin-bottom:15px; border-radius:10%;" />
 <p class="w3-medium">Abuja International Airport</p>
 <p></p>
 </div>
 </div>
+
+<div class="col-md-4 col-sm-6">
+<div class="feature-list" style="margin-bottom:40px;">
+<img src="img/edit13.jpg" width="104%" height="200px" style="margin-bottom:15px; border-radius:10%;" />
+<p class="w3-medium">National Assembly</p>
+<p></p>
+</div>
+</div>
+
 <div class="col-md-4 col-sm-6">
 <div class="feature-list">
- <img src="img/edit11.jpg" width="100%" height="200px" style="margin-bottom:20px; border-radius:10%;" />
+ <img src="img/edit11.jpg" width="100%" height="200px" style="margin-bottom:15px; border-radius:10%;" />
 <p class="w3-medium">End of year party 2011</p>
 <p></p>
 </div>
@@ -316,8 +311,6 @@ include 'config.php';
 
 <!--=== THE BLOG SECTION ==-->
 
-
-</section>
 <section class="grey section">
 <div class="container">
 <div class="row">
@@ -329,25 +322,30 @@ include 'config.php';
 </div>
 </div>
 <div class="row blog-widget">
-<div class="col-md-4 col-sm-6">
-<div class="blog-wrapper">
-<div class="blog-title">
+
 
 <?php
 $sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 2";
 $query = mysqli_query($conn, $sql);
 if (mysqli_num_rows($query) > 0) {
-$i=1;
+
 while($result = mysqli_fetch_array($query)){
 
 
 $title = $result['title'];
 $body = $result['body'];
 ?>
-<a class="category_title" href="#" title=""><?=$title?></a>
-<p><a href="single.html" title=""><?=$body?></a></p>
+<div class="col-md-4 col-sm-6">
+<div class="blog-wrapper">
+<div class="blog-title">
+<p class="category_title" title=""><?=$title?></p>
+<p><?=$body?></p>
+</div>
+</div>
+</div>
+
 <?php
-$i++;
+
 }
 }else{
 ?>
@@ -360,11 +358,7 @@ $i++;
 <?php
 }
 ?>
-<a href="blog.php" class="btn btn-default" title="">View More</a>
 
-</div>
-</div>
-</div>
 </div>
 </div>
 </section>
@@ -440,13 +434,11 @@ $i++;
 
 
 
-
-<section class="grey section">
 <div class="container">
 <div class="row">
 <div class="col-md-12">
 <div class="section-title text-center">
-<h4>Gallery</h4>
+<h4>Photo Gallery</h4>
 <p></p>
 </div>
 </div>
@@ -456,7 +448,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit19.jpg" width="70%" height="170px" alt="">
+<img src="img/edit19.jpg" width="70%" height="140px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -466,18 +458,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit17.jpg" width="70%" height="170px" alt="">
-<div class="magnifier">
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit15.jpg" width="70%" height="170px" alt="">
+<img src="img/edit17.jpg" width="70%" height="140px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -488,7 +469,18 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit4.jpg" width="70%" height="170px" alt="">
+<img src="img/edit15.jpg" width="70%" height="140px" alt="">
+<div class="magnifier">
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="owl-featured">
+<div class="shop-item-list ">
+<div class="">
+<img src="img/edit4.jpg" width="70%" height="140px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -498,7 +490,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit2.jpg" width="70%" height="170px" alt="">
+<img src="img/edit2.jpg" width="70%" height="140px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -508,7 +500,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit18.jpg" width="70%" height="170px" alt="">
+<img src="img/edit18.jpg" width="70%" height="140px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -518,7 +510,7 @@ $i++;
 <div class="owl-featured">
 <div class="shop-item-list ">
 <div class="">
-<img src="img/edit3.jpg" width="70%" height="170px" alt="">
+<img src="img/edit3.jpg" width="70%" height="140px" alt="">
 <div class="magnifier">
 </div>
 </div>
@@ -529,7 +521,6 @@ $i++;
 
 </div>
 </div>
-</section>
 
 <?php
 

@@ -383,7 +383,7 @@ $body = $result['body'];
 <div class="team-members row">
 <div class="col-md-3 col-sm-6 col-xs-12">
 <div class="team">
-<img src="img/edit16.jpg" width="70%" height="240px" alt="" class="wow fadeInUp">
+<img src="img/edit16.jpg" width="70%" height="250px" alt="" class="wow w3-image fadeInUp">
 <div class="team-hover-content">
 <h5>Principal</h5>
 <span></span>
@@ -406,9 +406,9 @@ $body = $result['body'];
 
 <div class="col-md-3 col-sm-6 col-xs-12">
 <div class="team">
-<img src="" width="70%" height="220px" alt="" class="wow fadeInUp">
+<img src="img/edit21.jpg" width="70%" height="250px" alt="" class="wow w3-image fadeInUp">
 <div class="team-hover-content">
-<h5>Name</h5>
+<h5>H.O.D Science</h5>
 <span></span>
 <p></p>
 </div>
@@ -417,9 +417,9 @@ $body = $result['body'];
 
 <div class="col-md-3 col-sm-6 col-xs-12">
 <div class="team">
-<img src="" width="70%" height="220px" alt="" class="wow fadeInUp">
+<img src="img/edit22.jpg" width="70%" height="250px" alt="" class="wow w3-image fadeInUp">
 <div class="team-hover-content">
-<h5>Name</h5>
+<h5>Exam Officer | School_Admin</h5>
 <span></span>
 <p></p>
 </div>

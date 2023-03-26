@@ -10,15 +10,15 @@ if (isset($_SESSION['username'])) {
 
 	if (isset($_GET['name2'])) {
 		
-		$name2 = $_GET['name2'];
-		$sql = "SELECT * FROM student WHERE name = '$name2' ";
+		$name = $_GET['name2'];
+		$sql = "SELECT * FROM student WHERE name = '$name' ";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 
 			while ($info = mysqli_fetch_assoc($result)) {
 
-				$id = $info['ID'];
+				$id = $info['id'];
 				
 				$dbname= $info['name'];
 				$gender = $info['sex'];
@@ -41,37 +41,15 @@ if (isset($_SESSION['username'])) {
 			$gender = mysqli_real_escape_string($conn, htmlspecialchars($_POST['sex'], ENT_QUOTES, 'utf-8'));
 
 
-			$sql = "UPDATE student SET name='$stu_name',sex='$gender',classesID='$stu_class' WHERE ID = '$id'";
+			$sql = "UPDATE student SET name='$stu_name',sex='$gender',classesID='$stu_class' WHERE id = '$id'";
 
 			$query = mysqli_query($conn, $sql);
 
 			if ($query) {
 				
-				$msg1 = "<div class='w3-padding w3-margin-top w3-margin-bottom w3-green'>
-
-							Changes made successfully.
-
-						</div>";
-						?>
-						<meta http-equiv="refresh" content="12; all_students.php">
-
-						<?php
-
-						$sql = "SELECT * FROM student WHERE name = '$stu_name' ";
-						$result = mysqli_query($conn, $sql);
-
-						if (mysqli_num_rows($result) > 0) {
-
-							while ($info = mysqli_fetch_assoc($result)) {
-
-								$id = $info['ID'];
-								
-								$dbname= $info['name'];
-								$gender = $info['sex'];
-								$class = $info['classesID'];
-							}
-							
-						}
+				$msg1 = "Changes Made Successfully.";
+						$_SESSION['msg'] = $msg1;
+						header("location:all_students.php");
 			}else{
 
 
@@ -110,9 +88,8 @@ if (isset($_SESSION['username'])) {
 			<div class="w3-row-padding">
 				<div class="w3-twothird">
 				
-				<?= $msg1 ?>
 				<?= $msg2 ?>
-				<h4 class="my-font w3-center">You are editing <strong><?= $name2 ?>'s</strong> info.</h4>
+				<h4 class="my-font w3-center">You are editing <strong><?= $name ?>'s</strong> info.</h4>
 				<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
 					
 

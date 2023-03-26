@@ -11,6 +11,7 @@ if(!isset($_SESSION['username'])){
 }else{
   
    $username = $_SESSION['username'];
+   $msg1 = '';
 
 ?>
 
@@ -43,7 +44,23 @@ if(!isset($_SESSION['username'])){
             <img src="images/badge.jpg" width="100" height="100" class="w3-circle">
          </div>
     <div style="height: auto; overflow-y: scroll;" class="">
-      <h2 class="w3-center my-font w3-large w3-padding-16"><strong>A Comprehensive List of All Students</strong><span class="w3-small w3-opacity"><b>&nbsp;(In Alphabetical order)</b></span></h2>
+      <h2 class="w3-center my-font w3-large w3-padding-16"><strong>A Comprehensive List of All Students</strong><span class="w3-small w3-opacity"><b>&nbsp;<br>(In Alphabetical order)</b></span></h2>
+      <?php
+
+      if (isset($_SESSION['msg'])) {
+        $msg1 = $_SESSION['msg'];
+
+      }
+      if (!empty($msg1)) {
+
+      ?>
+      <div class='w3-padding w3-large w3-text-green'>
+        <?=$msg1?>
+      </div>
+      <?php
+       
+      }
+      ?>
       <div class="">
         <table class="w3-table-all">
           <thead>
@@ -81,8 +98,8 @@ if(!isset($_SESSION['username'])){
               <td><?php  echo $pin; ?></td>
             
               <td>
-               <a href="edit.php?name2=<?php echo $name;?>" class="w3-text-red w3-btn w3-tiny">Edit</a>
-              <a href="delete.php?name2=<?=$name?>" class="w3-text-green w3-btn  w3-tiny">Delete</a>
+               <a href="edit.php?name2=<?php echo $name;?>" class="w3-text-green w3-btn w3-tiny">Edit</a>
+              <a href="delete.php?name2=<?=$name?>" class="w3-text-red w3-btn  w3-tiny">Delete</a>
              </td>
               
 

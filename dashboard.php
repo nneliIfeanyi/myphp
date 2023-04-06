@@ -13,7 +13,8 @@ if (isset($_SESSION['username'])) {
 $pinErr = $yearErr = $termErr = $dbErr = $msg = $msg1 = $Err = '';
 
 if (isset($_POST['submit'])) {
-	$scratch_pin = mysqli_real_escape_string($conn, htmlspecialchars($_POST['scratch_pin'], ENT_QUOTES, 'utf-8'));
+	$scratch_pin1 = mysqli_real_escape_string($conn, htmlspecialchars($_POST['scratch_pin'], ENT_QUOTES, 'utf-8'));
+	$scratch_pin = trim($scratch_pin1);
 
 	$sch_year = mysqli_real_escape_string($conn, htmlspecialchars($_POST['year'], ENT_QUOTES, 'utf-8'));
 
@@ -88,7 +89,7 @@ if (isset($_POST['submit'])) {
 			
 
 		}else{
-			$pinErr = "The pin you entered is not invalid.";
+			$pinErr = "The pin you entered is invalid.";
 		}
 	}
 }//end of isset POST 'submit'

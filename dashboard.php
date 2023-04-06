@@ -36,8 +36,6 @@ if (isset($_POST['submit'])) {
 		$query = mysqli_query($conn, $sql);
 		if (mysqli_num_rows($query) > 0 ) {
 
-			if($activated_date < $exp_date){
-
 				$sql2 = "SELECT * FROM pins WHERE pin_code = '$scratch_pin'";
 				$query2 = mysqli_query($conn, $sql2);
 
@@ -82,10 +80,6 @@ if (isset($_POST['submit'])) {
 					}
 
 				}//End of if pin is valid.
-				
-			}else{
-				$pinErr =  "The pin you entered has expired.";
-			}
 			
 
 		}else{

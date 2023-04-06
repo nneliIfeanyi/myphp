@@ -38,18 +38,18 @@ if (isset($_POST['submit'])) {
 
 			if($activated_date < $exp_date){
 
-				$sql = "SELECT * FROM pins WHERE pin_code = '$scratch_pin'";
-				$query2 = mysqli_query($conn, $sql);
+				$sql2 = "SELECT * FROM pins WHERE pin_code = '$scratch_pin'";
+				$query2 = mysqli_query($conn, $sql2);
 
 				if (mysqli_num_rows($query2) == 0) {
 					
-					$sql = "INSERT INTO pins (pin_code,exp_date,date_issued,used_by,status) VALUES('$scratch_pin','$exp_date','$activated_date','$username','1')";
-					$query3 = mysqli_query($conn, $sql);
+					$sql3 = "INSERT INTO pins (pin_code,exp_date,date_issued,used_by,status) VALUES('$scratch_pin','$exp_date','$activated_date','$username','1')";
+					$query3 = mysqli_query($conn, $sql3);
 
-					$sql = "UPDATE generated_pins SET status = 'used' WHERE pin = '$scratch_pin'";
-					$query4 = mysqli_query($conn, $sql);
-					$sql = "UPDATE student SET card_serial_no = '$scratch_pin' WHERE name = '$username'";
-					$query5 = mysqli_query($conn, $sql);
+					$sql4 = "UPDATE generated_pins SET status = 'used' WHERE pin = '$scratch_pin'";
+					$query4 = mysqli_query($conn, $sql4);
+					$sql5 = "UPDATE student SET card_serial_no = '$scratch_pin' WHERE name = '$username'";
+					$query5 = mysqli_query($conn, $sql5);
 						//FETCH RESULT
 						$msg = "<div class='w3-green w3-padding-small w3-margin-bottom w3-round-large' style='width:100%;'>
 					                Fetching your result.. pls wait<br>
@@ -61,8 +61,8 @@ if (isset($_POST['submit'])) {
 
 				}elseif (mysqli_num_rows($query2) > 0) {
 					
-					$sql = "SELECT * FROM pins WHERE pin_code = '$scratch_pin'";
-					$query6 = mysqli_query($conn, $sql);
+					$sql6 = "SELECT * FROM pins WHERE pin_code = '$scratch_pin'";
+					$query6 = mysqli_query($conn, $sql6);
 					if (mysqli_num_rows($query6) > 0) {
 						$check = mysqli_fetch_assoc($query6);
 						if ($username === $check['used_by']) {

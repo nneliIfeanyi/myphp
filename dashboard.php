@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 
 				if (mysqli_num_rows($query2) == 0) {
 					
-					$sql3 = "INSERT INTO pins (pin_code,exp_date,date_issued,used_by,status) VALUES('$scratch_pin','$exp_date','$activated_date','$username','1')";
+					$sql3 = "INSERT INTO pins (pin_code,exp_date,date_issued,used_by) VALUES('$scratch_pin','$exp_date','$activated_date','$username')";
 					$query3 = mysqli_query($conn, $sql3);
 
 					$sql4 = "UPDATE generated_pins SET status = 'used' WHERE pin = '$scratch_pin'";
@@ -49,13 +49,13 @@ if (isset($_POST['submit'])) {
 					$sql5 = "UPDATE student SET card_serial_no = '$scratch_pin' WHERE name = '$username'";
 					$query5 = mysqli_query($conn, $sql5);
 						//FETCH RESULT
-						$msg = "<div class='w3-green w3-padding-small w3-margin-bottom w3-round-large' style='width:100%;'>
-					                Fetching your result.. pls wait<br>
+					$msg = "<div class='w3-green w3-padding-small w3-margin-bottom w3-round-large' style='width:100%;'>
+		                Fetching your result.. pls wait<br>
 
-					                <span><i class='fa fa-spinner w3-text-light-grey w3-large fa-spin fa-fw'></i></span>
-					               
-					                <meta http-equiv='refresh' content='4; view_result.php?name=$username&term=$term&year=$sch_year'>
-					             </div>";
+		                <span><i class='fa fa-spinner w3-text-light-grey w3-large fa-spin fa-fw'></i></span>
+		               
+		                <meta http-equiv='refresh' content='4; view_result.php?name=$username&term=$term&year=$sch_year'>
+		             </div>";
 
 				}elseif (mysqli_num_rows($query2) > 0) {
 					

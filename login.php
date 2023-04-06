@@ -8,7 +8,8 @@ $passErr = $nameErr = $msg= $msg2= $username= '';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
 
-	$username = mysqli_real_escape_string($conn, htmlspecialchars($_POST['username'], ENT_QUOTES, 'utf-8'));
+	$username1 = mysqli_real_escape_string($conn, htmlspecialchars($_POST['username'], ENT_QUOTES, 'utf-8'));
+	$username = trim($username1);
 	$password = mysqli_real_escape_string($conn, htmlspecialchars($_POST['password'], ENT_QUOTES, 'utf-8'));
 	if (empty($username)) {
 

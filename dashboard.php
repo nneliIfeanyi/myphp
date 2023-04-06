@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 					$sql = "UPDATE student SET card_serial_no = '$scratch_pin' WHERE name = '$username'";
 					$query5 = mysqli_query($conn, $sql);
 						//FETCH RESULT
-						$msg = "<div class='w3-green w3-padding-small w3-round-large' style='width:100%;margin-left:20px;'>
+						$msg = "<div class='w3-green w3-padding-small w3-margin-bottom w3-round-large' style='width:100%;margin-left20px;'>
 					                Fetching your result.. pls wait
 
 					                <span><i class='fa fa-spinner w3-text-light-grey w3-large fa-spin fa-fw'></i></span>
@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
 						if ($username === $check['used_by']) {
 							//FETCH RESULT
 
-								$msg = "<div class='w3-green w3-padding-small w3-round-large' 			style='width:100%;margin-left:20px;'>
+								$msg = "<div class='w3-green w3-margin-bottom w3-padding-small w3-round-large' 			style='width:100%;margin-left20px;'>
 							                Fetching your result.. pls wait
 
 							                <span><i class='fa fa-spinner w3-text-light-grey w3-large fa-spin fa-fw'></i></span>

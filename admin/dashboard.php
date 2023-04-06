@@ -8,7 +8,8 @@ if(isset($_SESSION['username'])){
   $nameErr = $genderErr = $classErr = $msg1 = $msg2 ='';
 
   if (isset($_POST['submit'])) {
-    $stu_name = mysqli_real_escape_string($conn, htmlspecialchars($_POST['name'], ENT_QUOTES, 'utf-8'));
+    $stu_name1 = mysqli_real_escape_string($conn, htmlspecialchars($_POST['name'], ENT_QUOTES, 'utf-8'));
+    $stu_name = trim($stu_name1);
     $stu_class =mysqli_real_escape_string($conn, htmlspecialchars($_POST['class'], ENT_QUOTES, 'utf-8'));
     $sex = mysqli_real_escape_string($conn, htmlspecialchars($_POST['sex'], ENT_QUOTES, 'utf-8'));
     $reg_no = "12345";

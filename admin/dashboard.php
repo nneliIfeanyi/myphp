@@ -141,6 +141,7 @@ if(isset($_SESSION['username'])){
                             <option value="js2A">J.S.2A</option>
                             <option value="js2b">J.S.2b</option>
                             <option value="js3">J.S.3</option>
+                            <option value="class6">Common Entrance Pupils</option>
 
                         </select>
                         <span><?php echo $classErr; ?></span>

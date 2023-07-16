@@ -123,11 +123,12 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
                     
                       $i=1;
                       while($result2 = mysqli_fetch_array($query2)){
+                        $id = $result2['id'];
 
                         $gen_pin = $result2['pin'];
                      
                         $date_gen = $result2['date_generated'];
-                           $pin_status = $result2['status'];
+                        $pin_status = $result2['status'];
                         $exp_date = $result2['exp_date'];
                     
                     ?>
@@ -143,7 +144,10 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
                           <?php
                         }else{
                           ?>
-                          <td><span class="w3-btn w3-red w3-round-large w3-small"><?php  echo $pin_status; ?></span></td>
+                          <td>
+                            <span class="w3-btn w3-red w3-round-large w3-small"><?php  echo $pin_status; ?></span>
+                            <a href="delete.php?pin=<?=$gen_pin?>&id=<?=$id?>" class="w3-text-red w3-btn  w3-tiny">Delete</a>
+                          </td>
                           <?php
                         }
                       ?>

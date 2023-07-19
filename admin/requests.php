@@ -49,7 +49,6 @@ if(!isset($_SESSION['username'])){
               <th><b>Pin Code</b></th>
               <th><b>Used_By</b></th>
                <th><b>Date_used</b></th>
-              <th><b>Expiry_Date</b></th>
             </tr>
           </thead>
 
@@ -67,15 +66,13 @@ if(!isset($_SESSION['username'])){
                 $scratch_pin = $result['pin_code'];
                 $usedBy = $result['used_by'];
                 $dateUsed = $result['date_issued'];
-                $expiry = $result['exp_date'];
                
             ?>
             <tr class="w3-text-dark-grey">
               <td><?php echo $i; ?></td>
               <td><?php  echo $scratch_pin; ?></td>
               <td><?php  echo $usedBy; ?></td>
-              <td><?php  echo $dateUsed; ?></td>
-              <td><?php  echo $expiry; ?></td>              
+              <td><?php  echo $dateUsed; ?></td>             
             </tr>
 
             <?php

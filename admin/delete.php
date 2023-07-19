@@ -70,7 +70,7 @@ if (isset($_GET['name']) && isset($_GET['year'])) {
 	$used_pin = $_GET['pin'];
 	$pin_id = $_GET['id'];
 
-	$sql = "DELETE FROM generated_pins WHERE id = '$pin_id' AND pin = '$used_pin' LIMIT 1";
+	$sql = "DELETE FROM generated_pins WHERE status = 'used'";
 	$query = mysqli_query($conn, $sql);
 
 	if ($query) {

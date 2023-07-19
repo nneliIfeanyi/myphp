@@ -20,8 +20,7 @@ if (isset($_POST['submit'])) {
 
 	$term = mysqli_real_escape_string($conn, htmlspecialchars($_POST['term'], ENT_QUOTES, 'utf-8'));
 
-	$activated_date = date('2023-01-18');
-	$exp_date = date('2023-04-01');
+	$activated_date = date('Y-m-d');
 
 	if (empty($scratch_pin)) {
 		$pinErr = 'Pls enter your scratch card pin';
@@ -36,26 +35,26 @@ if (isset($_POST['submit'])) {
 		$query = mysqli_query($conn, $sql);
 		if (mysqli_num_rows($query) > 0 ) {
 
-				$sql2 = "SELECT * FROM pins WHERE pin_code = '$scratch_pin'";
-				$query2 = mysqli_query($conn, $sql2);
+			$sql2 = "SELECT * FROM pins WHERE pin_code = '$scratch_pin'";
+			$query2 = mysqli_query($conn, $sql2);
 
-				if (mysqli_num_rows($query2) == 0) {
-					
-					$sql3 = "INSERT INTO pins (pin_code,exp_date,date_issued,used_by) VALUES('$scratch_pin','$exp_date','$activated_date','$username')";
-					$query3 = mysqli_query($conn, $sql3);
+			if (mysqli_num_rows($query2) == 0) {
+				
+				$sql3 = "INSERT INTO pins (pin_code,date_issued,used_by) VALUES('$scratch_pin','$activated_date','$username')";
+				$query3 = mysqli_query($conn, $sql3);
 
-					$sql4 = "UPDATE generated_pins SET status = 'used' WHERE pin = '$scratch_pin'";
-					$query4 = mysqli_query($conn, $sql4);
-					$sql5 = "UPDATE student SET card_serial_no = '$scratch_pin' WHERE name = '$username'";
-					$query5 = mysqli_query($conn, $sql5);
-						//FETCH RESULT
-					$msg = "<div class='w3-green w3-padding-small w3-margin-bottom w3-round-large' style='width:100%;'>
-		                Fetching your result.. pls wait<br>
+				$sql4 = "UPDATE generated_pins SET status = 'used' WHERE pin = '$scratch_pin'";
+				$query4 = mysqli_query($conn, $sql4);
+				$sql5 = "UPDATE student SET card_serial_no = '$scratch_pin' WHERE name = '$username'";
+				$query5 = mysqli_query($conn, $sql5);
+					//FETCH RESULT
+				$msg = "<div class='w3-green w3-padding-small w3-margin-bottom w3-round-large' style='width:100%;'>
+	                Fetching your result.. pls wait<br>
 
-		                <span><i class='fa fa-spinner w3-text-light-grey w3-large fa-spin fa-fw'></i></span>
-		               
-		                <meta http-equiv='refresh' content='4; view_result.php?name=$username&term=$term&year=$sch_year'>
-		             </div>";
+	                <span><i class='fa fa-spinner w3-text-light-grey w3-large fa-spin fa-fw'></i></span>
+	               
+	                <meta http-equiv='refresh' content='4; view_result.php?name=$username&term=$term&year=$sch_year'>
+	             </div>";
 
 				}elseif (mysqli_num_rows($query2) > 0) {
 					
@@ -66,13 +65,13 @@ if (isset($_POST['submit'])) {
 						if ($username === $check['used_by']) {
 							//FETCH RESULT
 
-								$msg = "<div class='w3-green w3-margin-bottom w3-padding-small w3-round-large' 			style='width:100%;'>
-							                Fetching your result.. pls wait<br>
+							$msg = "<div class='w3-green w3-margin-bottom w3-padding-small w3-round-large' 			style='width:100%;'>
+						                Fetching your result.. pls wait<br>
 
-							                <span><i class='fa fa-spinner w3-text-light-grey w3-large fa-spin fa-fw'></i></span>
-							               
-							                <meta http-equiv='refresh' content='4; view_result.php?name=$username&term=$term&year=$sch_year'>
-							            </div>";
+						                <span><i class='fa fa-spinner w3-text-light-grey w3-large fa-spin fa-fw'></i></span>
+						               
+						                <meta http-equiv='refresh' content='4; view_result.php?name=$username&term=$term&year=$sch_year'>
+						            </div>";
 						}else{
 							$pinErr = "The pin you entered is already used by another student.";
 						}
@@ -139,6 +138,7 @@ if (isset($_POST['submit'])) {
 									<option value="first_term">First Term</option>
 									<option value="second_term">Second Term</option>
 									<option value="third_term">Third Term</option>
+									<option value="Common Entrance">Common Entrance</option>
 								</select>
 								<span class="w3-red"><?= $termErr ?></span>
 							</div>

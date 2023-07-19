@@ -149,6 +149,7 @@ include '../functions.php';
 							<option value="first_term">First Term</option>
 							<option value="second_term">Second Term</option>
 							<option value="third_term">Third Term</option>
+							<option value="Common Entrance">Common Entrance</option>
 						</select>
 
 						<span><?php echo $Err2; ?></span>

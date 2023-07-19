@@ -89,7 +89,7 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
             <div class="w3-padding-16">
               <div class="w3-margin-top w3-padding-16 w3-padding w3-blue-gray">
                 <input type="number" name="number" placeholder="Enter no. of pins to generate.." class="w3-input w3-white">
-                <span class="w3-padding-small w3-text-red w3-opacity">Maximum of 100 pins at a time.</span>
+                <span class="w3-padding-small">Maximum of 100 pins at a time.</span>
                 <span class="error"><?php echo "$pinErr";?></span>
               </div>
               <div class="w3-margin-top" style="margin:auto; width: 60%;">
@@ -109,7 +109,6 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
                   <th><b>Pin</b></th>
                   <th><b>Date_Generated</b></th>
                   <th><b>Status</b></th>
-                   <th><b>Expiry_Date</b></th>
                 </tr>
               </thead>
 
@@ -129,7 +128,7 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
                      
                         $date_gen = $result2['date_generated'];
                         $pin_status = $result2['status'];
-                        $exp_date = $result2['exp_date'];
+                        
                     
                     ?>
                     <tr class="w3-text-dark-grey">
@@ -151,7 +150,7 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
                           <?php
                         }
                       ?>
-                       <td><?php  echo $exp_date; ?></td>
+                      
 
                       
                     </tr>

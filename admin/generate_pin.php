@@ -141,11 +141,13 @@ $sql = "INSERT INTO generated_pins(pin, date_generated, status,exp_date) VALUES(
                           ?>
                           <td><span class="w3-btn w3-green w3-round-large w3-small"><?php  echo $pin_status; ?></span></td>
                           <?php
-                        }else{
+                        }
+
+                        else{
                           ?>
                           <td>
                             <span class="w3-btn w3-red w3-round-large w3-small"><?php  echo $pin_status; ?></span>
-                            <a href="delete.php?pin=<?=$gen_pin?>&id=<?=$id?>" class="w3-text-red w3-btn  w3-tiny">Delete</a>
+                            <!--<a href="delete.php?pin=<?=$gen_pin?>&id=<?=$id?>" class="w3-text-red w3-btn  w3-tiny">Delete</a>-->
                           </td>
                           <?php
                         }

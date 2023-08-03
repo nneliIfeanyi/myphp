@@ -71,27 +71,27 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
 				</div>
 
 				<div class="w3-center my-font p-font-size">Please login with your portal details.
-						<?php
+					<?php
 
-					  	if (!empty($msg)) {
+				  	if (!empty($msg)) {
 
-					  		?>
-					  		<p class="w3-text-red"><?= $msg ?></p>
-					  		<?php
-					  	}
-					 
-						?>
-							<?php
+			  		?>
+			  		<p class="w3-text-red w3-xlarge"><?= $msg ?></p>
+			  		<?php	
+				  	}
+				 
+					?>
+					<?php
 
-						  	if (!empty($msg2)) {
+				  	if (!empty($msg2)) {
 
-						  		?>
-						  		<p class="user w3-text-green"><?= $msg2 ?></p>
-						  		<?php
-						  	}
-						 
-							?>
-						</div>
+			  		?>
+			  		<p class="user w3-text-green w3-xlarge"><?= $msg2 ?></p>
+			  		<?php
+				  	}
+				 
+					?>
+				</div>
 				<div class="container">
 					<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
 						<div class="w3-padding-16">

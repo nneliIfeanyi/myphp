@@ -228,7 +228,7 @@ if (isset($_POST['submit'])) {
 		body.appendChild(panel);
 
 		const msg = document.createElement('p');
-		msg.textContent = 'Please kindly bear with us, as the results compilation is till ongoing. Therefore you might not be able to check your results now until 6pm on Monday 7th August, 2023. We sincerely apologize for this delay. Thanks for your coperation!';
+		msg.textContent = 'Please kindly bear with us, as the 3rd term results compilation is still ongoing. Therefore you might not be able to check your 3rd Term results now until 6pm on Monday 7th August, 2023. We sincerely apologize for this delay. Thanks for your coperation!';
 		panel.appendChild(msg);
 		msg.setAttribute('class','message');
 

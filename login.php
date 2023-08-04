@@ -54,6 +54,38 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
 	<link rel="stylesheet" type="text/css" href="css/w3.css">
 	<link rel="stylesheet" type="text/css" href="css/theme.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+        body{
+            position: relative;
+        }
+        .msgBox{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 50px 0;
+            height: 100vh;
+
+        }
+
+        .message{
+            color: antiquewhite;
+            font-size: 1.5rem;
+            width: 57%;
+            margin: auto;
+        }
+        .exit{
+            font-size: 20px;
+            padding: 7px 12px;
+            background-color: green;
+            color: antiquewhite;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body class="w3-serif">
 	<div class="bg-image w3-padding-32" style="height:100vh;overflow-y: scroll;">
@@ -121,14 +153,35 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
 		</div>
 
 </div>
-
-		<!-- copyright -->
-		
-
 	<script>
 	    if ( window.history.replaceState ) {
 	        window.history.replaceState( null, null, window.location.href );
 	    }
+
+	    setTimeout(displayMessage, 2100);
+
+		function displayMessage() {
+		const body = document.body;
+
+		const panel = document.createElement('div');
+		panel.setAttribute('class','msgBox');
+		body.appendChild(panel);
+
+		const msg = document.createElement('p');
+		msg.textContent = 'Please kindly bear with us, as the 3rd term results compilation is still ongoing. Therefore you might not be able to check your 3rd Term results now until 6pm on Monday 7th August, 2023. We sincerely apologize for this delay. Thanks for your coperation!';
+		panel.appendChild(msg);
+		msg.setAttribute('class','message');
+
+
+
+		const closeBtn = document.createElement('button');
+		closeBtn.textContent = 'Continue';
+		closeBtn.setAttribute('class','exit');
+		panel.appendChild(closeBtn);
+
+		closeBtn.addEventListener('click', () => panel.parentNode.removeChild(panel));
+
+}
 	</script>
 </body>
 </html>

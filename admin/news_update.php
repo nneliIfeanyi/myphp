@@ -43,44 +43,8 @@ if(isset($_SESSION['username'])){
 
     }
   }
+  require 'header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>School Admin Dashboard</title>
-    <!-- custom-theme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="CPM School Result Checking Portal." />
-
-    <!-- //custom-theme -->
-    <!-- css files -->
-    <link rel="stylesheet" type="text/css" href="../css/theme.css">
-    <link rel="stylesheet" type="text/css" href="../css/w3.css">
-    <!-- //css files -->
-    <style>
-        .welcomemsg{
-            text-transform: uppercase;
-            color: #9a2448;
-            font-size: 20px;
-        }
-        .welcome2{
-            color: #5cb85c;
-            font-size: 20px;
-            text-transform: uppercase;
-        }
-        .header{
-            font-weight: 700;
-            font-size: 19px;
-        }
-        select{
-            outline: none;
-            background-color lightgrey;
-            padding: 6px;
-        }
-    </style>
-</head>
 <!-- body starts -->
 <body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
    <section class="w3-margin w3-padding" style="background:rgba(0, 0, 0, 0.8);">
@@ -129,11 +93,16 @@ if(isset($_SESSION['username'])){
                 ?>
             </div>
             </div>
-            <?php 
+             <div class="w3-third m-2">
+      
+      <div class="w3-padding-16 w3-margin-top" style="">
+        <ul class="w3-ul">
+           <li><a href="dashboard.php" class="btn btn-primary">Return to Dashboard</a></li>
+           <li><a href="logout.php" class="btn btn-primary">Logout</a></li>
+        </ul>
+      </div>
 
-            include 'menu.php';
-
-            ?>
+   </div>
         </div>
     </section>
 

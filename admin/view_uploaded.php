@@ -11,29 +11,9 @@ if(!isset($_SESSION['username'])){
 }else{
   
    $username = $_SESSION['username'];
-
+require 'header.php';
 ?>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>School Admin Dashboard</title>
-    <!-- custom-theme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="CPM School Result Checking Portal." />
-
-    <!-- //custom-theme -->
-    <!-- css files -->
-    <link href="../css/w3.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/theme.css">
-    <!-- //css files -->
-  </head>
-
-  <body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
+<body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
 
 
   <section class="w3-margin w3-padding-small" style="background:rgba(0, 0, 0, 0.6);">
@@ -99,11 +79,18 @@ if(!isset($_SESSION['username'])){
    </div>
 
     </div>
-    <?php
+    <div class="row">
+    <div class="w3-third m-2">
+      
+      <div class="w3-padding-16 w3-margin-top" style="">
+        <ul class="w3-ul">
+           <li><a href="dashboard.php" class="btn btn-primary">Return to Dashboard</a></li>
+           <li><a href="logout.php" class="btn btn-primary">Logout</a></li>
+        </ul>
+      </div>
 
-    include 'menu.php';
-
-     ?>
+   </div>
+   </div>
   </div>
 </section>
 

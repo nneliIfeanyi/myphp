@@ -69,26 +69,12 @@ if(isset($_SESSION['username'])){
             }
 }
 }
+require 'header.php';
 ?>
 
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>School Admin Dashboard</title>
-    <!-- custom-theme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="CPM School Result Checking Portal." />
-
-    <!-- //custom-theme -->
-    <!-- css files -->
-    <link rel="stylesheet" type="text/css" href="../css/theme.css">
-    <link rel="stylesheet" type="text/css" href="../css/w3.css">
-    <!-- //css files -->
-    <style>
+<!-- body starts -->
+<body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
+        <style>
         .welcomemsg{
             text-transform: uppercase;
             color: #9a2448;
@@ -109,25 +95,22 @@ if(isset($_SESSION['username'])){
             padding: 6px;
         }
     </style>
-</head>
-<!-- body starts -->
-<body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
    <section class="w3-margin w3-padding" style="background:rgba(0, 0, 0, 0.8);">
-    <div class="w3-row">
-      <div class="w3-twothird w3-padding-16">
-
-            <div class="w3-center w3-margin-top">
-                <img src="images/badge.jpg" width="100" height="100" class="w3-circle">
-            </div>
-
-        <div class="w3-center">
-            <p class="welcomemsg w3-text-green w3-tag">Welcome <?php echo $username; ?></p>
-            <h3 class="text-center header">Please use the form below to upload a student's Data.</h3>
+    <div class="row">
+        <div class="w3-center w3-margin-top mb-5">
+            <img src="images/badge.jpg" width="150" height="130" class="w3-circle"><br><br>
+            <p class="welcomemsg text-light w3-tag">Welcome <?php echo $username; ?></p>
         </div>
+         <?php 
 
+            include 'menu.php';
+
+            ?>
+      <div class="col-md-8 border border-primary">
             <?php echo $msg1; ?>
             <?php echo $msg2; ?>
-            <div class="w3-padding-small w3-center w3-round-large">
+            <div class="w3-padding-small w3-round-large">
+                <h3 class="header">Please use the form below to upload a student's Data.</h3>
                 <form action="" method="post" enctype="multipart/form-data">
                     <!-- Classes Dropdown-->
                     <div class="w3-margin-bottom w3-padding-16">
@@ -166,11 +149,6 @@ if(isset($_SESSION['username'])){
                 </form>
             </div>
             </div>
-            <?php 
-
-            include 'menu.php';
-
-            ?>
         </div>
     </section>
 

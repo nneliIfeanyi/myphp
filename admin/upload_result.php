@@ -11,29 +11,9 @@ if(!isset($_SESSION['username'])){
 }else{
   
    $username = $_SESSION['username'];
-
+require 'header.php';
 ?>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>School Admin Dashboard</title>
-    <!-- custom-theme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="CPM School Result Checking Portal." />
-
-    <!-- //custom-theme -->
-    <!-- css files -->
-    <link href="../css/w3.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/theme.css">
-    <!-- //css files -->
-  </head>
-
-  <body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
+<body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
 
 
   <section class="w3-padding-small" style="background:rgba(0, 0, 0, 0.6);">
@@ -436,7 +416,7 @@ if(!isset($_SESSION['username'])){
    <div id="showJS3" style="display:none; height: auto;" class="">
      <h2 class="w3-center my-font w3-text-white w3-large w3-padding-16">ALL JS3 STUDENTS</h2>
      <div class="">
-       <table class="w3-table-all w3-text-blue" style="width:100%;margin: auto;">
+       <table class="w3-table-all" style="width:100%;margin: auto;">
          <thead>
            <tr class="w3-text-black">
             <th><b>S/N</b></th>
@@ -489,11 +469,16 @@ if(!isset($_SESSION['username'])){
     <div id="msg" style="display:block;" class="w3-margin-top w3-padding-32 w3-xlarge w3-serif">You have not selected any class..</div>
 
     </div>
-    <?php
+    <div class="w3-margin">
+      
+      <div class="w3-padding-16 w3-margin" style="">
+        <ul class="w3-ul">
+           <li><a href="dashboard.php" class="btn btn-primary">Return to Dashboard</a></li>
+           <li><a href="logout.php" class="btn btn-primary">Logout</a></li>
+        </ul>
+      </div>
 
-    include 'menu.php';
-
-     ?>
+   </div>
   </div>
 </section>
 

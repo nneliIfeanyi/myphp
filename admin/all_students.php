@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include '../config.php';
-include '../functions.php';
+require '../config.php';
+require '../functions.php';
 
 if(!isset($_SESSION['username'])){
     
@@ -12,28 +12,8 @@ if(!isset($_SESSION['username'])){
   
    $username = $_SESSION['username'];
    $msg1 = '';
-
+require 'header.php';
 ?>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>School Admin Dashboard</title>
-    <!-- custom-theme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="CPM School Result Checking Portal." />
-
-    <!-- //custom-theme -->
-    <!-- css files -->
-    <link href="../css/w3.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/theme.css">
-    <!-- //css files -->
-  </head>
-
   <body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
 
 
@@ -43,8 +23,20 @@ if(!isset($_SESSION['username'])){
          <div class="w3-center w3-margin-top">
             <img src="images/badge.jpg" width="100" height="100" class="w3-circle">
          </div>
-    <div style="height: auto; overflow-y: scroll;" class="">
+    <div  class="m-2">
       <h2 class="w3-center my-font w3-large w3-padding-16"><strong>A Comprehensive List of All Students</strong><span class="w3-small w3-opacity"><b>&nbsp;<br>(In Alphabetical order)</b></span></h2>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form action="search_results.php" method="get" class="">
+            <div class="input-group mb-2">
+              <input type="text" class="form-control" name="surname" placeholder="Search by surname ...">
+              <button type="submit" class="input-group-text px-3 bg-success text-light">
+                <i class="fa fa-fw fa-search text-white"></i> Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
       <?php
 
       if (isset($_SESSION['msg'])) {
@@ -61,7 +53,7 @@ if(!isset($_SESSION['username'])){
        
       }
       ?>
-      <div class="">
+      <div class="" style="height: 100vh; overflow-y: scroll;">
         <table class="w3-table-all">
           <thead>
             <tr class="w3-text-black">
@@ -118,13 +110,13 @@ if(!isset($_SESSION['username'])){
    </div>
 
     </div>
-   <div class="w3-third">
+   <div class="w3-third m-2">
       
       <div class="w3-padding-16 w3-margin-top" style="">
-         <ul class="w3-ul">
-         <li class="w3-hover-teal"><a href="dashboard.php" class="btn">Return to Dashboard</a></li>
-         <li class="w3-hover-teal"><a href="logout.php" class="btn">Logout</a></li>
-      </ul>
+        <ul class="w3-ul">
+           <li><a href="dashboard.php" class="btn btn-primary">Return to Dashboard</a></li>
+           <li><a href="logout.php" class="btn btn-primary">Logout</a></li>
+        </ul>
       </div>
 
    </div>

@@ -103,25 +103,8 @@ include '../functions.php';
 		
 	}
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>School Admin Dashboard</title>
-    <!-- custom-theme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="CPM School Result Checking Portal." />
-
-    <!-- //custom-theme -->
-    <!-- css files -->
-    <link href="../css/w3.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/theme.css">
-    <!-- //css files -->
-  </head>
-
-  <body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
+<?php require 'header.php'?>
+ <body class="bg-image w3-serif" style="height:100vh;overflow-y: scroll;color: antiquewhite;">
 
 
   <section class="w3-margin w3-padding" style="background:rgba(0, 0, 0, 0.6);">

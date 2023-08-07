@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
         .message{
             color: antiquewhite;
             font-size: 1.5rem;
-            width: 57%;
+            width: 100%;
             margin: auto;
         }
         .exit{
@@ -158,7 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
 	        window.history.replaceState( null, null, window.location.href );
 	    }
 
-	    setTimeout(displayMessage, 2100);
+	   /* setTimeout(displayMessage, 2100);
 
 		function displayMessage() {
 		const body = document.body;
@@ -168,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
 		body.appendChild(panel);
 
 		const msg = document.createElement('p');
-		msg.textContent = 'Please kindly bear with us, as the 3rd term results compilation is still ongoing. Therefore you might not be able to check your 3rd Term results now until 6pm on Monday 7th August, 2023. We sincerely apologize for this delay. Thanks for your coperation!';
+		msg.textContent = 'System busy, please try again later';
 		panel.appendChild(msg);
 		msg.setAttribute('class','message');
 
@@ -181,7 +181,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
 
 		closeBtn.addEventListener('click', () => panel.parentNode.removeChild(panel));
 
-}
-	</script>
+
+}*/	
+</script>
 </body>
 </html>

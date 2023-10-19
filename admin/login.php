@@ -1,122 +1,152 @@
 <?php
-session_start();
-include '../config.php';
-include '../functions.php';
+ session_start();
+ include 'includes/database.php';
+ include 'includes/functions.php';
 
-$passErr = $checkErr = $nameErr = $msg= '';
+ $conn = new Functions();
 
-if (isset($_POST['submit'])) {
-	$username = test_input($_POST["username"]);
-	$password = test_input($_POST["password"]);
-	
-	if (!empty($username) && !empty($password)) {
-
-	 	$sql = "SELECT * FROM admin WHERE user_name = '$username'";
-	 	$query = mysqli_query($conn, $sql);
-	 	if (mysqli_num_rows($query) > 0) {
-	 		$result = mysqli_fetch_assoc($query);
-	 		$db_username =$result['user_name'];
-	 		$db_password =$result['password'];
-	 		if ($db_username == $username && $db_password == $password) {
-	 			$_SESSION['username'] = $username;
-	 			$msg = "<div class='w3-green container w3-padding w3-round-large' 
-	 						style='width:70%;'>
-	 						Login Successful
-	 						<span>Redirecting <i class='fa fa-spinner w3-text-light-grey w3-large fa-spin fa-fw'></i></span>
-	 						<meta http-equiv='refresh' content='2; dashboard.php'>
-	 					</div>";
-	 		}else{
-	 			$msg = "<div class='w3-red  w3-padding container w3-round-large' 
-	 						style='width:70%;font-size:16px;'>
-	 						Pls Crosscheck Your Details!
-	 					</div>";
-	 		}
-	 	}else{
-	 		$msg = "<div class='w3-red container w3-padding w3-round-large' 
-	 					style='width:70%;'>
-	 					An error occured!
-	 				</div>";
-	 	} 
-		 	
-	}else{
-	
-		$msg =  "<div class='error container'>
-					Enter username and password.
-				</div>";
-	}
-		
-}
-
-
+ //fetch school details from database
+$sql = "SELECT * FROM general_settings";
+$conn->query($sql);
+$result = $conn->fetchSingle();
+$admin_login_bg = $result->admin_login_bg;
+$base_url = $conn->base_url();
+$main_url = $conn->main_url();
 ?>
 
-
-
-
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Admin Login</title>
-	<link rel="stylesheet" type="text/css" href="../css/w3.css">
-	<link rel="stylesheet" type="text/css" href="../css/theme.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Login | <?php echo $result->school_name; ?></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>plugins/toastr/toastr.min.css">
+    <link rel="icon" href="<?php echo $base_url; ?>upload/<?php echo $result->logo; ?>" type="image/png">
+<!--    <link rel="stylesheet" href="">logo-->
+
+    <style>
+        body{
+            background-image: url('<?php echo $base_url."upload/".$admin_login_bg?>');
+            background-position: center;
+            -webkit-background-size: cover;
+            background-size:cover;
+            background-repeat: no-repeat;
+            -webkit-background-clip: border-box;
+            -moz-background-clip: border-box;
+            background-clip: border-box;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #334722;
+            border-color: #334722;
+            box-shadow: none;
+        }
+
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #517978;
+            border-color: #517978;
+        }
+        .btn-primary.focus, .btn-primary:focus {
+            color: #fff;
+            background-color: #38582b;
+            border-color: #38582b;
+            box-shadow: 0 0 0 0 rgba(38,143,255,.5);
+        }
+
+        .card-primary.card-outline {
+            border-top: 3px solid #b1793e;
+        }
+        .btn-primary:not(:disabled):not(.disabled):active{
+            background-color: #38582b;
+            border-color: #38582b;
+        }
+
+
+        }
+    </style>
 </head>
-<body class="w3-serif">
-	<div class="bg-image w3-padding-32" style="height:100vh;overflow-y: scroll;">
-		<div class="container main-content">
-			<div class="w3-padding  w3-card-4 w3-text-light-grey">
-				 <div class="w3-center w3-margin-top">
-				 	<img src="images/badge.jpg" width="100" height="100" class="w3-circle">
-				 </div>
-				<div class="container">
-					<h1 class="w3-hide-small w3-center h-font-size ">
-						<span style="font-weight: 400;opacity: 0.86;"> Welcome To Glory Land</span><br><span style=""> School Management System.</span>
-					</h1>
-					<h2 class="w3-text-green w3-center w3-large h-font-size w3-hide-large w3-hide-medium">		Welcome To Glory Land<br><span class="w3-medium"> School Management System.</span>
-					</h2>
-				</div>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="card card-outline card-primary" style="box-shadow: 0 14px 16px #646161;">
+        <div class="card-header text-center">
+            <p>
+                <i class="fas fa-lock fa-5x" style="background: #1b2626; padding: 30px; -webkit-border-radius: ;-moz-border-radius: ;border-radius: 20px; color: #fff;"></i>
+            </p>
+            <a href="index" class="h1" style="color: #1b2626;"><b>Restricted Area</b></a>
+        </div>
 
-				<div class="w3-center my-font p-font-size">Please login with Admin Username and Password.</div>
-					<?php echo $msg ;?>
-				<div class="container">
-					<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
-						<div class="w3-padding-16">
-							<div class="w3-margin-top w3-padding w3-blue-gray">
-								<input type="text" name="username" placeholder="Your username" class="w3-input">
-								<span class="error"><?php echo "$nameErr";?></span>
-							</div>
-							<div class="w3-margin-top w3-padding w3-blue-gray">
-								<input type="text" name="password" placeholder="Your password" class="w3-input">
-								<span class="error"><?php echo "$passErr";?></span>
-							</div>
+    </div>
+   <div class="card">
+     <div class="card-body login-card-body">
+        <p class="login-box-msg"> Sign in to start your session</p>
+        <form action="" method="post" id="login_form">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Username" name="username">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
+                    </div>
+                </div>
+            </div>
 
-							<div class="w3-center">
-								<input type="submit" name="submit" value="Submit And Continue" class="w3-round-large w3-btn w3-teal w3-margin-top">
-								<a href="../index.php" class="w3-round-large w3-btn w3-margin-top w3-text-teal w3-border">Bact to Homepage</a>
-							</div>
-						</div>
-					</form>
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Password" name="password">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                </div>
+            </div>
 
-				</div>
-			</div>
-		</div>
+            <div class="row">
+                <div class="col-4" style="margin: 0 auto;">
+                    <button type="submit" class="btn btn-primary btn-block" style="background: #382521; border-color:#382521 ">Sign In</button>
+                </div>
+            </div>
+        </form>
 
-		<div class="w3-center footer" style="width:100%;color: navy;">
-		    © 2023 <span class="my-font">CPM Int. School Suleja</span><br> All Rights Reserved
-		</div>
-
+        <p class="mb-1 mt-2 text-center">
+            <a href="<?php echo  $main_url; ?>" style="color: #374923;">Back to Home</a>
+        </p>
+        <div id="msg"></div>
+    </div>
+   </div>
 </div>
 
-		<!-- copyright -->
-		
+<script src="<?php echo $base_url; ?>plugins/jquery/jquery.min.js"></script>
+<script src="<?php echo $base_url; ?>plugins/toastr/toastr.min.js"></script>
+<script src="<?php echo $base_url; ?>dist/js/adminlte.js"></script>
+<!-- Bootstrap 4 -->
+<script src="<?php echo $base_url; ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	<script>
-	    if ( window.history.replaceState ) {
-	        window.history.replaceState( null, null, window.location.href );
-	    }
-	</script>
+<script>
+    $(function () {
+        $('#login_form').on('submit', function (event) {
+            event.preventDefault();
+            let formData = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: "<?php echo $base_url;?>process-login.php",
+                data: formData,
+                beforeSend: function () {
+                    $('#msg').html("Signing In..... Please wait.");
+                },
+                success: function (response) {
+                    $('#msg').html(response);
+                }
+            })
+        })
+    })
+</script>
+
 </body>
 </html>

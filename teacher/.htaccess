@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^view-teacher/([0-9a-zA-Z_-]+)$ view-teacher.php?teacher=$1 [NC,L]
+RewriteRule ^student/([0-9a-zA-Z_-]+)$ student.php?class=$1 [NC,L]
+RewriteRule ^view-student/([0-9a-zA-Z_-]+)$ view-student.php?student=$1 [NC,L]
+RewriteRule ^edit-student/([0-9a-zA-Z_-]+)$ edit-student.php?student=$1 [NC,L]
+RewriteRule ^section/([0-9a-zA-Z_-]+)$ section.php?section=$1 [NC,L]
+RewriteRule ^subject/([0-9a-zA-Z_-]+)$ subject.php?class=$1 [NC,L]
+RewriteRule ^report-comments/([0-9a-zA-Z_-]+)$ report-comments.php?class_name=$1 [NC,L]
+RewriteRule ^attendance/([0-9a-zA-Z_-]+)$ attendance.php?class_name=$1 [NC,L]
+##remove .php from all files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC]

@@ -1,0 +1,23 @@
+RewriteEngine on
+RewriteRule ^view-teacher/([0-9a-zA-Z_-]+)$ view-teacher.php?teacher=$1 [NC,L]
+RewriteRule ^edit-teacher/([0-9a-zA-Z_-]+)$ edit-teacher.php?teacher=$1 [NC,L]
+RewriteRule ^edit-student/([0-9a-zA-Z_-]+)$ edit-student.php?student=$1 [NC,L]
+RewriteRule ^view-student/([0-9a-zA-Z_-]+)$ view-student.php?student=$1 [NC,L]
+RewriteRule ^edit-class/([0-9a-zA-Z_-]+)$ edit-class.php?class=$1 [NC,L]
+RewriteRule ^section/([0-9a-zA-Z_-]+)$ section.php?section=$1 [NC,L]
+RewriteRule ^subject/([0-9a-zA-Z_-]+)$ subject.php?class=$1 [NC,L]
+RewriteRule ^student/([0-9a-zA-Z_-]+)$ student.php?class=$1 [NC,L]
+RewriteRule ^edit-section/([0-9a-zA-Z_-]+)$ edit-section.php?section=$1 [NC,L]
+RewriteRule ^edit-subject/([0-9a-zA-Z_-]+)$ edit-subject.php?subject=$1 [NC,L]
+RewriteRule ^edit-exam/([0-9a-zA-Z_-]+)$ edit-exam.php?exam=$1 [NC,L]
+RewriteRule ^mark/([0-9a-zA-Z_-]+)$ mark.php?class=$1 [NC,L]
+RewriteRule ^report-comments/([0-9a-zA-Z_-]+)$ report-comments.php?class_name=$1 [NC,L]
+RewriteRule ^attendance/([0-9a-zA-Z_-]+)$ attendance.php?class_name=$1 [NC,L]
+RewriteRule ^generate_report/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+) generate_report.php?name=$1&exam=$2&section=$3&class=$4&year=$5 [NC,L]
+RewriteRule ^edit-grade/([0-9a-zA-Z_-]+)$ edit-grade.php?grade_id=$1 [NC,L]
+
+##remove .php from all files
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC]

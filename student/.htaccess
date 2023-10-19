@@ -1,0 +1,13 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^view-result/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+) view-result.php?result_pin=$1&name=$2&term=$3&year=$4 [NC,L]
+RewriteRule ^generate-report/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+) generate-report.php?name=$1&exam=$2&section=$3&class=$4&year=$5 [NC,L]
+
+
+
+##remove .php from all files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC]

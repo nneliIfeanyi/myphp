@@ -73,8 +73,8 @@
 <li style="color:antiquewhite;"><a href="index.php">Home</a></li>
 <li style="color:antiquewhite;"><a href="page-about.php#subjects">Curriculumns</a></li>
 <li style="color:antiquewhite;"><a href="blog.php">News</a></li>
-<li style="color:antiquewhite;"><a href="admin/login.php">Admin</a></li>
-<li style="color:antiquewhite;"> <a href="login.php" class="btn btn-primary">Student Login</a></li>
+<li style="color:antiquewhite;"><a href="admin/index.php">Admin</a></li>
+<li style="color:antiquewhite;"> <a href="student/index.php" class="btn btn-primary">Student Login</a></li>
 </ul>
 </div>
 </div>

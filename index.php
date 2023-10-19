@@ -18,16 +18,6 @@ include 'config.php';
 <meta name="description" content="CPM International School, Glory Land Academy">
 <meta name="author" content="Stanvic Concepts">
 <meta name="keywords" content="CPM International School, Glory Land Academy, Best School in Suleja">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png"/>
-<link rel="apple-touch-icon" sizes="72x72" href="images/xapple-touch-icon-72x72.png.pagespeed.ic.lf5d8kCpOf.png"/>
-<link rel="apple-touch-icon" sizes="76x76" href="images/xapple-touch-icon-76x76.png.pagespeed.ic.ATZZpSeito.png"/>
-<link rel="apple-touch-icon" sizes="114x114" href="images/xapple-touch-icon-114x114.png.pagespeed.ic.Fi5O5s2tzL.png"/>
-<link rel="apple-touch-icon" sizes="120x120" href="images/xapple-touch-icon-120x120.png.pagespeed.ic.uPQH0sygdV.png"/>
-<link rel="apple-touch-icon" sizes="144x144" href="images/xapple-touch-icon-144x144.png.pagespeed.ic.yZ9-_sm5OF.png"/>
-<link rel="apple-touch-icon" sizes="152x152" href="images/xapple-touch-icon-152x152.png.pagespeed.ic.gThaVrKtXF.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="images/xapple-touch-icon-180x180.png.pagespeed.ic.Q8Pmsj5fQM.png"/>
 <link rel="stylesheet" type="text/css" href="rs-plugin/css/A.settings.css.pagespeed.cf.xeOyGChsgq.css" media="screen"/>
 
 <link rel="stylesheet" type="text/css" href="A.fonts%2c%2c_font-awesome-4.3.0%2c%2c_css%2c%2c_font-awesome.min.css%2bcss%2c%2c_bootstrap.css%2bcss%2c%2c_animate.css%2cMcc.kSNwpaaMDX.css.pagespeed.cf.w2G3xGgFf0.css"/>
@@ -39,11 +29,11 @@ include 'config.php';
 <title>Welcome to CPM International School</title>
 </head>
 <body style="scroll-behavior:smooth !important;">
-<div id="loader">
+<!-- <div id="loader">
 <div class="loader-container">
 <img src="images/site.gif" alt="" class="loader-site">
 </div>
-</div>
+</div> -->
 
 <div id="wrapper">
 <div class="topbar">
@@ -110,7 +100,7 @@ include 'config.php';
 <li><a href="index.php#contact">Contact Us</a></li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
-<li><a class="btn btn-primary w3-small" href="login.php"><i class="fa fa-sign-in"></i> Student Login</a></li>
+<li><a class="btn btn-primary w3-small" href="student/index.php"><i class="fa fa-sign-in"></i> Student Login</a></li>
 </ul>
 </div>
 </div>

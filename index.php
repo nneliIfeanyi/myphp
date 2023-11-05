@@ -43,28 +43,7 @@ include 'config.php';
 <p><i class="fa fa-graduation-cap"></i>Best learning environment.</p>
 </div>
 <div class="col-md-6 text-right">
-<ul class="list-inline">
-
-<li class="dropdown">
-<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-lock"></i>Admin Login</a>
-<div class="dropdown-menu">
-<form method="post" action="admin/login.php">
-<div class="form-title">
-<h4>Login Area</h4>
-<hr>
-</div>
-<input class="form-control" type="text" name="username" placeholder="User Name">
-<div class="formpassword">
-<input class="form-control" type="password" name="password" placeholder="******">
-</div>
-<div class="clearfix"></div>
-<input type="submit" name="submit" class="btn btn-block btn-primary" value="Login">
-<hr>
-
-</form>
-</div>
-</li>
-</ul>
+<a class="" href="teacher/index.php"><i class="fa fa-lock"></i>Admin Login</a>
 </div>
 </div>
 </div>

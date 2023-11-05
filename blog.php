@@ -52,28 +52,9 @@ include 'config.php';
 <p><i class="fa fa-graduation-cap"></i>Best learning environment.</p>
 </div>
 <div class="col-md-6 text-right">
-<ul class="list-inline">
 
-<li class="dropdown">
-<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-lock"></i>Admin Login</a>
-<div class="dropdown-menu">
-<form method="post" action="admin/login.php">
-<div class="form-title">
-<h4>Login Area</h4>
-<hr>
-</div>
-<input class="form-control" type="text" name="username" placeholder="User Name">
-<div class="formpassword">
-<input class="form-control" type="password" name="password" placeholder="******">
-</div>
-<div class="clearfix"></div>
-<input type="submit" name="submit" class="btn btn-block btn-primary" value="Login">
-<hr>
+<a class="" href="teacher/index.php"><i class="fa fa-lock"></i>Admin Login</a>
 
-</form>
-</div>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -109,7 +90,7 @@ include 'config.php';
 <li><a href="index.php#contact">Contact Us</a></li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
-<li><a class="btn btn-primary w3-small" href="login.php"><i class="fa fa-sign-in"></i> Student Login</a></li>
+<li><a class="btn btn-primary w3-small" href="student/login.php"><i class="fa fa-sign-in"></i> Student Login</a></li>
 </ul>
 </div>
 </div>

@@ -61,15 +61,14 @@ class Functions extends Database{
         $username = $this->fetchSingle();
 
         if($username){
-            // global $existing_hash;
-            // $existing_hash = $username->password; //password already in database
-            // //check for password associated with same username
-            // if($this->password_check($password, $existing_hash)){
-            //     return true;
-            // }else{
-            //     return null;
-            // }
-            return true;
+            global $existing_hash;
+            $existing_hash = $username->password; //password already in database
+            //check for password associated with same username
+            if($this->password_check($password, $existing_hash)){
+                return true;
+            }else{
+                return null;
+            }
         }
     }
 

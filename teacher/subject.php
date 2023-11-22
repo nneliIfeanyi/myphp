@@ -68,6 +68,13 @@ if(isset($_SESSION['teacher'])){
                                  Manage Subjects
                              </h3>
                          </div>
+                         <div class="card-header">
+                             <h3 class="card-title">
+                                 <a href="<?php echo $teacher_url; ?>/add-subject">Add a subject
+                                   <i class="fa fa-plus"></i>
+                                 </a>
+                             </h3>
+                         </div>
                          <div class="card-body">
                              <h3 class="card-title text-center" style="font-size: 15px;">
                                  Please select a class to view available subjects

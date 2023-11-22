@@ -1,6 +1,7 @@
 <?php
 session_start();
-if(isset($_SESSION['username'])){
+if(isset($_SESSION['teacher'])){
+$username = $_SESSION['teacher'];
 
 ?>
 
@@ -250,10 +251,10 @@ if(isset($_SESSION['username'])){
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
         <title> Login to continue | <?php echo $school_name; ?> </title>
 
-        <?php include 'includes/styles.php'; ?>
+        <?php include '../admin/includes/styles.php'; ?>
         <?php
         $conn = new Functions();
-        $base_url = $conn->base_url();
+        $base_url = $conn->main_url()."/teacher/";
         $redirect = $base_url."login";
         ?>
 

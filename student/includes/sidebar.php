@@ -143,8 +143,8 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                 <p> Have a query, feedback or just want to say hi?</p>
                 <p> Call/Whatsapp School Admin on the phone number below</p>
 
-                <a href="javascript:void" style="color: #0c515c; "> <i class="fab fa-whatsapp"></i> +2347015776873 </a> &nbsp; &nbsp;
-                <a href="javascript:void" style="color: #0c515c"> <i class="fa fa-phone"></i>  +234809988543</a>
+                <a href="javascript:void" style="color: #0c515c; "> <i class="fab fa-whatsapp"></i> +2348122321931 </a> &nbsp; &nbsp;
+                <a href="javascript:void" style="color: #0c515c"> <i class="fa fa-phone"></i>  +2348076602896</a>
 
             </div>
         </div>

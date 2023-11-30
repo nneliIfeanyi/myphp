@@ -14,8 +14,8 @@ if(isset($_SESSION['student'])){
     <title> Check Result | <?php echo $school_name; ?></title>
 
     <?php
-    $dt1 = new DateTime();
-    $current_date = $dt1->format('Y-m-d');
+    //$dt1 = new DateTime();
+    $current_date = date('Y-m-d');//$dt1->format('Y-m-d');
     $sql = "SELECT * FROM card_expire_date WHERE expire_date != ''";
     $conn->query($sql);
     $result_set = $conn->fetchSingle();

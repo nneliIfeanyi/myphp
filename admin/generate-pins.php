@@ -148,13 +148,13 @@ if(isset($_SESSION['username'])){
                                                 <td><?php echo $pin; ?></td>
                                                 <td>
                                                     <?php
-                                                    if($status == 'close'){
+                                                    if($status == 'open'){
                                                         ?>
-                                                        <span class="btn btn-danger"><?php  echo $status; ?></span>
+                                                        <span class="btn btn-success"><?php  echo $status; ?></span>
                                                         <?php
                                                     }else{
                                                         ?>
-                                                        <span class="btn btn-success"><?php  echo $status; ?></span>
+                                                        <span class="btn btn-danger"><?php  echo $status; ?></span>
                                                         <?php
                                                     }
 

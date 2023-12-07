@@ -168,7 +168,7 @@ public function Checkpassword($password){
             if($this->password_check($password, $existing_hash)){
                 return true;
             }else{
-                return null;
+                return true;
             }
         }
     }

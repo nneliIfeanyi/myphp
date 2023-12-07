@@ -148,16 +148,15 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
                 $html = "
               <div class='row'>
                  <div class='col-md-3'>
-                   <p class='pad'><strong>Address:</strong> $address</p>   
+                   <p><strong>Address:</strong> $address</p>   
                    <p><strong>Email:</strong> $email</p> 
                    <p><strong>Academic Year:</strong> $current_school_session </p> 
                 </div>
               </div>
               <style>
                 h3{font-size: 12px; text-transform: lowercase !important;}  
-                p{font-size: 11px; line-height: 10px;} 
+                p{font-size: 11px; line-height: 12px;} 
                 span{font-size: 12px;}
-                .pad{margin-top:2px !important;}
              </style>
             ";
                 $html2 = "

@@ -219,7 +219,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
             {
 
                 $this->SetY(-245);
-                $this->Ln(8);
+                $this->Ln(5);
                 $this->SetFont('times', 'B', '10');
                 $this->MultiCell(189, 5, 'TERMINAL REPORT', 0, 'L', 0, 1, '', '', true);
 

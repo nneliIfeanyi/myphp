@@ -174,7 +174,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
                 h3 span{font-weight: 400 !important; font-size: 11px;}
                 p{font-size: 11px; line-height: 10px;} 
                 div{padding-right: 20px;}
-                .pad{margin-top:2px;}
+                .pad{margin-top:5px;}
              </style>
             ";
 

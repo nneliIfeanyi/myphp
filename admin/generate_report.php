@@ -149,7 +149,8 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
               <div class='row'>
                  <div class='col-md-3'>
                    <p><strong>Address:</strong> $address</p>   
-                   <p><strong>Email:</strong> $email</p>  
+                   <p><strong>Email:</strong> $email</p> 
+                   <p><strong>Academic Year:</strong> $current_school_session </p> 
                 </div>
               </div>
               <style>
@@ -162,8 +163,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
               <div class='row'>
                  <div class='col-md-3'>
                    <p><strong>Name:</strong> $name_student</p>
-                   <p><strong>Academic Year:</strong> $current_school_session </p>
-                  <p><strong>Reg No:</strong> $reg_no </p>
+                   <p><strong>Reg No:</strong> $reg_no </p>
                   <p><strong>Class:</strong> $new_section</p>
                    
                   

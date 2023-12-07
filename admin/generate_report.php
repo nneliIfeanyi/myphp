@@ -575,7 +575,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
         $today_date = date('F d, Y') .' at exactly '. date('h:sa');
         $pdf->SetTextColor(0, 0, 0);
         $pdf->SetFont('times', 'N', '10');
-        //$pdf->Cell(80, 5, "This result was generated on $today_date", 0, 0, "L");
+        $pdf->Cell(80, 5, "This result was generated on $today_date", 0, 0, "L");
 
     }else{
 

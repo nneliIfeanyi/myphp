@@ -250,7 +250,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
 // set margins
         $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
         $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+        //$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
 // set auto page breaks
         $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
@@ -410,7 +410,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
         }
         $pdf->Ln(6);
         $pdf->SetFont('times', 'B', '11');
-        $pdf->Cell(47, 4, "Class Teacher's Comment: ________________________________________________", 0, 0, "L");
+        $pdf->Cell(47, 4, "Class Teacher's Comment: ______________________________________", 0, 0, "L");
         $pdf->SetTextColor(0, 0,0);
         $pdf->SetFont('times', 'N', '10');
         $pdf->Cell(40, 4, "$teacher_comment", 0, 0, "L");
@@ -425,7 +425,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
         $pdf->Ln(6);
         $pdf->SetTextColor(0, 0,0);
         $pdf->SetFont('times', 'B', '11');
-        $pdf->Cell(40, 4, "Principal's Comment: ____________________________________________________", 0, 0, "L");
+        $pdf->Cell(40, 4, "Principal's Comment: __________________________________________", 0, 0, "L");
         $pdf->SetTextColor(0, 0,0);
         $pdf->SetFont('times', 'N', '10');
         $pdf->Cell(40, 4, "$principal_comment", 0, 0, "L");
@@ -468,38 +468,38 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
         $pdf->SetFont('times', 'N', '10');
         $pdf->Cell(10, 6, "$no_times_school_open times", 0, 0, 'L', 0);
 
-        $pdf->Ln(7);
-        $pdf->SetTextColor(14, 93,117);
-        $pdf->SetFont('times', 'N', '11');
-        $pdf->Cell(33, 3, 'Meaning of Grades:', 0, 0, 'L');
-        //fetch all available grades from the system
-        $sql = "SELECT * FROM grade ORDER BY mark_from DESC LIMIT  0, 8";
-        $conn->query($sql);
-        $grade_result = $conn->fetchMultiple();
+        // $pdf->Ln(7);
+        // $pdf->SetTextColor(14, 93,117);
+        // $pdf->SetFont('times', 'N', '11');
+        // $pdf->Cell(33, 3, 'Meaning of Grades:', 0, 0, 'L');
+        // //fetch all available grades from the system
+        // $sql = "SELECT * FROM grade ORDER BY mark_from DESC LIMIT  0, 8";
+        // $conn->query($sql);
+        // $grade_result = $conn->fetchMultiple();
 
 
-        foreach ($grade_result as $student_grading){
-            $mark_upto = $student_grading->mark_upto;
-            $mark_from = $student_grading->mark_from;
-            $student_grade = $student_grading->grade_name;
-            $pdf->SetTextColor(0, 0,0);
-            $pdf->SetFont('times', 'N', '10');
-            $pdf->Cell(20, 3, "$mark_from - $mark_upto($student_grade) ", 0, 0, "L");
-        }
+        // foreach ($grade_result as $student_grading){
+        //     $mark_upto = $student_grading->mark_upto;
+        //     $mark_from = $student_grading->mark_from;
+        //     $student_grade = $student_grading->grade_name;
+        //     $pdf->SetTextColor(0, 0,0);
+        //     $pdf->SetFont('times', 'N', '10');
+        //     $pdf->Cell(20, 3, "$mark_from - $mark_upto($student_grade) ", 0, 0, "L");
+        // }
 
-        $sql = "SELECT * FROM grade ORDER BY mark_from DESC LIMIT  8, 6";
-        $conn->query($sql);
-        $grade_result = $conn->fetchMultiple();
-        $pdf->Ln(4);
-        foreach ($grade_result as $student_grading){
-            $mark_upto = $student_grading->mark_upto;
-            $mark_from = $student_grading->mark_from;
-            $student_grade = $student_grading->grade_name;
-            $pdf->SetTextColor(0, 0,0);
-            $pdf->SetFont('times', 'N', '10');
-            $pdf->Cell(15, 7, "", 0, 0, "L");
-            $pdf->Cell(4, 5, "$mark_from - $mark_upto($student_grade) ", 0, 0, "L");
-        }
+        // $sql = "SELECT * FROM grade ORDER BY mark_from DESC LIMIT  8, 6";
+        // $conn->query($sql);
+        // $grade_result = $conn->fetchMultiple();
+        // $pdf->Ln(4);
+        // foreach ($grade_result as $student_grading){
+        //     $mark_upto = $student_grading->mark_upto;
+        //     $mark_from = $student_grading->mark_from;
+        //     $student_grade = $student_grading->grade_name;
+        //     $pdf->SetTextColor(0, 0,0);
+        //     $pdf->SetFont('times', 'N', '10');
+        //     $pdf->Cell(15, 7, "", 0, 0, "L");
+        //     $pdf->Cell(4, 5, "$mark_from - $mark_upto($student_grade) ", 0, 0, "L");
+        // }
 
         //student weight  and more ....
         $sql = "SELECT * FROM student WHERE name =:name";
@@ -534,10 +534,10 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
             if(!empty($new_date)){
                 $pdf->SetTextColor(0, 0,0);
                 $pdf->SetFont('times', 'N', '11');
-                $pdf->Cell(23, 6, "Date of Birth: ", 0, 0, "L");
+                //$pdf->Cell(23, 6, "Date of Birth: ", 0, 0, "L");
                 $pdf->SetTextColor(14, 93,117);
                 $pdf->SetFont('times', 'N', '10');
-                $pdf->Cell(30, 6, "$new_date", 0, 0, "L");
+                //$pdf->Cell(30, 6, "$new_date", 0, 0, "L");
             }
         }
 

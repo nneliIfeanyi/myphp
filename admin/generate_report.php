@@ -148,9 +148,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
                 $html = "
               <div class='row'>
                  <div class='col-md-3'>
-                   <h3>$school_name</h3>   
-                   <span>$address</span>
-                   <p><strong>Phone:</strong> $phone_no</p>  
+                   <p><strong>Address:</strong> $address</p>   
                    <p><strong>Email:</strong> $email</p>  
                 </div>
               </div>
@@ -166,8 +164,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
                    <p><strong>Name:</strong> $name_student</p>
                    <p><strong>Academic Year:</strong> $current_school_session </p>
                   <p><strong>Reg No:</strong> $reg_no </p>
-                  <p><strong>Class:</strong> $class &nbsp; <strong>Section:</strong> $new_section</p>
-                   <p><strong>Term:</strong> $new_exam </p>
+                  <p><strong>Class:</strong> $new_section</p>
                    
                   
                 </div>
@@ -198,6 +195,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
                  <div class='col-md-3'>
                    <p><strong>Marks Obtainable:</strong>$obtainable_mark</p>
                   <p><strong>Gender:</strong> $gender <strong></p>
+                  <p><strong>Term:</strong> $new_exam </p>
                 </div>
               </div>
               <style> 
@@ -219,7 +217,7 @@ if(isset($_GET['name']) AND isset($_GET['exam']) AND isset($_GET['year'])
             {
 
                 $this->SetY(-245);
-                $this->Ln(5);
+                $this->Ln(8);
                 $this->SetFont('times', 'B', '10');
                 $this->MultiCell(189, 5, 'TERMINAL REPORT', 0, 'L', 0, 1, '', '', true);
 

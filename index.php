@@ -96,13 +96,13 @@ include 'config.php';
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner" role="listbox">
 <div class="item active">
-<img src="img/edit.jpg" alt="" width="100%;" class="img-responsive">
+<img src="img/press.jpeg" alt="" width="100%;" class="img-responsive">
 </div>
 <div class="item">
-<img src="img/edit5.jpg" alt=""  width="100%;" class="img-responsive">
+<img src="images/press1.jpeg" alt=""  width="100%;" class="img-responsive">
 </div>
 <div class="item">
-<img src="img/edit4.jpg" alt=""  width="100%;" class="img-responsive">
+<img src="images/press2.jpeg" alt=""  width="100%;" class="img-responsive">
 </div>
 </div>
 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -127,7 +127,7 @@ include 'config.php';
 <div class="section-title text-center">
 
 <div class="w3-half">
-<img src="img/badge_.png" width="60%" style="border-radius:10%;height: 150px;" class="w3-image" />
+<img src="img/badge.png" width="60%" style="border-radius:10%;height: 250px;" class="w3-image" />
 </div>
 <div class="w3-half">
 <h4><span class="w3-tiny">a.k.a</span>Glory Land Academy</h4>

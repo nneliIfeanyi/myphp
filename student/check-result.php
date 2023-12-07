@@ -122,6 +122,7 @@ if(isset($_SESSION['student'])){
                         <div class="card card-info">
                             <div class="card-header">
                                 <h3 class="card-title">Complete the form below to check result </h3>
+                                <i class='fas fa-spinner'></i>
                             </div>
 
                             <form action="" class="form-horizontal" method="post" id="result-check">
@@ -196,7 +197,8 @@ if(isset($_SESSION['student'])){
                                     <div class="form-group row">
                                         <label for="" class="col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9">
-                                            <input type="submit" name="check_result" value="Check Result" class="btn btn-info" id="submit">
+                                            <!-- <input type="submit" name="check_result" value="Check Result" class="btn btn-info" id="submit"> -->
+                                            <a href="#" class="btn btn-info">Result will be ready by Monday</a>
                                         </div>
 
                                     </div>

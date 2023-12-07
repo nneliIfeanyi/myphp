@@ -64,7 +64,8 @@ if(!empty($_POST['card_serial']) && !empty($_POST['pin'])
            echo "<p class='alert alert-success alert-dismissible fade show text-center' role='alert'>
            <i class='fas fa-check-circle'></i>
            We are fetching Result.... Please wait.
-           <img src='images/loader.gif' alt='loading image' width='20'>
+           <i class='fas fa-spinner fa-pulse fa-2x'></i>
+          
            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                <span aria-hidden='true'>×</span>
            </button> 
@@ -93,7 +94,8 @@ if(!empty($_POST['card_serial']) && !empty($_POST['pin'])
                 echo "<p class='alert alert-success alert-dismissible fade show text-center' role='alert'>
                 <i class='fas fa-check-circle'></i>
                 We are fetching Result.... Please wait.
-                <img src='images/loader.gif' alt='loading image' width='20'>
+                <i class='fas fa-spinner fa-pulse fa-2x'></i>
+                
                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                     <span aria-hidden='true'>×</span>
                 </button> 

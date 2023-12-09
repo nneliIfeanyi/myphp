@@ -144,9 +144,10 @@ if(isset($_POST['generate-report'])){
                 $html = "
               <div class='row'>
                  <div class='col-md-3'>
-                   <span>$address</span>  
+                   <h3>$school_name</h3>   
+                   <span>$address</span>
+                   <p><strong>Phone:</strong> $phone_no</p>  
                    <p><strong>Email:</strong> $email</p>  
-                   <p><strong>Academic Year:</strong> $current_school_session </p>
                 </div>
               </div>
               <style>
@@ -158,10 +159,11 @@ if(isset($_POST['generate-report'])){
                 $html2 = "
               <div class='row'>
                  <div class='col-md-3'>
-                   <p><strong>Name:</strong> $name_student</p>  
+                   <p><strong>Name:</strong> $name_student</p>
+                   <p><strong>Academic Year:</strong> $current_school_session </p>
                   <p><strong>Reg No:</strong> $reg_no </p>
-                 
-                  <p><strong>Class:</strong> $$new_section</p>
+                  <p><strong>Class:</strong> $class &nbsp; <strong>Section:</strong> $new_section</p>
+                   <p><strong>Term:</strong> $new_exam </p>
                    
                 
                 </div>
@@ -192,7 +194,6 @@ if(isset($_POST['generate-report'])){
                  <div class='col-md-3'>
                    <p><strong>Marks Obtainable:</strong>$obtainable_mark</p>
                   <p><strong>Gender:</strong> $gender <strong></p>
-                  <p><strong>Term:</strong> $new_exam </p>
                 </div>
               </div>
               <style> 

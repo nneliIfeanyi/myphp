@@ -197,8 +197,8 @@ if(isset($_SESSION['student'])){
                                     <div class="form-group row">
                                         <label for="" class="col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9">
-                                            <!-- <input type="submit" name="check_result" value="Check Result" class="btn btn-info" id="submit"> -->
-                                            <a href="#" class="btn btn-info">Result will be ready by Monday, still processing <i class='fas fa-spinner fa-spin'></i></a>
+                                            <input type="submit" name="check_result" value="Check Result" class="btn btn-info" id="submit">
+                                            <!-- <a href="#" class="btn btn-info">Result will be ready by Monday, still processing <i class='fas fa-spinner fa-spin'></i></a> -->
                                         </div>
 
                                     </div>

@@ -144,10 +144,9 @@ if(isset($_POST['generate-report'])){
                 $html = "
               <div class='row'>
                  <div class='col-md-3'>
-                   <h3>$school_name</h3>   
-                   <span>$address</span>
-                   <p><strong>Phone:</strong> $phone_no</p>  
+                   <span>$address</span>  
                    <p><strong>Email:</strong> $email</p>  
+                   <p><strong>Academic Year:</strong> $current_school_session </p>
                 </div>
               </div>
               <style>
@@ -159,11 +158,10 @@ if(isset($_POST['generate-report'])){
                 $html2 = "
               <div class='row'>
                  <div class='col-md-3'>
-                   <p><strong>Name:</strong> $name_student</p>
-                   <p><strong>Academic Year:</strong> $current_school_session </p>
+                   <p><strong>Name:</strong> $name_student</p>  
                   <p><strong>Reg No:</strong> $reg_no </p>
-                  <p><strong>Class:</strong> $class &nbsp; <strong>Section:</strong> $new_section</p>
-                   <p><strong>Term:</strong> $new_exam </p>
+                 
+                  <p><strong>Class:</strong> $$new_section</p>
                    
                 
                 </div>
@@ -194,6 +192,7 @@ if(isset($_POST['generate-report'])){
                  <div class='col-md-3'>
                    <p><strong>Marks Obtainable:</strong>$obtainable_mark</p>
                   <p><strong>Gender:</strong> $gender <strong></p>
+                  <p><strong>Term:</strong> $new_exam </p>
                 </div>
               </div>
               <style> 
@@ -461,36 +460,36 @@ if(isset($_POST['generate-report'])){
         $pdf->SetFont('times', 'N', '10');
         $pdf->Cell(10, 6, "$no_times_school_open times", 0, 0, 'L', 0);
 
-        $pdf->Ln(7);
-        $pdf->SetTextColor(14, 93,117);
-        $pdf->SetFont('times', 'N', '11');
-        $pdf->Cell(33, 3, 'Meaning of Grades:', 0, 0, 'L');
-        //fetch all available grades from the system
-        $sql = "SELECT * FROM grade ORDER BY mark_from DESC LIMIT  0, 8";
-        $conn->query($sql);
-        $grade_result = $conn->fetchMultiple();
-        foreach ($grade_result as $student_grading){
-            $mark_upto = $student_grading->mark_upto;
-            $mark_from = $student_grading->mark_from;
-            $student_grade = $student_grading->grade_name;
-            $pdf->SetTextColor(0, 0,0);
-            $pdf->SetFont('times', 'N', '10');
-            $pdf->Cell(20, 3, "$mark_from - $mark_upto($student_grade) ", 0, 0, "L");
-        }
+        // $pdf->Ln(7);
+        // $pdf->SetTextColor(14, 93,117);
+        // $pdf->SetFont('times', 'N', '11');
+        // $pdf->Cell(33, 3, 'Meaning of Grades:', 0, 0, 'L');
+        // //fetch all available grades from the system
+        // $sql = "SELECT * FROM grade ORDER BY mark_from DESC LIMIT  0, 8";
+        // $conn->query($sql);
+        // $grade_result = $conn->fetchMultiple();
+        // foreach ($grade_result as $student_grading){
+        //     $mark_upto = $student_grading->mark_upto;
+        //     $mark_from = $student_grading->mark_from;
+        //     $student_grade = $student_grading->grade_name;
+        //     $pdf->SetTextColor(0, 0,0);
+        //     $pdf->SetFont('times', 'N', '10');
+        //     $pdf->Cell(20, 3, "$mark_from - $mark_upto($student_grade) ", 0, 0, "L");
+        // }
 
-        $sql = "SELECT * FROM grade ORDER BY mark_from DESC LIMIT  8, 6";
-        $conn->query($sql);
-        $grade_result = $conn->fetchMultiple();
-        $pdf->Ln(4);
-        foreach ($grade_result as $student_grading){
-            $mark_upto = $student_grading->mark_upto;
-            $mark_from = $student_grading->mark_from;
-            $student_grade = $student_grading->grade_name;
-            $pdf->SetTextColor(0, 0,0);
-            $pdf->SetFont('times', 'N', '10');
-            $pdf->Cell(15, 7, "", 0, 0, "L");
-            $pdf->Cell(4, 5, "$mark_from - $mark_upto($student_grade) ", 0, 0, "L");
-        }
+        // $sql = "SELECT * FROM grade ORDER BY mark_from DESC LIMIT  8, 6";
+        // $conn->query($sql);
+        // $grade_result = $conn->fetchMultiple();
+        // $pdf->Ln(4);
+        // foreach ($grade_result as $student_grading){
+        //     $mark_upto = $student_grading->mark_upto;
+        //     $mark_from = $student_grading->mark_from;
+        //     $student_grade = $student_grading->grade_name;
+        //     $pdf->SetTextColor(0, 0,0);
+        //     $pdf->SetFont('times', 'N', '10');
+        //     $pdf->Cell(15, 7, "", 0, 0, "L");
+        //     $pdf->Cell(4, 5, "$mark_from - $mark_upto($student_grade) ", 0, 0, "L");
+        // }
 
         //student weight  and more ....
         $sql = "SELECT * FROM student WHERE name =:name";

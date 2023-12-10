@@ -6,11 +6,9 @@ include '../admin/includes/functions.php';
 
 $conn = new Functions();
 
-if(!empty($_POST['card_serial']) && !empty($_POST['pin'])
-  && !empty($_POST['examyear']) && !empty($_POST['examterm'])){
+if(!empty($_POST['card_serial']) && !empty($_POST['examyear']) && !empty($_POST['examterm'])){
 
     $card_serial = $_POST['card_serial'];
-    $generated_pin = $_POST['pin'];
     $exam_term = $_POST['examterm'];
     $exam_year = $_POST['examyear'];
     $username = $_POST['username'];
@@ -26,10 +24,6 @@ if(!empty($_POST['card_serial']) && !empty($_POST['pin'])
         echo "<script>
          toastr['error']('Invalid Card Serial no..');
       </script>";
-    }elseif(!$conn->checkGeneratedPin($generated_pin, $username)){
-        echo "<script>
-        toastr['error']('Your generated pin is invalid. Copy and paste the generated pin below.');
-     </script>";
     }elseif($conn->ifPinAvailableForUse($card_serial)){
           
         //update table generated pins table 

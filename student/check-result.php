@@ -134,12 +134,12 @@ if(isset($_SESSION['student'])){
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label for="pin" class="col-sm-3 col-form-label">Generated Pin <span style="color: #f00;">*</span></label>
                                         <div class="col-sm-9">
                                             <input type="number" name="pin" class="form-control" required data-parsley-trigger="keyup" id="pin" placeholder="Please look below for generated pin">
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group row">
                                         <label for="exam_year" class="col-sm-3 col-form-label">Examination Year <span style="color: #f00;">*</span></label>

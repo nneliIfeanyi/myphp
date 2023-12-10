@@ -423,7 +423,7 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                         </li>
 
 
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>set-card-usage-limit"
                                 <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'set-card-usage-limit.php'){
                                     //APPLY THE ACTIVE CLASS
@@ -435,7 +435,7 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                                 <i class="fas fa-id-card nav-icon" style="<?php echo $change_style; ?>"></i>
                                 <p> Set Card Usage Limit </p>
                             </a>
-                        </li> -->
+                        </li>
 
                         <!-- <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>set-card-expire-date"

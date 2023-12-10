@@ -203,12 +203,12 @@ if(isset($_SESSION['student'])){
 
                                     </div>
 
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label for="" class="col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9">
                                             <p style="text-align: left; margin-top: 10px;">Your generated pin no is:  <span style="color: mediumvioletred; font-weight: bold;"><?php echo $exam_pin; ?></span></p>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                 </div>
 

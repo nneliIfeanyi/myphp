@@ -522,14 +522,14 @@ if(isset($_POST['generate-report'])){
                 $pdf->Cell(13, 6, "$height m", 0, 0, "L");
             }
 
-            if(!empty($new_date)){
-                $pdf->SetTextColor(0, 0,0);
-                $pdf->SetFont('times', 'N', '11');
-                $pdf->Cell(23, 6, "Date of Birth: ", 0, 0, "L");
-                $pdf->SetTextColor(14, 93,117);
-                $pdf->SetFont('times', 'N', '10');
-                $pdf->Cell(30, 6, "$new_date", 0, 0, "L");
-            }
+            // if(!empty($new_date)){
+            //     $pdf->SetTextColor(0, 0,0);
+            //     $pdf->SetFont('times', 'N', '11');
+            //     $pdf->Cell(23, 6, "Date of Birth: ", 0, 0, "L");
+            //     $pdf->SetTextColor(14, 93,117);
+            //     $pdf->SetFont('times', 'N', '10');
+            //     $pdf->Cell(30, 6, "$new_date", 0, 0, "L");
+            // }
         }
 
         //result analysis

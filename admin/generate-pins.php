@@ -234,7 +234,7 @@ if(isset($_SESSION['username'])){
             $i = 1;
             $success_msg = '';
             while($i <= $no_of_pins){
-                $generate_pins = rand(10000,99999).rand(90000,99999);
+                $generate_pins = 'CP'.rand(10000,99999).rand(90000,99999).'M';
                 $date_generated = date("Y-m-d h:ia");
                 //insert the generated pin into database
                 $sql = "INSERT INTO generated_pins(pin, date_generated) 

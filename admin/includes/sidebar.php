@@ -394,7 +394,7 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     </a>
 
                     <ul class="nav nav-treeview">
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>generate-pins"
                                 <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'generate-pins.php'){
                                     //APPLY THE ACTIVE CLASS
@@ -406,7 +406,7 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                                 <i class="fas fa-map-pin nav-icon" style="<?php echo $change_style; ?>"></i>
                                 <p> Generate Pins</p>
                             </a>
-                        </li> -->
+                        </li>
 
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>view-pins-requests"

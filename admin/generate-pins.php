@@ -152,7 +152,12 @@ if(isset($_SESSION['username'])){
                                                         ?>
                                                         <span class="btn btn-success"><?php  echo $status; ?></span>
                                                         <?php
-                                                    }else{
+                                                    }elseif($status == 'used'){
+                                                        ?>
+                                                        <span class="btn btn-warning"><?php  echo $status; ?></span>
+                                                        <?php
+                                                    }
+                                                    else{
                                                         ?>
                                                         <span class="btn btn-danger"><?php  echo $status; ?></span>
                                                         <?php

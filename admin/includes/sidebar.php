@@ -437,7 +437,7 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                             </a>
                         </li>
 
-                        <!-- <li class="nav-item">
+                       <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>set-card-expire-date"
                                 <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'set-card-expire-date.php'){
                                     //APPLY THE ACTIVE CLASS

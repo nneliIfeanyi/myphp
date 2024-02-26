@@ -12,6 +12,11 @@ $sql = "UPDATE generated_pins SET expired_date = :p_date";
 $conn->query($sql);
 $conn->bind(":p_date", $date);
 $send = $conn->execute();
+//process  delete of data in database
+$sql2 = "DELETE FROM generated_pins WHERE status = :close";
+$conn->query($sql2);
+$conn->bind(":close", "close");
+$send2 = $conn->execute();
 $redirect = $conn->base_url().'exp';
     if($send){
     echo "<p class='alert alert-success alert-dismissible fade show' role='alert'>

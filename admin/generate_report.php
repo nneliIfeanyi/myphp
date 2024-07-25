@@ -125,13 +125,16 @@ if (
                         $img_file = "upload/$photo";
                     }
 
+                    $sql = "SELECT state FROM student WHERE name =:name";
+                    $conn->query($sql);
+                    $conn->bind(":name", $name_student);
+                    $state = $conn->fetchColumn();
 
                     $html = "
               <div class='row'>
                  <div class='col-md-4'>
                    <p><strong>Address:</strong> $address</p>   
                    <p><strong>Email:</strong> $email</p> 
-                   <p><strong>Academic Year:</strong> $current_school_session </p> 
                 </div>
               </div>
               <style>
@@ -145,7 +148,7 @@ if (
                  <div class='col-md-6'>
                    <p>Name:<strong> $name_student</strong></p>
                    <p><strong>Reg No:</strong> $reg_no </p>
-                  <p><strong>Class:</strong> $new_section</p>
+                  <p><strong>State:</strong> $state</p>
                    
                   
                 </div>
@@ -176,7 +179,7 @@ if (
                  <div class='col-md-4'>
                    <p><strong>Marks Obtainable:</strong>$obtainable_mark</p>
                   <p><strong>Gender:</strong> $gender <strong></p>
-                  <p><strong>Term:</strong> $new_exam </p>
+                  <p><strong>Academic Year:</strong> $current_school_session </p> 
                 </div>
               </div>
               <style> 

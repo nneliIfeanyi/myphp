@@ -59,7 +59,7 @@ $results = $conn->fetchMultiple();
 // create some HTML content
 
 $html = '<h4 align="center">ENTRANCE EXAMINATION SHEET 2023/2024 SESSION</h4>
-<table border="1" cellpadding="5" style="text-align:left;" >
+<table border="1" cellpadding="7" style="text-align:left;" >
 	<tr  style="font-weight:bold;">
 		<th width="41">S/N</th>
 		<th width="270">NAMES</th>

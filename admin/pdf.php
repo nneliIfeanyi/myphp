@@ -20,7 +20,7 @@ $pdf = new TCPDF('l', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 $pdf->setHeaderData('', 70, '   C.P.M INTERNATIONAL SCHOOL', 'A.K.A GLORYLAND ACADEMY SULEJA');
 
 //set header and footer fonts
-$pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', 18));
+$pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', 17));
 $pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
 // // set default monospaced font
@@ -32,7 +32,7 @@ $pdf->setHeaderMargin(PDF_MARGIN_HEADER);
 $pdf->setFooterMargin(PDF_MARGIN_FOOTER);
 
 // set auto page breaks
-$pdf->setAutoPageBreak(TRUE, 15);
+$pdf->setAutoPageBreak(TRUE, 10);
 
 // set image scale factor
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
@@ -59,7 +59,7 @@ $results = $conn->fetchMultiple();
 // create some HTML content
 
 $html = '<h4 align="center">ENTRANCE EXAMINATION SHEET 2023/2024 SESSION</h4>
-<table border="1" cellpadding="7" style="text-align:left;" >
+<table border="1" cellpadding="5" style="text-align:left;" >
 	<tr  style="font-weight:bold;">
 		<th width="41">S/N</th>
 		<th width="270">NAMES</th>
@@ -73,7 +73,7 @@ $html = '<h4 align="center">ENTRANCE EXAMINATION SHEET 2023/2024 SESSION</h4>
 		<th width="70">TOTAL</th>
         <th width="90">REMARK</th>
 	</tr>';
-$count = 0;
+$count = 1;
 foreach ($results as $names) {
     $sql = "SELECT exam_score FROM results WHERE exam=:exam AND name_of_student=:name AND subject=:sub";
     $conn->query($sql);

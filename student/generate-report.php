@@ -375,7 +375,7 @@ if (isset($_POST['generate-report'])) {
         $new_year = $year - 1 . '/' . $year;
         $class = str_replace('-', ' ', $_POST['class']);
         $section = str_replace('-', ' ', $_POST['section']);
-        $zero = 500;
+        $zero = 0;
         $sql = "SELECT * FROM results WHERE name_of_student =:student AND first_ca != :zero AND second_ca != :zero AND exam_score != :zero
             AND class =:class AND exam=:exam AND section =:section AND school_year =:year ORDER BY subject ASC";
         $conn->query($sql);

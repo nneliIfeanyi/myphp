@@ -640,13 +640,13 @@ else{
 
         $pdf->Ln(44);
         $pdf->SetFillColor(224, 225, 255);
-        $pdf->Cell(45, 4, 'Subject', 1, 0, 'L', 1);
-        $pdf->Cell(25, 4, '1st CA (20%)', 1, 0, 'L', 1);
-        $pdf->Cell(25, 4, '2nd CA (20%)', 1, 0, 'L', 1);
-        $pdf->Cell(25, 4, 'Exam (60%)', 1, 0, 'L', 1);
-        $pdf->Cell(25, 4, 'Total (100%)', 1, 0, 'L', 1);
-        $pdf->Cell(20, 4, 'Grade', 1, 0, 'L', 1);
-        $pdf->Cell(27, 4, 'Remark', 1, 0, 'L', 1);
+        $pdf->Cell(45, 7, 'Subject', 1, 0, 'L', 1);
+        $pdf->Cell(25, 7, '1st CA (20%)', 1, 0, 'L', 1);
+        $pdf->Cell(25, 7, '2nd CA (20%)', 1, 0, 'L', 1);
+        $pdf->Cell(25, 7, 'Exam (60%)', 1, 0, 'L', 1);
+        $pdf->Cell(25, 7, 'Total (100%)', 1, 0, 'L', 1);
+        $pdf->Cell(20, 7, 'Grade', 1, 0, 'L', 1);
+        $pdf->Cell(27, 7, 'Remark', 1, 0, 'L', 1);
 
         foreach ($result as $report_details) {
             $subject_offered = $report_details->subject;
@@ -708,24 +708,24 @@ else{
             //show the values
             $pdf->Ln(6); //this will reduce the line height of each subject
 //            $pdf->SetTextColor(14, 93,117);
-            $pdf->Cell(48, 3, $subject_offered, 0, 0, "L");
-            $pdf->Cell(25, 3, $first_ca_score, 0, 0, "L");
-            $pdf->Cell(25, 3, $second_ca_score, 0, 0, "L");
-            $pdf->Cell(25, 3, $exam_score, 0, 0, "L");
-            $pdf->Cell(25, 3, $total_score, 0, 0, "L");
-            $pdf->Cell(20, 3, $grade, 0, 0, "L");
-            $pdf->Cell(20, 3, $remark, 0, 0, "L");
+            $pdf->Cell(48, 8, $subject_offered, 0, 0, "L");
+            $pdf->Cell(25, 8, $first_ca_score, 0, 0, "L");
+            $pdf->Cell(25, 8, $second_ca_score, 0, 0, "L");
+            $pdf->Cell(25, 8, $exam_score, 0, 0, "L");
+            $pdf->Cell(25, 8, $total_score, 0, 0, "L");
+            $pdf->Cell(20, 8, $grade, 0, 0, "L");
+            $pdf->Cell(20, 8, $remark, 0, 0, "L");
 
         }
-        $pdf->Ln(4);
+        $pdf->Ln(8);
         $pdf->MultiCell(189, 7, '______________________________________________________________________________________________', 0, 'L', 0, 1, '', '', true);
         $pdf->SetTextColor(14, 93,117);
         $pdf->SetFont('times', 'B', '11');
-        $pdf->Cell(48, 4, 'Total', 0, 0, "L");
-        $pdf->Cell(25, 4, $total_first_ca_score, 0, 0, "L");
-        $pdf->Cell(25, 4, $total_second_ca_score, 0, 0, "L");
-        $pdf->Cell(25, 4, $total_exam_score, 0, 0, "L");
-        $pdf->Cell(20, 4, $total_exam_score + $total_first_ca_score + $total_second_ca_score, 0, 0, "L");
+        $pdf->Cell(48, 6, 'Total', 0, 0, "L");
+        $pdf->Cell(25, 6, $total_first_ca_score, 0, 0, "L");
+        $pdf->Cell(25, 6, $total_second_ca_score, 0, 0, "L");
+        $pdf->Cell(25, 6, $total_exam_score, 0, 0, "L");
+        $pdf->Cell(20, 6, $total_exam_score + $total_first_ca_score + $total_second_ca_score, 0, 0, "L");
         $total_marks_obtained = $total_exam_score + $total_first_ca_score + $total_second_ca_score;
         global $total_marks_obtained;
         $pdf->Ln(8);

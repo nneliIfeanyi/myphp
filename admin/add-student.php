@@ -90,12 +90,12 @@ if(isset($_SESSION['username'])){
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label for="dob" class="col-sm-3 col-form-label">date of birth<span style="color: #f00;">*</span></label>
                                         <div class="col-sm-9">
                                             <input type="date" class="form-control" id="dob" required name="dob" data-parsley-trigger="keyup">
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group row">
                                         <label for="sex" class="col-sm-3 col-form-label">Sex</label>
@@ -109,7 +109,7 @@ if(isset($_SESSION['username'])){
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label for="religion" class="col-sm-3 col-form-label">Religion</label>
                                         <div class="col-sm-9">
                                             <input type="text" class="form-control" id="religion" name="religion">
@@ -122,9 +122,9 @@ if(isset($_SESSION['username'])){
                                             <input type="email" class="form-control" id="email" required name="email"
                                                    data-parsley-type="email" data-parsley-trigger="keyup">
                                         </div>
-                                    </div>
+                                    </div> -->
 
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label for="phone" class="col-sm-3 col-form-label">Phone</label>
                                         <div class="col-sm-9">
                                             <input type="tel" class="form-control" id="phone" name="phone" data-parsley-type='number'
@@ -144,7 +144,7 @@ if(isset($_SESSION['username'])){
                                         <div class="col-sm-9">
                                             <input type="text" class="form-control" id="state" name="state">
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group row">
                                         <label for="class" class="col-sm-3 col-form-label"> Class <span

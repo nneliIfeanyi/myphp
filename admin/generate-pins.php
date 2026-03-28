@@ -148,18 +148,13 @@ if(isset($_SESSION['username'])){
                                                 <td><?php echo $pin; ?></td>
                                                 <td>
                                                     <?php
-                                                    if($status == 'open'){
-                                                        ?>
-                                                        <span class="btn btn-success"><?php  echo $status; ?></span>
-                                                        <?php
-                                                    }elseif($status == ''){
-                                                        ?>
-                                                        <span class="btn btn-success"><?php  echo 'open'; ?></span>
-                                                        <?php
-                                                    }
-                                                    else{
+                                                    if($status == 'close'){
                                                         ?>
                                                         <span class="btn btn-danger"><?php  echo $status; ?></span>
+                                                        <?php
+                                                    }else{
+                                                        ?>
+                                                        <span class="btn btn-success"><?php  echo $status; ?></span>
                                                         <?php
                                                     }
 
@@ -239,7 +234,7 @@ if(isset($_SESSION['username'])){
             $i = 1;
             $success_msg = '';
             while($i <= $no_of_pins){
-                $generate_pins = 'CP'.rand(10000,99999).rand(90000,99999).'M';
+                $generate_pins = rand(10000,99999).rand(90000,99999);
                 $date_generated = date("Y-m-d h:ia");
                 //insert the generated pin into database
                 $sql = "INSERT INTO generated_pins(pin, date_generated) 

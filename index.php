@@ -1,527 +1,468 @@
-<?php
-session_start();
-include 'config.php';
-
-
-?>
-
-
+```html
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="CPM International School, Glory Land Academy">
-<meta name="author" content="Stanvic Concepts">
-<meta name="keywords" content="CPM International School, Glory Land Academy, Best School in Suleja">
-<link rel="stylesheet" type="text/css" href="rs-plugin/css/A.settings.css.pagespeed.cf.xeOyGChsgq.css" media="screen"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPM International School | Abuja</title>
 
-<link rel="stylesheet" type="text/css" href="A.fonts%2c%2c_font-awesome-4.3.0%2c%2c_css%2c%2c_font-awesome.min.css%2bcss%2c%2c_bootstrap.css%2bcss%2c%2c_animate.css%2cMcc.kSNwpaaMDX.css.pagespeed.cf.w2G3xGgFf0.css"/>
+    <!-- Bootstrap 5 CDN -->
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (local, with CDN fallback) -->
+    <link rel="stylesheet" href="assets/icons.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css'" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- AOS Animation Library -->
+    <link href="assets/aos-css.css" rel="stylesheet">
+    <link href="assets/theme.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="css/A.menu.css.pagespeed.cf.0_hLwXzYkZ.css">
-<link rel="stylesheet" type="text/css" href="css/A.carousel.css%2bbxslider.css%2cMcc.jgeTii-u52.css.pagespeed.cf.STKSIMl7GF.css"/>
-<link rel="stylesheet" type="text/css" href="A.style.css%2bcss%2c%2c_custom.css%2cMcc.HvWh1qoob-.css.pagespeed.cf.pWH5huNcWh.css"/>
-<link rel="stylesheet" type="text/css" href="css/w3.css"/>
-<title>Welcome to CPM International School</title>
+    <style>
+        /* Navbar dropdown on hover */
+        .navbar .dropdown:hover>.dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .navbar .dropdown-toggle::after {
+            margin-left: .3rem;
+        }
+    </style>
+
 </head>
-<body style="scroll-behavior:smooth !important;">
-<!-- <div id="loader">
-<div class="loader-container">
-<img src="images/site.gif" alt="" class="loader-site">
-</div>
-</div> -->
-
-<div id="wrapper">
-<div class="topbar">
-<div class="container">
-<div class="row">
-<div class="col-md-6 text-left">
-<p><i class="fa fa-graduation-cap"></i>Best learning environment.</p>
-</div>
-<div class="col-md-6 text-right">
-<a class="" href="teacher/index.php"><i class="fa fa-lock"></i>Admin Login</a>
-</div>
-</div>
-</div>
-</div>
-
-
-<header class="header">
-<div class="container">
-<div class="hovermenu ttmenu">
-<div class="navbar navbar-default" role="navigation">
-
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-<span class="sr-only">Toggle navigation</span>
-<span class="fa fa-bars"></span>
-</button>
-<div class="logo">
-<a class="navbar-brand" href="index.php">
-      <i class="fa fa-graduation-cap" style="color:red;"></i>
-      <span class="w3-large w3-text-blue w3-serif">C.P.M. <span class="w3-cursive w3-medium">International School</span></span>
-</a>
-</div>
-</div>
-
-<div class="navbar-collapse collapse">
-<ul class="nav navbar-nav">
-
-
-<li><a href="#">Home</a></li>
-<li><a href="page-about.php">About Us</a></li>
-<li><a href="page-about.php#subjects">Curriculumns</a></li>
-<li><a href="blog.php">News</a></li>
-<li><a href="index.php#contact">Contact Us</a></li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-<li><a class="btn btn-primary w3-small" href="student/index.php"><i class="fa fa-sign-in"></i> Student Login</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</header>
-
-
-
-<div class="row">
-
-<div class="col-md-12">
-<div class="media-element">
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-<div class="carousel-inner" role="listbox">
-<div class="item active">
-<img src="img/press.jpeg" alt="" width="100%;" class="img-responsive">
-</div>
-<div class="item">
-<img src="images/press1.jpeg" alt=""  width="100%;" class="img-responsive">
-</div>
-<div class="item">
-<img src="images/press2.jpeg" alt=""  width="100%;" class="img-responsive">
-</div>
-</div>
-<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-<span class="fa fa-angle-left" aria-hidden="true"></span>
-<span class="sr-only">Previous</span>
-</a>
-<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-<span class="fa fa-angle-right" aria-hidden="true"></span>
-<span class="sr-only">Next</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-
-
-
-<div class="container">
-
-      <!--=== WELCOME ADDRESS ===-->
-<div class="w3-row-">
-<div class="section-title text-center">
-
-<div class="w3-half">
-<img src="img/badge.png" width="60%" style="border-radius:10%;height: 250px;" class="w3-image" />
-</div>
-<div class="w3-half">
-<h4><span class="w3-tiny">a.k.a</span>Glory Land Academy</h4>
-<p>Welcomes all tribes, religion and nationality to be part of this noble vision. We are dedicated to giving quality and sound education without any track out of their life time. We are glad you are here, and we promise to meet up to your expectations. <br />Once again you are welcome!
-</p>
-</div>
-</div>
-</div>
-
-</div>
-
-
-
-<div class="row-fluid">
-
-<div class="container">
-<div class="row">
-<div class="col-md-6 col-md-offset-6">
-<div class="section-container nopadding">
-<div class="textrotate">
-<ul class="bxslider">
-
-<li class="">
-<div class="big-title">
-<h3><i class="fa fa-user"></i> <span>WHO</span> WE ARE</h3>
-</div>
-<p>We are a co-education mission<br> school that welcomes any student<br> interested in exploring and soaring<br>the fields of academic and moral excellence.</p>
-</li>
-
-<li>
-<div class="big-title">
-<h3><i class="fa fa-eye"></i> <span>OUR</span> VISSION</h3>
-<div class="border-title"></div>
-</div>
-<p>To ensure a solid foundation in <br>education and moral training in the<br> fear of God.</p>
-</li>
-
-<li>
-<div class="big-title">
-<h3><i class="fa fa-bullseye"></i> <span>OUR</span> MISSION</h3>
-<div class="border-title"></div>
-</div>
-<p>We aim to develop well rounded and <br>thoughtful students prepared to cope<br> with a changing post-modern world and <br>globalized world.</p>
-</li>
-<div class="w3-center"><a href="page-about.php" class="btn btn-default" title="About Us">Learn More</a></div>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-<!--=== FACILITY SECTIONS ===-->
-
-
-<section class="grey section">
-<div class="row-fluid">
-<div class="col-md-6 myimg"></div>
-<div class="container">
-<div class="row">
-<div class="col-md-6 col-md-offset-6">
-<div class="section-container nopadding">
-<div class="textrotate">
-<ul class="bxslider">
-
-<li>
-<div class="big-title">
-<p class="lead w3-red w3-tag"><b>Our Facilities</b></p>
-<h3 class="w3-large"><b>Kid's Playground</b></h3>
-<div class="border-title"></div>
-</div>
-<img src="img/edit10.jpg" alt="">
-</li>
-
-<li>
-<div class="big-title">
-<p class="lead w3-red w3-tag"><b>Our Facilities</b></p>
-<h3 class="w3-large"><b>Science Labouratory</b></h3>
-<div class="border-title"></div>
-</div>
-<img src="img/edit6.jpg" alt="">
-</li>
-<li>
-<div class="big-title">
-<p class="lead w3-red w3-tag"><b>Our Facilities</b></p>
-<h3 class="w3-large"><b>Computer Lab | ICT Unit</b></h3>
-<div class="border-title"></div>
-</div>
-<img src="img/edit8.jpg" alt="">
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-
-
-
-<!--=== PAST EVENTS SECTION ===-->
-<section class="section darkskin fullscreen paralbackground parallax" style="background-image:url(img/edit.jpg)" data-img-width="1627" data-img-height="868" data-diff="100">
-
-<div class="overlay"></div>
-<div>
-<div class="row">
-<div class="col-md-12">
-<div class="section-title text-center">
-<h4>OUR PAST EVENTS</h4>
-<p>We Shared Awesome times together exploring places...</p>
-</div>
-</div>
-</div>
-<div class="row service-center" style="margin-left:17px ;">
-<div class="col-md-4 col-sm-6">
-<div class="feature-list" style="margin-bottom:40px;">
- <img src="img/edit12.jpg" width="100%" height="200px" style="margin-bottom:15px; border-radius:10%;" />
-<p class="w3-medium">Abuja International Airport</p>
-<p></p>
-</div>
-</div>
-
-<div class="col-md-4 col-sm-6">
-<div class="feature-list" style="margin-bottom:40px;">
-<img src="img/edit13.jpg" width="104%" height="200px" style="margin-bottom:15px; border-radius:10%;" />
-<p class="w3-medium">National Assembly</p>
-<p></p>
-</div>
-</div>
-
-<div class="col-md-4 col-sm-6">
-<div class="feature-list">
- <img src="img/edit11.jpg" width="100%" height="200px" style="margin-bottom:15px; border-radius:10%;" />
-<p class="w3-medium">End of year party 2011</p>
-<p></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!--=== THE BLOG SECTION ==-->
-
-<section class="grey section">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<div class="section-title text-center">
-<h4 class="w3-medium">From The Blog</h4>
-<p class="w3-xlarge"><b>RECENT NEWS AND UPCOMING EVENTS</b></p>
-</div>
-</div>
-</div>
-<div class="row blog-widget">
-
-
-<?php
-$sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 2";
-$query = mysqli_query($conn, $sql);
-if (mysqli_num_rows($query) > 0) {
-
-while($result = mysqli_fetch_array($query)){
-
-
-$title = $result['title'];
-$body = $result['body'];
-?>
-<div class="col-md-4 col-sm-6">
-<div class="blog-wrapper">
-<div class="blog-title">
-<p class="category_title" title=""><?=$title?></p>
-<p><?=$body?></p>
-</div>
-</div>
-</div>
-
-<?php
-
-}
-}else{
-?>
-<div class="widget">
-<div class="widget-title">
-<h4 class="w3-tag w3-red">No Posts found.</h4>
-<hr>
-</div>
-</div>
-<?php
-}
-?>
-
-</div>
-</div>
-</section>
-
-
-
-
-<!--=== TEAMS ===-->
-<section class="white section">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<div class="section-title text-center">
-<h4>Meet Our Team</h4>
-<p>We teach/build with care and love</p>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-<div class="content-widget">
-<div class="team-members row">
-<div class="col-md-3 col-sm-6 col-xs-12">
-<div class="team">
-<img src="img/edit16.jpg" width="70%" height="250px" alt="" class="wow w3-image fadeInUp">
-<div class="team-hover-content">
-<h5>Principal</h5>
-<span></span>
-<p></p>
-</div>
-</div>
-</div>
-
-<div class="col-md-3 col-sm-6 col-xs-12">
-<div class="team">
-<img src="img/edit20.jpg" width="70%" height="220px" alt="" class="wow fadeInUp">
-<div class="team-hover-content">
-<h5>Leadership</h5>
-<span></span>
-<p></p>
-</div>
-</div>
-</div>
-
-
-<div class="col-md-3 col-sm-6 col-xs-12">
-<div class="team">
-<img src="img/edit21.jpg" width="70%" height="250px" alt="" class="wow w3-image fadeInUp">
-<div class="team-hover-content">
-<h5>H.O.D Science</h5>
-<span></span>
-<p></p>
-</div>
-</div>
-</div>
-
-<div class="col-md-3 col-sm-6 col-xs-12">
-<div class="team">
-<img src="img/edit22.jpg" width="70%" height="250px" alt="" class="wow w3-image fadeInUp">
-<div class="team-hover-content">
-<h5>Exam Officer | School_Admin</h5>
-<span></span>
-<p></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<style type="text/css">
-
-.contents img{
-  width: 100%;
-  border-radius: 10px;
-  transition: all .7s ease-out;
-}
-
-.contents img:hover{
-  transform: scale(1.1) !important;
-  margin: 0 10px !important;
-}
-</style>
-
-
-
-<div class="container contents">
-<div class="row">
-<div class="col-md-12">
-<div class="section-title text-center">
-<h4>Photo Gallery</h4>
-<p></p>
-</div>
-</div>
-</div>
-
-<div id="owl-featured" class="owl-custom">
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit19.jpg" width="100%" height="100px" alt="">
-<div class="magnifier">
-</div>
-</div>
-</div>
-</div>
-
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit17.jpg" width="100%" height="100px" alt="">
-<div class="magnifier">
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit15.jpg" width="100%" height="100px" alt="">
-<div class="magnifier">
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit4.jpg" width="100%" height="100px" alt="">
-<div class="magnifier">
-</div>
-</div>
-</div>
-</div>
-
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit2.jpg" width="100%" height="100px" alt="">
-<div class="magnifier">
-</div>
-</div>
-</div>
-</div>
-
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit18.jpg" width="100%" height="100px" alt="">
-<div class="magnifier">
-</div>
-</div>
-</div>
-</div>
-
-<div class="owl-featured">
-<div class="shop-item-list ">
-<div class="">
-<img src="img/edit3.jpg" width="100%" height="100px" alt="">
-<div class="magnifier">
-</div>
-</div>
-
-
-</div>
-</div>
-
-</div>
-</div>
-
-<?php
-
-include 'footer.php';
-
-?>
-
-</div>
-      <script src="js/jquery.min.js.pagespeed.jm.iDyG3vc4gw.js"></script>
-      <script src="js/bootstrap.min.js%2bretina.js%2bwow.js.pagespeed.jc.pMrMbVAe_E.js"></script><script>eval(mod_pagespeed_gFRwwUbyVc);</script>
-      <script>eval(mod_pagespeed_U0OPgGhapl);</script>
-      <script src="js/carousel.js%2bcustom.js.pagespeed.jc.nVhk-UfDsv.js"></script><script>eval(mod_pagespeed_6Ja02QZq$f);</script>
-      <script>eval(mod_pagespeed_KxQMf5X6rF);</script>
-      <script src="rs-plugin/js/jquery.themepunch.tools.min.js.pagespeed.jm.0PLSBOOLZa.js"></script>
-      <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-      <script>jQuery(document).ready(function(){jQuery('.tp-banner').show().revolution({dottedOverlay:"none",delay:16000,startwidth:1170,startheight:620,hideThumbs:200,thumbWidth:100,thumbHeight:50,thumbAmount:5,navigationType:"none",navigationArrows:"solo",navigationStyle:"preview3",touchenabled:"on",onHoverStop:"on",swipe_velocity:0.7,swipe_min_touches:1,swipe_max_touches:1,drag_block_vertical:false,parallax:"mouse",parallaxBgFreeze:"on",parallaxLevels:[10,7,4,3,2,5,4,3,2,1],parallaxDisableOnMobile:"off",keyboardNavigation:"off",navigationHAlign:"center",navigationVAlign:"bottom",navigationHOffset:0,navigationVOffset:20,soloArrowLeftHalign:"left",soloArrowLeftValign:"center",soloArrowLeftHOffset:20,soloArrowLeftVOffset:0,soloArrowRightHalign:"right",soloArrowRightValign:"center",soloArrowRightHOffset:20,soloArrowRightVOffset:0,shadow:0,fullWidth:"on",fullScreen:"off",spinner:"spinner4",stopLoop:"off",stopAfterLoops:-1,stopAtSlide:-1,shuffle:"off",autoHeight:"off",forceFullWidth:"off",hideThumbsOnMobile:"off",hideNavDelayOnMobile:1500,hideBulletsOnMobile:"off",hideArrowsOnMobile:"off",hideThumbsUnderResolution:0,hideSliderAtLimit:0,hideCaptionAtLimit:0,hideAllCaptionAtLilmit:0,startWithSlide:0,fullScreenOffsetContainer:""});});</script>
-      <script src="js/bxslider.js.pagespeed.jm.X-sF7YFq4Y.js"></script>
-      <script type="text/javascript">(function($){"use strict";$('.bxslider').bxSlider({mode:'vertical',minSlides:1,maxSlides:1,slideMargin:0,pager:false,nextText:'<i class="fa fa-arrow-down"></i>',prevText:'<i class="fa fa-arrow-up"></i>',speed:1000,auto:true});})(jQuery);</script>
-      </body>
+
+<body>
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="brand-logo">CPM</span>
+                <span class="fs-5 fw-lighter text-dark">School</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why-choose">Why Choose Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="dropdown ms-lg-4">
+                    <a href="#" class="btn btn-teal dropdown-toggle" id="applyNowDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Login
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="applyNowDropdown">
+                        <li><a class="dropdown-item" href="admin/login.php">Admin Login</a></li>
+                        <li><a class="dropdown-item" href="student/login.php">Student Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero text-white">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-9 hero-content" data-aos="fade-up">
+                    <h1 class="display-3 fw-bold mb-3" data-aos="fade-up" data-aos-delay="100">
+                        Shaping Leaders of Tomorrow
+                    </h1>
+                    <p class="lead fs-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        CPM International School
+                    </p>
+                    <p class="fs-5 mb-5 opacity-90" data-aos="fade-up" data-aos-delay="300">
+                        Excellence in Academics<span style="font-size: 10px;"> &hearts;</span> Character<span style="font-size: 10px;"> &hearts;</span> Innovation<span style="font-size: 10px;"> &hearts;</span> Since 2002
+                    </p>
+                    <a href="#contact"
+                        class="btn btn-teal btn-lg px-5 py-3 fs-5"
+                        data-aos="fade-up"
+                        data-aos-delay="400">
+                        Apply Now for 2026/2027 Session
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-5 text-center">
+            <i class="bi bi-chevron-down fs-3 animate-bounce" style="animation: bounce 2s infinite;"></i>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <!-- Left Text -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="badge bg-teal text-white px-3 py-2 mb-3">EST. 2002 | ABUJA</span>
+                    <h2 class="section-title display-5 fw-bold mb-4">About CPM International School</h2>
+                    <p class="lead text-muted">
+                        Located in the heart of Suleja, Niger State, CPM International School is a world-class secondary institution
+                        that combines the Nigerian National Curriculum with international best practices.
+                    </p>
+                    <p class="mb-4">
+                        We provide a nurturing environment where students develop academically, socially,
+                        and morally. Our graduates consistently gain admission into top Nigerian universities and over shores.
+                    </p>
+
+                    <div class="row g-4 mt-4">
+                        <!-- Mission -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="d-flex">
+                                <i class="bi bi-bullseye fs-2 text-teal me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold">Our Mission</h5>
+                                    <p class="small text-muted">
+                                        To inspire and equip every student with knowledge, skills, and values for global leadership.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vision -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="d-flex">
+                                <i class="bi bi-eye fs-2 text-teal me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold">Our Vision</h5>
+                                    <p class="small text-muted">
+                                        To be Nigeria's most respected secondary school, producing leaders of integrity and innovation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="img/press.jpeg"
+                        alt="CPM International School Campus - Abuja"
+                        class="img-fluid rounded-4 shadow-lg">
+                    <div class="text-center mt-3">
+                        <!-- <small class="text-muted">Our beautiful Suleja campus</small> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US SECTION ==================== -->
+    <section id="why-choose" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-teal px-4 py-2">EXCELLENCE</span>
+                <h2 class="section-title display-5 fw-bold">Why Choose Us</h2>
+                <p class="lead text-muted col-lg-8 mx-auto">
+                    Rasons parents and students trust us with their future
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+                    <div class="why-card card h-100 text-center p-4">
+                        <div class="why-icon">
+                            <i class="bi bi-book-fill"></i>
+                        </div>
+                        <h5 class="fw-bold">Academic Excellence</h5>
+                        <p class="text-muted">89% WAEC/NECO success rate for 5 consecutive years.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="why-card card h-100 text-center p-4">
+                        <div class="why-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h5 class="fw-bold">Qualified Teachers</h5>
+                        <p class="text-muted">Greater percentage of our teachers hold degrees and have professional teaching experience.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+                    <div class="why-card card h-100 text-center p-4">
+                        <div class="why-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <h5 class="fw-bold">Holistic Development</h5>
+                        <p class="text-muted">Drama, music, debate, entrepreneurship clubs | we nurture every talent.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY SECTION ==================== -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title display-5 fw-bold">Photo Gallery</h2>
+                <p class="lead text-muted">Moments that define our community</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Gallery Item 1 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="img/img1.jpeg"
+                        alt="Aerial view of CPM School Campus"
+                        class="gallery-img w-100 shadow">
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/img5.jpeg"
+                        alt="Students in Science Laboratory"
+                        class="gallery-img w-100 shadow">
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/img6.jpeg"
+                        alt="Sports Day at CPM"
+                        class="gallery-img w-100 shadow">
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="img/img9.jpeg"
+                        alt="Graduation Ceremony"
+                        class="gallery-img w-100 shadow">
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="img/img3.jpeg"
+                        alt="Library Reading Session"
+                        class="gallery-img w-100 shadow">
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="img/img2.jpeg"
+                        alt="Cultural Day Performance"
+                        class="gallery-img w-100 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT / CTA SECTION ==================== -->
+    <section id="contact" class="cta-section py-5 text-white">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <!-- Left CTA -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-5 fw-bold mb-3">Ready to Join the CPM Family?</h2>
+                    <p class="lead opacity-90 mb-4">
+                        Limited spaces available for the 2026/2027 academic session.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#" onclick="alert('Application form would open here in production')"
+                            class="btn btn-light btn-lg px-5 py-3 fw-semibold">
+                            Start Application
+                        </a>
+                        <a href="tel:+2348031234567" class="btn btn-outline-light btn-lg px-5 py-3">
+                            <i class="bi bi-telephone"></i> Call 09064457846
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Contact Form -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-4 p-md-5">
+                            <h4 class="fw-bold text-dark mb-4">Get in Touch</h4>
+
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control form-control-lg" placeholder="Full Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control form-control-lg" placeholder="Phone Number" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" class="form-control form-control-lg" placeholder="Email Address" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control form-control-lg" rows="4"
+                                            placeholder="Message or enquiry"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit"
+                                            class="btn btn-teal w-100 py-3 fw-bold">
+                                            SEND MESSAGE
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer text-white py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- School Info -->
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <span class="text-teal">CPM</span> International School
+                    </h5>
+                    <p class="opacity-75">
+                        Opposite field base, 1st gate<br>
+                        Suleja, Niger State,<br>
+                        Nigeria.
+                    </p>
+                    <p class="small opacity-75">
+                        Established 2002 • Approved by FCT Ministry of Education
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#about" class="text-white opacity-75 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#why-choose" class="text-white opacity-75 text-decoration-none">Why CPM</a></li>
+                        <li class="mb-2"><a href="#gallery" class="text-white opacity-75 text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="#" class="text-white opacity-75 text-decoration-none">Admissions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Contact Us</h6>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-telephone-fill me-3"></i>
+                        <div>
+                            <a href="tel:+2348031234567" class="text-white opacity-75 text-decoration-none">08050470948</a><br>
+                            <a href="tel:+2348098765432" class="text-white opacity-75 text-decoration-none">09064457846</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-envelope-fill me-3"></i>
+                        <a href="mailto:info@cpminternationalschool.edu.ng"
+                            class="text-white opacity-75 text-decoration-none">cpminternational2022@gmail.com</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-geo-alt-fill me-3"></i>
+                        <span class="opacity-75">Suleja, Niger State</span>
+                    </div>
+                </div>
+
+                <!-- Social -->
+                <div class="col-lg-3">
+                    <!-- <h6 class="fw-bold mb-3">Follow Us</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white fs-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white fs-3"><i class="bi bi-youtube"></i></a>
+                    </div> -->
+
+                    <div class="mt-5">
+                        <small class="opacity-50">© 2026 CPM International School. All Rights Reserved.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap.min.js"></script>
+    <!-- AOS JS -->
+    <script src="assets/aos-animate.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Fake form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerHTML;
+
+            btn.innerHTML = `
+                <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                Sending...
+            `;
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert('✅ Thank you! Your message has been received. We will contact you within 24 hours.');
+                this.reset();
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 1800);
+        });
+
+        // Active nav link highlighting
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = ['home', 'about', 'why-choose', 'gallery', 'contact'];
+
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= sectionTop - 200) {
+                        current = sectionId;
+                    }
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
 </html>

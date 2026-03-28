@@ -87,29 +87,25 @@ if (isset($_SESSION['username'])) {
                                     <form action="" class="form-horizontal" method="post" id="student-add" enctype="multipart/form-data">
                                         <div class="card-body">
                                             <div class="form-group row">
-                                                <label for="name" class="col-sm-3 col-form-label">Surname <span style="color: #f00;">*</span></label>
+                                                <label for="surname" class="col-sm-3 col-form-label">Surname <span style="color: #f00;">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" id="surname" required data-parsley-trigger="keyup" name="surname">
                                                 </div>
                                             </div>
+
                                             <div class="form-group row">
-                                                <label for="firstname" class="col-sm-3 col-form-label">Firstname <span style="color: #f00;">*</span></label>
+                                                <label for="firstname" class="col-sm-3 col-form-label">FirstName<span style="color: #f00;">*</span></label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="firstname" required data-parsley-trigger="keyup" name="firstname">
+                                                    <input type="text" class="form-control" id="firstname" required name="firstname" data-parsley-trigger="keyup">
                                                 </div>
                                             </div>
+
                                             <div class="form-group row">
-                                                <label for="middlename" class="col-sm-3 col-form-label">Middlename <span style="color: #f00;">*</span></label>
+                                                <label for="middlename" class="col-sm-3 col-form-label">MiddleName</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="middlename" required data-parsley-trigger="keyup" name="middlename">
+                                                    <input type="text" class="form-control" id="middlename" name="middlename" data-parsley-trigger="keyup">
                                                 </div>
                                             </div>
-                                            <!-- <div class="form-group row">
-                                        <label for="dob" class="col-sm-3 col-form-label">date of birth<span style="color: #f00;">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input type="date" class="form-control" id="dob" required name="dob" data-parsley-trigger="keyup">
-                                        </div>
-                                    </div> -->
 
                                             <div class="form-group row">
                                                 <label for="sex" class="col-sm-3 col-form-label">Sex</label>
@@ -123,42 +119,6 @@ if (isset($_SESSION['username'])) {
                                                 </div>
                                             </div>
 
-                                            <!-- <div class="form-group row">
-                                        <label for="religion" class="col-sm-3 col-form-label">Religion</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="religion" name="religion">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="email" class="col-sm-3 col-form-label">Email<span style="color: #f00;">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input type="email" class="form-control" id="email" required name="email"
-                                                   data-parsley-type="email" data-parsley-trigger="keyup">
-                                        </div>
-                                    </div> -->
-
-                                            <!-- <div class="form-group row">
-                                        <label for="phone" class="col-sm-3 col-form-label">Phone</label>
-                                        <div class="col-sm-9">
-                                            <input type="tel" class="form-control" id="phone" name="phone" data-parsley-type='number'
-                                                   maxlength="11" data-parsley-length="[11, 11]" data-parsley-trigger="keyup" pattern="\d{11}">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="address" class="col-sm-3 col-form-label">Address</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="address" name="address">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="state" class="col-sm-3 col-form-label">State</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="state" name="state">
-                                        </div>
-                                    </div> -->
 
                                             <div class="form-group row">
                                                 <label for="class" class="col-sm-3 col-form-label"> Class <span
@@ -199,20 +159,6 @@ if (isset($_SESSION['username'])) {
                                                     </select>
                                                 </div>
                                             </div>
-                                            <?php include 'country.php'; ?>
-
-                                            <div class="form-group row">
-                                                <label for="photo" class="col-sm-3 col-form-label">Photo</label>
-                                                <div class="col-sm-9">
-                                                    <div class="input-group">
-                                                        <div class="custom-file">
-                                                            <input type="file" class="custom-file-input" id="photo" name="photo">
-                                                            <label class="custom-file-label" for="photo">Choose photo</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
 
 
                                             <div class="form-group row">
@@ -224,16 +170,16 @@ if (isset($_SESSION['username'])) {
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="username" class="col-sm-3 col-form-label">Username <span style="color: #f00;">*</span></label>
+                                                <label for="username" class="col-sm-3 col-form-label">Username</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="username" required name="username">
+                                                    <input type="text" class="form-control" id="username" placeholder="" name="username">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="password" class="col-sm-3 col-form-label">Password <span style="color: #f00;">*</span></label>
+                                                <!-- <label for="password" class="col-sm-3 col-form-label">Password</label> -->
                                                 <div class="col-sm-9">
-                                                    <input type="password" value="12345" class="form-control" id="password" required name="password">
+                                                    <input type="hidden" class="form-control" id="password" value="12345" required name="password">
                                                 </div>
                                             </div>
 

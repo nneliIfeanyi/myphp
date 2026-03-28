@@ -24,13 +24,13 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                 <li class="nav-item">
                     <a href="<?php echo $conn->base_url();  ?>" <?php
-                      if(basename($_SERVER['SCRIPT_NAME']) == 'index.php'){
-                          //APPLY THE ACTIVE CLASS
-                          echo 'class = "nav-link active"';
-                      }else{
-                          echo 'class = "nav-link"';
-                      }
-                    ?>>
+                                                                if (basename($_SERVER['SCRIPT_NAME']) == 'index.php') {
+                                                                    //APPLY THE ACTIVE CLASS
+                                                                    echo 'class = "nav-link active"';
+                                                                } else {
+                                                                    echo 'class = "nav-link"';
+                                                                }
+                                                                ?>>
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -39,17 +39,19 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                 </li>
 
                 <li class="nav-item">
-                    <a href="<?php echo $conn->base_url();?>student" <?php
-                    if(basename($_SERVER['SCRIPT_NAME']) == 'student.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'add-student.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'edit-student.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'view-student.php'){
-                        //APPLY THE ACTIVE CLASS
-                        echo 'class = "nav-link active"';
-                    }else{
-                        echo 'class = "nav-link"';
-                    }
-                    ?>>
+                    <a href="<?php echo $conn->base_url(); ?>student" <?php
+                                                                        if (
+                                                                            basename($_SERVER['SCRIPT_NAME']) == 'student.php'
+                                                                            || basename($_SERVER['SCRIPT_NAME']) == 'add-student.php'
+                                                                            || basename($_SERVER['SCRIPT_NAME']) == 'edit-student.php'
+                                                                            || basename($_SERVER['SCRIPT_NAME']) == 'view-student.php'
+                                                                        ) {
+                                                                            //APPLY THE ACTIVE CLASS
+                                                                            echo 'class = "nav-link active"';
+                                                                        } else {
+                                                                            echo 'class = "nav-link"';
+                                                                        }
+                                                                        ?>>
                         <i class="nav-icon fas fa-graduation-cap"></i>
                         <p>
                             Student
@@ -58,42 +60,46 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                 </li>
 
                 <li class="nav-item">
-                    <a href="<?php echo $conn->base_url();?>teacher" <?php
-                    if(basename($_SERVER['SCRIPT_NAME']) == 'teacher.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'add-teacher.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'view-teacher.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'edit-teacher.php'){
-                        //APPLY THE ACTIVE CLASS
-                        echo 'class = "nav-link active"';
-                    }else{
-                        echo 'class = "nav-link"';
-                    }
-                    ?>>
+                    <a href="<?php echo $conn->base_url(); ?>teacher" <?php
+                                                                        if (
+                                                                            basename($_SERVER['SCRIPT_NAME']) == 'teacher.php'
+                                                                            || basename($_SERVER['SCRIPT_NAME']) == 'add-teacher.php'
+                                                                            || basename($_SERVER['SCRIPT_NAME']) == 'view-teacher.php'
+                                                                            || basename($_SERVER['SCRIPT_NAME']) == 'edit-teacher.php'
+                                                                        ) {
+                                                                            //APPLY THE ACTIVE CLASS
+                                                                            echo 'class = "nav-link active"';
+                                                                        } else {
+                                                                            echo 'class = "nav-link"';
+                                                                        }
+                                                                        ?>>
                         <i class="nav-icon fas fa-user-circle"></i>
                         <p>
-                          Teacher
+                            Teacher
                         </p>
                     </a>
                 </li>
 
                 <!--    start academics sidebar-->
                 <li <?php
-                   if(basename($_SERVER['SCRIPT_NAME']) == 'class.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'section.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'add-section.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'edit-section.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'subject.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'add-class.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'edit-class.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'edit-subject.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'add-subject.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'promotion.php'){
-                    //APPLY THE ACTIVE CLASS
-                    echo 'class = "nav-item menu-open"';
-                }else{
-                    echo 'class = "nav-item"';
-                }
-                ?>>
+                    if (
+                        basename($_SERVER['SCRIPT_NAME']) == 'class.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'section.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'add-section.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'edit-section.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'subject.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'add-class.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'edit-class.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'edit-subject.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'add-subject.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'promotion.php'
+                    ) {
+                        //APPLY THE ACTIVE CLASS
+                        echo 'class = "nav-item menu-open"';
+                    } else {
+                        echo 'class = "nav-item"';
+                    }
+                    ?>>
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-university"></i>
                         <p>
@@ -105,12 +111,14 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="<?php echo $base_url; ?>class"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'class.php'
+                                <?php if (
+                                    basename($_SERVER['SCRIPT_NAME']) == 'class.php'
                                     || basename($_SERVER['SCRIPT_NAME']) == 'add-class.php'
-                                    || basename($_SERVER['SCRIPT_NAME']) == 'edit-class.php'){
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'edit-class.php'
+                                ) {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -121,15 +129,17 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                         <li class="nav-item">
                             <a href="<?php echo $base_url; ?>section"
-                            <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'section.php'
-                                || basename($_SERVER['SCRIPT_NAME']) == 'add-section.php'
-                                || basename($_SERVER['SCRIPT_NAME']) == 'edit-section.php'){
-                                //APPLY THE ACTIVE CLASS
-                                echo 'class = "nav-link active"';
-                            }else{
-                                echo 'class = "nav-link"';
-                            }
-                            ?>>
+                                <?php if (
+                                    basename($_SERVER['SCRIPT_NAME']) == 'section.php'
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'add-section.php'
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'edit-section.php'
+                                ) {
+                                    //APPLY THE ACTIVE CLASS
+                                    echo 'class = "nav-link active"';
+                                } else {
+                                    echo 'class = "nav-link"';
+                                }
+                                ?>>
                                 <i class="fas fa-star nav-icon" style="<?php echo $change_style; ?>"></i>
                                 <p>Section</p>
                             </a>
@@ -137,12 +147,14 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                         <li class="nav-item">
                             <a href="<?php echo $base_url; ?>subject"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'subject.php'
+                                <?php if (
+                                    basename($_SERVER['SCRIPT_NAME']) == 'subject.php'
                                     || basename($_SERVER['SCRIPT_NAME']) == 'add-subject.php'
-                                    || basename($_SERVER['SCRIPT_NAME']) == 'edit-subject.php'){
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'edit-subject.php'
+                                ) {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -152,14 +164,14 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?php echo $conn->base_url().'promotion'; ?>"<?php
-                            if(basename($_SERVER['SCRIPT_NAME']) == 'promotion.php'){
-                                echo 'class = "nav-link active"';
-                            }else{
-                                echo 'class = "nav-link"';
-                            }
-                            ?>>
-                                <i class="fas fa-graduation-cap nav-icon" style="<?php echo $change_style;?>"></i>
+                            <a href="<?php echo $conn->base_url() . 'promotion'; ?>" <?php
+                                                                                        if (basename($_SERVER['SCRIPT_NAME']) == 'promotion.php') {
+                                                                                            echo 'class = "nav-link active"';
+                                                                                        } else {
+                                                                                            echo 'class = "nav-link"';
+                                                                                        }
+                                                                                        ?>>
+                                <i class="fas fa-graduation-cap nav-icon" style="<?php echo $change_style; ?>"></i>
                                 <p>Promotion</p>
                             </a>
                         </li>
@@ -167,19 +179,21 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     </ul>
                 </li>
 
-<!--                end academics sidebar-->
+                <!--                end academics sidebar-->
 
 
                 <!-- start administrator -->
                 <li <?php
-                if(basename($_SERVER['SCRIPT_NAME']) == 'resetpassword.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'systemadmin.php'){
-                    //APPLY THE ACTIVE CLASS
-                    echo 'class = "nav-item menu-open"';
-                }else{
-                    echo 'class = "nav-item"';
-                }
-                ?>>
+                    if (
+                        basename($_SERVER['SCRIPT_NAME']) == 'resetpassword.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'systemadmin.php'
+                    ) {
+                        //APPLY THE ACTIVE CLASS
+                        echo 'class = "nav-item menu-open"';
+                    } else {
+                        echo 'class = "nav-item"';
+                    }
+                    ?>>
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
@@ -191,10 +205,10 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>resetpassword"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'resetpassword.php'){
+                                <?php if (basename($_SERVER['SCRIPT_NAME']) == 'resetpassword.php') {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -205,10 +219,10 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>systemadmin"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'systemadmin.php'){
+                                <?php if (basename($_SERVER['SCRIPT_NAME']) == 'systemadmin.php') {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -225,18 +239,20 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                 <!-- start exam and grading -->
 
                 <li <?php
-                if(basename($_SERVER['SCRIPT_NAME']) == 'exam.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'add-exam.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'edit-exam.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'add-grade.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'edit-grade.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'grade.php'){
-                    //APPLY THE ACTIVE CLASS
-                    echo 'class = "nav-item menu-open"';
-                }else{
-                    echo 'class = "nav-item"';
-                }
-                ?>>
+                    if (
+                        basename($_SERVER['SCRIPT_NAME']) == 'exam.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'add-exam.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'edit-exam.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'add-grade.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'edit-grade.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'grade.php'
+                    ) {
+                        //APPLY THE ACTIVE CLASS
+                        echo 'class = "nav-item menu-open"';
+                    } else {
+                        echo 'class = "nav-item"';
+                    }
+                    ?>>
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-user-edit"></i>
                         <p>
@@ -248,12 +264,14 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>exam"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'exam.php'
-                                           || basename($_SERVER['SCRIPT_NAME']) == 'add-exam.php'
-                                           || basename($_SERVER['SCRIPT_NAME']) == 'edit-exam.php'){
+                                <?php if (
+                                    basename($_SERVER['SCRIPT_NAME']) == 'exam.php'
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'add-exam.php'
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'edit-exam.php'
+                                ) {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -264,12 +282,14 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>grade"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'grade.php'
-                                           || basename($_SERVER['SCRIPT_NAME']) == 'add-grade.php'
-                                           || basename($_SERVER['SCRIPT_NAME']) == 'edit-grade.php'){
+                                <?php if (
+                                    basename($_SERVER['SCRIPT_NAME']) == 'grade.php'
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'add-grade.php'
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'edit-grade.php'
+                                ) {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -282,18 +302,20 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                 </li>
                 <!-- end exam and grading -->
 
-                    <!-- start mark sidebar content -->
+                <!-- start mark sidebar content -->
 
-                    <li <?php
-                if(basename($_SERVER['SCRIPT_NAME']) == 'mark.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'view-mark.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'add-mark.php'){
-                    //APPLY THE ACTIVE CLASS
-                    echo 'class = "nav-item menu-open"';
-                }else{
-                    echo 'class = "nav-item"';
-                }
-                ?>>
+                <li <?php
+                    if (
+                        basename($_SERVER['SCRIPT_NAME']) == 'mark.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'view-mark.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'add-mark.php'
+                    ) {
+                        //APPLY THE ACTIVE CLASS
+                        echo 'class = "nav-item menu-open"';
+                    } else {
+                        echo 'class = "nav-item"';
+                    }
+                    ?>>
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-bookmark"></i>
                         <p>
@@ -305,12 +327,14 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>mark"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'mark.php'
-                                           || basename($_SERVER['SCRIPT_NAME']) == 'add-mark.php'
-                                           || basename($_SERVER['SCRIPT_NAME']) == 'view-mark.php'){
+                                <?php if (
+                                    basename($_SERVER['SCRIPT_NAME']) == 'mark.php'
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'add-mark.php'
+                                    || basename($_SERVER['SCRIPT_NAME']) == 'view-mark.php'
+                                ) {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -320,18 +344,20 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                         </li>
                     </ul>
                 </li>
-               <!-- end mark sidebar content -->
+                <!-- end mark sidebar content -->
 
-<!--                start homepage settings menu -->
+                <!--                start homepage settings menu -->
                 <li <?php
-                if(basename($_SERVER['SCRIPT_NAME']) == 'settings.php'
-                   || basename($_SERVER['SCRIPT_NAME']) == 'show-position.php'){
-                    //APPLY THE ACTIVE CLASS
-                    echo 'class = "nav-item menu-open"';
-                }else{
-                    echo 'class = "nav-item"';
-                }
-                ?>>
+                    if (
+                        basename($_SERVER['SCRIPT_NAME']) == 'settings.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'show-position.php'
+                    ) {
+                        //APPLY THE ACTIVE CLASS
+                        echo 'class = "nav-item menu-open"';
+                    } else {
+                        echo 'class = "nav-item"';
+                    }
+                    ?>>
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
@@ -343,10 +369,10 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>settings"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'settings.php'){
+                                <?php if (basename($_SERVER['SCRIPT_NAME']) == 'settings.php') {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -356,14 +382,14 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?php echo $conn->base_url().'show-position'; ?>"  <?php
-                            if(basename($_SERVER['SCRIPT_NAME']) == 'show-position.php'){
-                                echo 'class = "nav-link active"';
-                            }else{
-                                echo 'class = "nav-link"';
-                            }
-                            ?>>
-                                <i class="fas fa-chalkboard-teacher nav-icon" style="<?php echo $change_style;?>"></i>
+                            <a href="<?php echo $conn->base_url() . 'show-position'; ?>" <?php
+                                                                                            if (basename($_SERVER['SCRIPT_NAME']) == 'show-position.php') {
+                                                                                                echo 'class = "nav-link active"';
+                                                                                            } else {
+                                                                                                echo 'class = "nav-link"';
+                                                                                            }
+                                                                                            ?>>
+                                <i class="fas fa-chalkboard-teacher nav-icon" style="<?php echo $change_style; ?>"></i>
                                 <p>Positions Setting</p>
                             </a>
                         </li>
@@ -375,16 +401,18 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                 <!--                start pin management  menu -->
                 <li <?php
-                if(basename($_SERVER['SCRIPT_NAME']) == 'view-pins-requests.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'generate-pins.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'set-card-usage-limit.php'
-                  || basename($_SERVER['SCRIPT_NAME']) == 'set-card-expire-date.php'){
-                    //APPLY THE ACTIVE CLASS
-                    echo 'class = "nav-item menu-open"';
-                }else{
-                    echo 'class = "nav-item"';
-                }
-                ?>>
+                    if (
+                        basename($_SERVER['SCRIPT_NAME']) == 'view-pins-requests.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'generate-pins.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'set-card-usage-limit.php'
+                        || basename($_SERVER['SCRIPT_NAME']) == 'set-card-expire-date.php'
+                    ) {
+                        //APPLY THE ACTIVE CLASS
+                        echo 'class = "nav-item menu-open"';
+                    } else {
+                        echo 'class = "nav-item"';
+                    }
+                    ?>>
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-map-marker"></i>
                         <p>
@@ -396,10 +424,10 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>generate-pins"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'generate-pins.php'){
+                                <?php if (basename($_SERVER['SCRIPT_NAME']) == 'generate-pins.php') {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -410,10 +438,10 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>view-pins-requests"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'view-pins-requests.php'){
+                                <?php if (basename($_SERVER['SCRIPT_NAME']) == 'view-pins-requests.php') {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -425,10 +453,10 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>set-card-usage-limit"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'set-card-usage-limit.php'){
+                                <?php if (basename($_SERVER['SCRIPT_NAME']) == 'set-card-usage-limit.php') {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -437,12 +465,12 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                             </a>
                         </li>
 
-                       <li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>set-card-expire-date"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'set-card-expire-date.php'){
+                                <?php if (basename($_SERVER['SCRIPT_NAME']) == 'set-card-expire-date.php') {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -450,7 +478,7 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                                 <p> Set Card Expire Date </p>
                             </a>
                         </li>
- -->
+
                     </ul>
                 </li>
                 <!--               end pin management menu -->
@@ -458,13 +486,13 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                 <!-- start Terminal Report sidebar content -->
 
                 <li <?php
-                if(basename($_SERVER['SCRIPT_NAME']) == 'terminal-report.php'){
-                    //APPLY THE ACTIVE CLASS
-                    echo 'class = "nav-item menu-open"';
-                }else{
-                    echo 'class = "nav-item"';
-                }
-                ?>>
+                    if (basename($_SERVER['SCRIPT_NAME']) == 'terminal-report.php') {
+                        //APPLY THE ACTIVE CLASS
+                        echo 'class = "nav-item menu-open"';
+                    } else {
+                        echo 'class = "nav-item"';
+                    }
+                    ?>>
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-bullhorn"></i>
                         <p>
@@ -476,10 +504,10 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="<?php echo $conn->base_url(); ?>terminal-report"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'terminal-report.php'){
+                                <?php if (basename($_SERVER['SCRIPT_NAME']) == 'terminal-report.php') {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -494,15 +522,17 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                 <!--              Report card comments -->
                 <li class="nav-item">
-                    <a href="<?php echo $conn->base_url();?>report-comments" <?php
-                    if(basename($_SERVER['SCRIPT_NAME']) == 'report-comments.php'
-                       ||basename($_SERVER['SCRIPT_NAME']) == 'add-comment.php' ){
-                        //APPLY THE ACTIVE CLASS
-                        echo 'class = "nav-link active"';
-                    }else{
-                        echo 'class = "nav-link"';
-                    }
-                    ?>>
+                    <a href="<?php echo $conn->base_url(); ?>report-comments" <?php
+                                                                                if (
+                                                                                    basename($_SERVER['SCRIPT_NAME']) == 'report-comments.php'
+                                                                                    || basename($_SERVER['SCRIPT_NAME']) == 'add-comment.php'
+                                                                                ) {
+                                                                                    //APPLY THE ACTIVE CLASS
+                                                                                    echo 'class = "nav-link active"';
+                                                                                } else {
+                                                                                    echo 'class = "nav-link"';
+                                                                                }
+                                                                                ?>>
                         <i class="nav-icon fas fa-comment"></i>
                         <p>Report Card Comments
                         </p>
@@ -512,15 +542,17 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                 <!--            Student Attendance -->
                 <li class="nav-item">
-                    <a href="<?php echo $conn->base_url();?>attendance" <?php
-                    if(basename($_SERVER['SCRIPT_NAME']) == 'attendance.php'
-                        ||basename($_SERVER['SCRIPT_NAME']) == 'add-attendance.php' ){
-                        //APPLY THE ACTIVE CLASS
-                        echo 'class = "nav-link active"';
-                    }else{
-                        echo 'class = "nav-link"';
-                    }
-                    ?>>
+                    <a href="<?php echo $conn->base_url(); ?>attendance" <?php
+                                                                            if (
+                                                                                basename($_SERVER['SCRIPT_NAME']) == 'attendance.php'
+                                                                                || basename($_SERVER['SCRIPT_NAME']) == 'add-attendance.php'
+                                                                            ) {
+                                                                                //APPLY THE ACTIVE CLASS
+                                                                                echo 'class = "nav-link active"';
+                                                                            } else {
+                                                                                echo 'class = "nav-link"';
+                                                                            }
+                                                                            ?>>
                         <i class="nav-icon fas fa-calendar"></i>
                         <p>Manage Attendance
                         </p>
@@ -531,14 +563,14 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
 
                 <li class="nav-item">
-                    <a href="<?php echo $conn->base_url();?>logout" <?php
-                    if(basename($_SERVER['SCRIPT_NAME']) == 'logout.php'){
-                        //APPLY THE ACTIVE CLASS
-                        echo 'class = "nav-link active"';
-                    }else{
-                        echo 'class = "nav-link"';
-                    }
-                    ?>>
+                    <a href="<?php echo $conn->base_url(); ?>logout" <?php
+                                                                        if (basename($_SERVER['SCRIPT_NAME']) == 'logout.php') {
+                                                                            //APPLY THE ACTIVE CLASS
+                                                                            echo 'class = "nav-link active"';
+                                                                        } else {
+                                                                            echo 'class = "nav-link"';
+                                                                        }
+                                                                        ?>>
                         <i class="nav-icon fas fa-lock"></i>
                         <p>Logout
                         </p>

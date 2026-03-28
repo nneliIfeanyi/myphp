@@ -24,13 +24,13 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                 <li class="nav-item">
                     <a href="<?php echo $conn->student_url();  ?>" <?php
-                    if(basename($_SERVER['SCRIPT_NAME']) == 'index.php'){
-                        //APPLY THE ACTIVE CLASS
-                        echo 'class = "nav-link active"';
-                    }else{
-                        echo 'class = "nav-link"';
-                    }
-                    ?>>
+                                                                    if (basename($_SERVER['SCRIPT_NAME']) == 'index.php') {
+                                                                        //APPLY THE ACTIVE CLASS
+                                                                        echo 'class = "nav-link active"';
+                                                                    } else {
+                                                                        echo 'class = "nav-link"';
+                                                                    }
+                                                                    ?>>
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -41,30 +41,32 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                 <li class="nav-item">
                     <a href="<?php echo $conn->student_url();  ?>check-result" <?php
-                    if(basename($_SERVER['SCRIPT_NAME']) == 'check-result.php'
-                       || basename($_SERVER['SCRIPT_NAME']) == 'view-result.php' ){
-                        //APPLY THE ACTIVE CLASS
-                        echo 'class = "nav-link active"';
-                    }else{
-                        echo 'class = "nav-link"';
-                    }
-                    ?>>
+                                                                                if (
+                                                                                    basename($_SERVER['SCRIPT_NAME']) == 'check-result.php'
+                                                                                    || basename($_SERVER['SCRIPT_NAME']) == 'view-result.php'
+                                                                                ) {
+                                                                                    //APPLY THE ACTIVE CLASS
+                                                                                    echo 'class = "nav-link active"';
+                                                                                } else {
+                                                                                    echo 'class = "nav-link"';
+                                                                                }
+                                                                                ?>>
                         <i class="nav-icon fa fa-bookmark"></i>
                         <p>
-                          Check Result
+                            Check Result
                         </p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="javascript:void();" <?php
-                    if(basename($_SERVER['SCRIPT_NAME']) == 'contact.php'){
-                        //APPLY THE ACTIVE CLASS
-                        echo 'class = "nav-link active"';
-                    }else{
-                        echo 'class = "nav-link"';
-                    }
-                    ?> data-toggle="modal" data-target="#contact-admin">
+                                                    if (basename($_SERVER['SCRIPT_NAME']) == 'contact.php') {
+                                                        //APPLY THE ACTIVE CLASS
+                                                        echo 'class = "nav-link active"';
+                                                    } else {
+                                                        echo 'class = "nav-link"';
+                                                    }
+                                                    ?> data-toggle="modal" data-target="#contact-admin">
                         <i class="nav-icon fas fa-phone"></i>
                         <p>
                             Contact Admin
@@ -74,13 +76,13 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
                 <!--                start homepage settings menu -->
                 <li <?php
-                if(basename($_SERVER['SCRIPT_NAME']) == 'settings.php'){
-                    //APPLY THE ACTIVE CLASS
-                    echo 'class = "nav-item menu-open"';
-                }else{
-                    echo 'class = "nav-item"';
-                }
-                ?>>
+                    if (basename($_SERVER['SCRIPT_NAME']) == 'settings.php') {
+                        //APPLY THE ACTIVE CLASS
+                        echo 'class = "nav-item menu-open"';
+                    } else {
+                        echo 'class = "nav-item"';
+                    }
+                    ?>>
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
@@ -92,10 +94,10 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="<?php echo $conn->student_url(); ?>settings"
-                                <?php   if(basename($_SERVER['SCRIPT_NAME']) == 'settings.php'){
+                                <?php if (basename($_SERVER['SCRIPT_NAME']) == 'settings.php') {
                                     //APPLY THE ACTIVE CLASS
                                     echo 'class = "nav-link active"';
-                                }else{
+                                } else {
                                     echo 'class = "nav-link"';
                                 }
                                 ?>>
@@ -112,14 +114,14 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
 
 
                 <li class="nav-item">
-                    <a href="<?php echo $conn->student_url();?>logout" <?php
-                    if(basename($_SERVER['SCRIPT_NAME']) == 'logout.php'){
-                        //APPLY THE ACTIVE CLASS
-                        echo 'class = "nav-link active"';
-                    }else{
-                        echo 'class = "nav-link"';
-                    }
-                    ?>>
+                    <a href="<?php echo $conn->student_url(); ?>logout" <?php
+                                                                        if (basename($_SERVER['SCRIPT_NAME']) == 'logout.php') {
+                                                                            //APPLY THE ACTIVE CLASS
+                                                                            echo 'class = "nav-link active"';
+                                                                        } else {
+                                                                            echo 'class = "nav-link"';
+                                                                        }
+                                                                        ?>>
                         <i class="nav-icon fas fa-lock"></i>
                         <p>Logout
                         </p>
@@ -143,8 +145,8 @@ $change_style = "font-size: 13px; color: #17a2b8; padding: 4px;";
                 <p> Have a query, feedback or just want to say hi?</p>
                 <p> Call/Whatsapp School Admin on the phone number below</p>
 
-                <a href="javascript:void" style="color: #0c515c; "> <i class="fab fa-whatsapp"></i> +2348122321931 </a> &nbsp; &nbsp;
-                <a href="javascript:void" style="color: #0c515c"> <i class="fa fa-phone"></i>  +2348076602896</a>
+                <a href="javascript:void" style="color: #0c515c; "> <i class="fab fa-whatsapp"></i> +2348164313243 </a> &nbsp; &nbsp;
+                <a href="javascript:void" style="color: #0c515c"> <i class="fa fa-phone"></i> +2348164313243</a>
 
             </div>
         </div>

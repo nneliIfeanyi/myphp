@@ -6,9 +6,11 @@ include '../admin/includes/functions.php';
 
 $conn = new Functions();
 
-if(!empty($_POST['card_serial']) && !empty($_POST['examyear']) && !empty($_POST['examterm'])){
+if(!empty($_POST['card_serial']) && !empty($_POST['pin'])
+  && !empty($_POST['examyear']) && !empty($_POST['examterm'])){
 
     $card_serial = $_POST['card_serial'];
+    $generated_pin = $_POST['pin'];
     $exam_term = $_POST['examterm'];
     $exam_year = $_POST['examyear'];
     $username = $_POST['username'];
@@ -24,6 +26,10 @@ if(!empty($_POST['card_serial']) && !empty($_POST['examyear']) && !empty($_POST[
         echo "<script>
          toastr['error']('Invalid Card Serial no..');
       </script>";
+    }elseif(!$conn->checkGeneratedPin($generated_pin, $username)){
+        echo "<script>
+        toastr['error']('Your generated pin is invalid. Copy and paste the generated pin below.');
+     </script>";
     }elseif($conn->ifPinAvailableForUse($card_serial)){
           
         //update table generated pins table 
@@ -58,8 +64,7 @@ if(!empty($_POST['card_serial']) && !empty($_POST['examyear']) && !empty($_POST[
            echo "<p class='alert alert-success alert-dismissible fade show text-center' role='alert'>
            <i class='fas fa-check-circle'></i>
            We are fetching Result.... Please wait.
-           <i class='fas fa-spinner fa-pulse fa-2x'></i>
-          
+           <img src='images/loader.gif' alt='loading image' width='20'>
            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                <span aria-hidden='true'>×</span>
            </button> 
@@ -88,8 +93,7 @@ if(!empty($_POST['card_serial']) && !empty($_POST['examyear']) && !empty($_POST[
                 echo "<p class='alert alert-success alert-dismissible fade show text-center' role='alert'>
                 <i class='fas fa-check-circle'></i>
                 We are fetching Result.... Please wait.
-                <i class='fas fa-spinner fa-pulse fa-2x'></i>
-                
+                <img src='images/loader.gif' alt='loading image' width='20'>
                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                     <span aria-hidden='true'>×</span>
                 </button> 
